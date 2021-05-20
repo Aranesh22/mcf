@@ -1,22 +1,23 @@
 import React from 'react'
 import Coach from './Coach'
+import faceOfFitness from '../AYAP5379.jpeg'
 
 import {Container, CardDeck} from 'react-bootstrap'
 
 export default function Coaches() {
     const coachInfo = [ //example info - this will likely be populated by calling a GET req to the server 
-      {Name: 'name here', imgPath: 'holder.js/100px180?text=Image cap', bio: 'short snippet bio here'},
-      {Name: 'test01', imgPath: 'holder.js/100px180?src=https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg/', bio: 'bio here 02'},
-      {Name: 'tester', imgPath: 'holder.js/100px180?src=https://pbs.twimg.com/profile_images/949787136030539782/LnRrYf6e.jpg/', bio: 'no'},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: 'firstname lastname', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''},
-      {Name: '', imgPath: '', bio: ''}
+      {Name: 'name here', imgPath: faceOfFitness, bio: 'short snippet bio here'},
+      {Name: 'test01', imgPath: faceOfFitness, bio: 'bio here 02'},
+      {Name: 'tester', imgPath: faceOfFitness, bio: 'no'},
+      {Name: 'The face of fitness', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: 'firstname lastname', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''},
+      {Name: '', imgPath: faceOfFitness, bio: ''}
     ]
 
     const renderCoach = (card, index) => {

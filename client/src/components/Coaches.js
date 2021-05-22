@@ -1,6 +1,6 @@
 import React from 'react'
 import Coach from './Coach'
-import faceOfFitness from '../AYAP5379.jpeg'
+import faceOfFitness from '../assets/AYAP5379.jpeg'
 
 import {Container, CardDeck} from 'react-bootstrap'
 

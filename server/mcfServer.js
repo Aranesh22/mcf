@@ -33,3 +33,17 @@ mc.connect("mongodb://localhost:27017",function(err,client) {
     app.listen(5000);
     console.log('Server is listening at http://localhost:5000');
 });
+
+/*
+const express = require("express");
+const PORT = process.env.PORT || 3001;
+const app = express();
+
+app.get("/api", (req, res) => {
+    res.json({ message: "Server says best anime is Steins;Gate." });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server listening on ${PORT}`);
+});
+*/

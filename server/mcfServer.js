@@ -16,10 +16,11 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
+/*
 mc.connect("mongodb://localhost:27017",function(err,client) {
     if (err) {
         console.log("Error connecting to database.");
-        console.log(err);
+        //console.log(err);
         return;
     }
 
@@ -33,3 +34,6 @@ mc.connect("mongodb://localhost:27017",function(err,client) {
     app.listen(5000);
     console.log('Server is listening at http://localhost:5000');
 });
+*/
+app.listen(5000);
+console.log('Server is listening at http://localhost:5000');

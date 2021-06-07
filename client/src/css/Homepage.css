@@ -1,0 +1,52 @@
+body {
+    background: #F8F8F8;
+}
+
+.flexAlignEnd{
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.trainTxtPanel{
+    margin-top: 25%;
+}
+.bgDiv{
+    background: #8B0808;
+    height: 50vmax;
+    overflow-wrap: normal
+}
+
+
+/* Find your plan button */
+.btn-primary.buttonWhite{
+    color: #8B0808;
+    background-color: #FFFFFF;
+    border-color: #FFFFFF; 
+    border-radius: 0px;
+
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+}
+
+.btn-primary.buttonWhite:hover{
+    color: #FFFFFF;
+    background-color: #8B0808;
+    border-color: #FFFFFF; 
+    border-radius: 0px;
+
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+}
+
+.btn-primary.buttonWhite:focus{
+    color: #FFFFFF;
+    background-color: #8B0808;
+    border-color: #FFFFFF; 
+    
+    border-radius: 0px;
+  
+
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+}
+

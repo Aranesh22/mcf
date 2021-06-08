@@ -2,9 +2,33 @@ body {
     background: #F8F8F8;
 }
 
+*{
+    color: #F8F8F8;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+
+}
+
+
+/* TrainPanel.js */
+
 .flexAlignEnd{
     flex-direction: column;
     align-items: flex-end;
+}
+
+.mcfH1{
+    padding-right: 2%;
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    letter-spacing: 0.1rem;
+}
+
+.txtBox{
+    /* width: 50%; */
+    padding: 5%;
 }
 
 .trainTxtPanel{
@@ -12,8 +36,9 @@ body {
 }
 .bgDiv{
     background: #8B0808;
-    height: 50vmax;
-    overflow-wrap: normal
+    height: fit-content;
+    overflow-wrap: normal;
+    
 }
 
 
@@ -49,4 +74,26 @@ body {
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
 }
+
+
+
+
+/* ReviewPanel.js */
+
+/* will prob need a math equation to fit dynamic sizing  */
+.rectangle {
+    height: 350px;
+    width: 50vh;
+    position: relative;
+    background-color: #8B0808;
+    /* border: solid;
+	border-color:  rgba(185, 185, 185, 0.664); */
+
+    /* margin-top: 10%;
+    margin-right: 15%; */
+
+    z-index: 10;
+
+   
+  }
 

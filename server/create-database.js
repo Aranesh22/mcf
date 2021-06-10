@@ -4,8 +4,7 @@ const Schema = mongoose.Schema;
 const Coach = require("./models/coachModel");
 const Package = require("./models/programPackage");
 
-let allCoaches = []; 
-let allPackages = [];
+let allCoaches = require("./coaches.json");
 
 mongoose.connect('mongodb://localhost/myCureData', {useNewUrlParser: true});
 let db = mongoose.connection;
@@ -26,8 +25,15 @@ db.once('open', function() {
 			return;
 		}
 		
-		console.log("Inilialized; ");
-		mongoose.connection.close();
+		Coach.insertMany(allCoaches, function(err, result) {
+			if(err){
+				console.log(err);
+				return;
+			}
+			
+			console.log("Inilialized; ");
+			mongoose.connection.close();
+		});
 	});
 
     /*Movie.insertMany(allMovies, function(err, result){

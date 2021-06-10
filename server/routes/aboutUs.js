@@ -11,7 +11,7 @@ router.get('/meetTheTeam',function(req,res) {
     res.sendFile('/dummyPages/meetTheTeam.html',{root:'../server'});
     //res.send("hi get /aboutUs/meetTheTeam.");
 });
-
+/*
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -34,5 +34,6 @@ transporter.sendMail(mailOptions, function(error, info){
         console.log('Email sent: ' + info.response);
     }
 });
+*/
 
 module.exports = router;

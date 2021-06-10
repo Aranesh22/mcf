@@ -3,6 +3,7 @@ const app = express();
 const mc = require('mongodb').MongoClient;
 const aboutUs = require('./routes/aboutUs');
 const index = require('./routes/index');
+const coaches = require('./coaches.json');
 let db;
 
 app.use('/aboutUs',aboutUs);

@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 let coachSchema = Schema({
 	name: {type: String, required: true},
-	pic: {type: String},
-	bio: {type: String},
-	specialities: [String],
-	rate: {type: Number},
-	availability: {type: Boolean}
+	position: {type: String},
+	story: {type: String},
+	profilePic: {type: String},
+	images: [String]
+	//availability: {type: Boolean}
 }); 
 
 module.exports = mongoose.model("Coach", coachSchema);

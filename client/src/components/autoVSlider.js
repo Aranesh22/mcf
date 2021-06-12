@@ -5,14 +5,14 @@ class vSlider extends Component {
    
     render(){
         return(
-            <div class ="content">   
+            <div class ="vSlidercontent">   
                 <div class ="slider-wrapper">
-                Aranesh
+                Core Values
                 <div class ="slider"> 
-                    <div class="slider-text1">single</div> 
-                    <div class="slider-text2">longer</div> 
-                    <div class="slider-text3">no</div>   
-                    <div class="slider-text4">is</div>
+                    <div class="slider-text1">Core Value Four</div> 
+                    <div class="slider-text2">Core Value Three</div> 
+                    <div class="slider-text3">Core Value Two</div>   
+                    <div class="slider-text4">Core Value One</div>
                 </div>
                 </div>   
             </div>

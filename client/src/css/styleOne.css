@@ -4,16 +4,18 @@ html,body {
     height: 100%;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   }
-  .content {
-    width: 100vw;
-    height: 100vh;
+  .vSlidercontent { 
+    position: center;
+    width: 100vw;  
+    height: -5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
+    padding-bottom: 5%;
   }
   .slider-wrapper {
-    font-size: 40px;
-    color:#aaa;
+    font-size: 2rem;
+    color:#fff;
     font-weight: bold;
     text-transform: uppercase;
     display: flex;
@@ -26,23 +28,20 @@ html,body {
     overflow: hidden;
   }
   .slider div {
-    color:#fff;
+    color:black;
     height: 50px;
     margin-bottom: 50px;
     padding: 2px 15px;
     text-align: center;
-    box-sizing: border-box;
+    box-sizing: border-box;  
+    font-size: 2rem;
+    font-weight: bolder;
+  
   }
   .slider-text1 {
-    background: lightgreen;
-    animation: slide 5s linear infinite;
+    animation: slide 9s linear infinite; 
   }
-  .slider-text2 {
-    background: skyblue;
-  }
-  .slider-text3 {
-    background: lightcoral;
-  }
+
   @keyframes slide {
     0% {margin-top:-300px;}
     5% {margin-top:-200px;}

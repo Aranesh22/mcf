@@ -1,6 +1,6 @@
 body {
     background: #F8F8F8;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 *{
@@ -92,7 +92,7 @@ body {
     margin-right: 15%; */
 
     z-index: 10;
-
+    bottom: 75px;
    
   }
 

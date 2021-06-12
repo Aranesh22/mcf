@@ -29,7 +29,7 @@
     padding: 2px 15px;
     text-align: center;
     box-sizing: border-box;  
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bolder;
   
   }
@@ -38,11 +38,28 @@
   }
 
   @keyframes slide {
-    0% {margin-top:-300px;}
+    0% {margin-top:-300px;} 
     5% {margin-top:-200px;}
     33% {margin-top:-200px;}
     38% {margin-top:-100px;}
     66% {margin-top:-100px;}
     71% {margin-top:0px;}
     100% {margin-top:0px;}
-  }
+  }  
+
+  @keyframes slide {
+    0% {margin-top:-400px;} 
+    5% {margin-top:-400px;}
+    25% {margin-top:-300px;}
+    30% {margin-top:-300px;}
+    50% {margin-top:-200px;}
+    55% {margin-top:-200px;} 
+    75% {margin-top: -100px;} 
+    80% {margin-top: -100px;} 
+    95% {margin-top: 0px;}
+    100% {margin-top:0px;} 
+  
+  } 
+
+
+

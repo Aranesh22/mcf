@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styleOne.css';
+import '../css/styleOne.css';
 
 class vSlider extends Component {
    

@@ -9,8 +9,8 @@
     padding-bottom: 5%;
   }
   .slider-wrapper {
-    font-size: 2rem;
-    color:#fff;
+    font-size: 1.5rem;
+    color:white;
     font-weight: bold;
     text-transform: uppercase;
     display: flex;
@@ -29,7 +29,7 @@
     padding: 2px 15px;
     text-align: center;
     box-sizing: border-box;  
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bolder;
   
   }

@@ -1,3 +1,5 @@
+import logo from '../../assets/logo.png'
+
 export const MenuItems = [
     {
         title: 'Home',
@@ -10,7 +12,7 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        img: './logo.png',
+        img: logo,
         url: '#',
         cName:'nav-img'
     },

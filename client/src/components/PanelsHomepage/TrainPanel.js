@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, Container} from 'react-bootstrap'
 import '../../css/Homepage.css'
 import trainLogo from '../../assets/train.png'
-import VSlider from '../autoVSlider'
+import VSlider from '../util/autoVSlider'
 
 export default function TrainPanel() {
     return (

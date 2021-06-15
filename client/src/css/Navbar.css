@@ -1,11 +1,6 @@
 .NavbarItems {
-    /*background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);*/
     background: white;
-    /*height: 80px;*/
     height: 120px;
-    /*display: flex;*/
-    justify-content: center;
-    align-items: center;
     font-size: 1.2rem; 
 }
 
@@ -23,17 +18,7 @@
 }
 
 .nav-menu {  
-    left: 50%; 
-    right: 50%;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 75px;
-    list-style: none;
-    text-align: center;
-    width: 70vw;
-    justify-content: end;
-    /*position: center;*/
-    margin-left: 6rem; 
+    display: flex;
     
 }
 

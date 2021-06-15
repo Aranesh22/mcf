@@ -18,7 +18,9 @@
 }
 
 .nav-menu {  
-    display: flex;
+    display: flex; 
+    justify-content: center; 
+    list-style: none;
     
 }
 
@@ -27,7 +29,8 @@
     text-decoration: none;
     top: 10px;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;  
+    margin: 15px;
     /*padding: 0.5rem 1rem;*/
     /*margin: 55px;*/
 }

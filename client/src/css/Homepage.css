@@ -104,3 +104,37 @@ body {
 .reviewPanel {
     overflow-x: scroll;
 }
+
+/* Landingpage css */
+
+.reviewCard.card {
+    background-color: #8B0808;
+    color: #8B0808;
+    /* padding: 10%; */
+    max-width: fit-content;
+    min-width: min-content;
+    margin: 1rem;
+    
+}
+
+.reviewDeck {
+    /* width: fit-content; */
+    width: 100%;
+}
+
+
+.reviewContainer.container{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: scroll;
+    padding: 5% 0%;
+}
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{
+    width: 100% !important;
+} */
+
+.blockquote-footer{
+    text-align:end;
+    padding-right: 5%;
+    color: #F8F8F8 !important;
+}

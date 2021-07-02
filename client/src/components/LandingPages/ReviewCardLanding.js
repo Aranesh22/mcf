@@ -1,7 +1,5 @@
 import React from 'react'
 import {Card} from 'react-bootstrap'
-// import '../../css/Homepage.css'
-
 
 export default function ReviewCardLanding({txt, author}) {
     return (

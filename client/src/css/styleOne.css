@@ -9,7 +9,7 @@
     padding-bottom: 5%;
   }
   .slider-wrapper {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color:white;
     font-weight: bold;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
     justify-content: center;
   }
   .slider{
-    height: 50px;
+    height: 69px;
     padding-left:15px;
     overflow: hidden;
   }
@@ -29,23 +29,13 @@
     padding: 2px 15px;
     text-align: center;
     box-sizing: border-box;  
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bolder;
   
   }
   .slider-text1 {
-    animation: slide 9s linear infinite; 
+    animation: slide 5.5s linear infinite; 
   }
-
-  @keyframes slide {
-    0% {margin-top:-300px;} 
-    5% {margin-top:-200px;}
-    33% {margin-top:-200px;}
-    38% {margin-top:-100px;}
-    66% {margin-top:-100px;}
-    71% {margin-top:0px;}
-    100% {margin-top:0px;}
-  }  
 
   @keyframes slide {
     0% {margin-top:-400px;} 

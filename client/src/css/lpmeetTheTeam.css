@@ -1,0 +1,56 @@
+.testone { 
+
+    width: 240px; 
+    height: 240px;   
+    left: 100px;
+    position: absolute;
+}  
+
+.testTwo { 
+
+    width: 240px; 
+    height: 240px;   
+    left: 275px; 
+    bottom: 450px;
+    position: absolute; 
+
+} 
+
+.testThree {  
+
+    width: 240px; 
+    height: 240px;   
+    left: 455px; 
+    position: absolute; 
+}
+
+.testFour{ 
+ 
+    width: 240px; 
+    height: 240px; 
+    left: 275px; 
+    bottom: 255px; 
+    position: absolute; 
+
+} 
+
+.testFive { 
+
+    
+    width: 240px; 
+    height: 240px;   
+    left: 100px; 
+    bottom: 150px; 
+    position: absolute; 
+
+}
+.containTeam { 
+
+    width: 800px; 
+    height: 800px; 
+    border: 5px solid black;  
+    margin: 20px auto;   
+    top: 300px;
+    position: relative; 
+} 
+

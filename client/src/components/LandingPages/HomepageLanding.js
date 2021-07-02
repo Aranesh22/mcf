@@ -6,10 +6,10 @@ import TrainLanding from './TrainLanding';
 
 export default function HomepageLanding() {
     return (
-        <>
+        <div style={{position: 'absolute', top:'-10%'}}>
         <TrainLanding />
         <ReviewsLanding />
-        </>
+        </div>
         
     )
 }

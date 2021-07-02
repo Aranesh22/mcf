@@ -2,7 +2,6 @@ import React from 'react'
 import backgroundImage from '../../assets/BackGroundImage.svg'
 import AA from '../../assets/aATransparent.svg'
 import mcf from '../../assets/mcf.svg'
-// will need to import the background image + the 2 other logos for clickable links 
 
 export default function LinksLanding() {
     return (

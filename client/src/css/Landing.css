@@ -1,5 +1,5 @@
 body {
-    background: #F7FCFF;
+    background: #F7FCFF !important;
     overflow-x: hidden;
 }
 
@@ -66,7 +66,7 @@ body {
 .reviewContainer.container{
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: scroll;
+    overflow-x: hidden;
     padding: 5% 0%;
 }
 /* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl{

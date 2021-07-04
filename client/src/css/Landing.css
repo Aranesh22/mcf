@@ -33,7 +33,7 @@ body {
     margin-top: 25%;
 }
 .bgDiv{
-    background: #1eb686;
+    background: #004568 ;
     height: fit-content;
     overflow-wrap: normal;
     
@@ -46,7 +46,7 @@ body {
 /* Landingpage css */
 
 .reviewCard.card {
-    background-color: #1eb686;
+    background-color: #004568 ;
     color: #8B0808;
     /* padding: 10%; */
     /* max-width: fit-content;

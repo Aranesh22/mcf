@@ -17,7 +17,7 @@ export default function TrainLanding() {
                 </div>
             </div>
             <div className='flexAlignEnd d-flex'>
-                <h1 className="mcfH1"style={{color: '#1eb686'}}>WE ARE MYCUREFITNESS</h1>
+                <h1 className="mcfH1"style={{color: '#004568'}}>WE ARE MYCUREFITNESS</h1>
            </div>
         </div>
     )

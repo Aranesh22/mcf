@@ -53,3 +53,31 @@
     position: relative; 
 } 
 
+
+@media only screen and (max-width: 700px){
+    .containTeam{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .testone { 
+        left: 0px;
+        position:unset; 
+    }  
+    .testThree {  
+        left: 0px; 
+        position:unset; 
+    }
+    .testFour{ 
+        left: 0px; 
+        bottom: 0px; 
+        position: unset; 
+    } 
+    /* empty hexagons */
+    .testTwo {  
+        display: none;
+    } 
+    .testFive {  
+        display: none;
+    }
+}

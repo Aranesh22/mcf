@@ -79,6 +79,17 @@ body {
     color: #F0F4F7 !important;
 }
 
+@media only screen and (max-width: 700px){
+    .reviewDeck{
+       flex-wrap: wrap;
+       flex-direction: column;
+       align-items: center;
+    }
+    .reviewCard.card {
+        margin: 1rem;
+        width: 95%;        
+    }
+}
 
 
 
@@ -97,3 +108,7 @@ body {
     margin: 5px;
     text-align: center;
 }
+
+
+
+

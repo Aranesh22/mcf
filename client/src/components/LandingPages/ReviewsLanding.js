@@ -18,7 +18,8 @@ export default function ReviewsLanding() {
           }
     return (
         <Container className="reviewContainer d-flex justify-content-center" >
-          <CardDeck className="d-flex reviewDeck" >
+          <CardDeck className="d-flex reviewDeck" > 
+          {/* use flex wrap */}
               {reviews.map(renderReview)}
           </CardDeck>
       </Container>

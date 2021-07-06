@@ -61,14 +61,20 @@
         align-items: center;
     }
     .testone { 
+        width: 440px; 
+        height: 440px;   
         left: 0px;
         position:unset; 
     }  
     .testThree {  
+        width: 440px; 
+        height: 440px;  
         left: 0px; 
         position:unset; 
     }
     .testFour{ 
+        width: 440px; 
+        height: 440px;  
         left: 0px; 
         bottom: 0px; 
         position: unset; 

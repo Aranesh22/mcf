@@ -10,7 +10,7 @@ import t4 from '../../assets/mTimages/JG_HP.svg'
 
 import '../../css/lpmeetTheTeam.css'
 
-export default function LinksLanding() {
+export default function MeetTheTeam() {
     return (
         <div class="containTeam">  
             <img class ="testone" src={t3} alt={wH}></img>

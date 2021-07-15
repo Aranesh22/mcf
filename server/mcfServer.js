@@ -4,6 +4,7 @@ const mc = require('mongodb').MongoClient;
 const aboutUs = require('./routes/aboutUs');
 const index = require('./routes/index');
 const coaches = require('./coaches.json');
+const questions = require('./questions.json');
 const { google } = require("googleapis");
 let db;
 

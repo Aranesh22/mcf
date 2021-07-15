@@ -16,6 +16,22 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
+app.post('/questions', (req, res) => {
+  console.log(req.body);
+  res.redirect('/');
+});
+
+app.get('/sendQuestions', (req, res) => {
+  let newQuestions = {};
+  let someQuestions = [];
+  for (let i = 0; i < questions.length; ++i) {
+    newQuestions[i] = questions[i];
+    someQuestions.push(questions[i]);
+  }
+  //res.json(newQuestions);
+  res.send(someQuestions);
+});
+
 mc.connect("mongodb://localhost:27017",function(err,client) {
     if (err) {
         console.log("Error connecting to database.");

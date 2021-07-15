@@ -18,6 +18,22 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
+app.post('/questions', (req, res) => {
+  console.log(req.body);
+  res.redirect('/');
+});
+
+app.get('/sendQuestions', (req, res) => {
+  let newQuestions = {};
+  let someQuestions = [];
+  for (let i = 0; i < questions.length; ++i) {
+    newQuestions[i] = questions[i];
+    someQuestions.push(questions[i]);
+  }
+  //res.json(newQuestions);
+  res.send(someQuestions);
+});
+
 app.post('/questions',function(req,res) {
     let tracker = {'Zhongli':0, 'Razor':0, 'Yanfei':0};
     console.log(req.body);

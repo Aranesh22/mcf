@@ -39,7 +39,6 @@ class App extends React.Component {
   }
 
   render() {
-
     const { question_1 } = this.state;
     const { answer_1 } = this.state;
     const { question_2 } = this.state;

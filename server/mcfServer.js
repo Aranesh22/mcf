@@ -6,6 +6,8 @@ const index = require('./routes/index');
 const coaches = require('./coaches.json');
 const questions = require('./questions.json');
 const { google } = require("googleapis");
+const nodemailer = require('nodemailer');
+
 let db;
 
 app.use('/aboutUs',aboutUs);
@@ -20,75 +22,69 @@ app.get('/whoweare',function(req,res) {
 });
 
 app.post('/questions', (req, res) => {
-  console.log(req.body);
-  res.redirect('/');
-});
-
-app.get('/sendQuestions', (req, res) => {
-  let newQuestions = {};
-  let someQuestions = [];
-  for (let i = 0; i < questions.length; ++i) {
-    newQuestions[i] = questions[i];
-    someQuestions.push(questions[i]);
-  }
-  //res.json(newQuestions);
-  res.send(someQuestions);
-});
-
-app.post('/questions',function(req,res) {
-    let tracker = {'Zhongli':0, 'Razor':0, 'Yanfei':0};
     console.log(req.body);
-
-    question_1(req.body.preferred_gender,tracker);
-    question_2(req.body.group_nutrion,tracker);
-    console.log(greatest(tracker));
+    
+    if (checkEmail(req.body.email) == 0) {
+        return res.status(400).send({
+            message: "Email was not entered properly!"
+        });
+    }
+    
+    sendEmail(req.body.email);
 
     res.redirect('/');
 });
 
-function question_1(answer, tracker) {
-    if (answer == 'Male') {
-        tracker['Zhongli'] += 1;
-        tracker['Razor'] += 1;
-    }else if (answer == 'Female') {
-        tracker['Yanfei'] += 1;
+app.get('/sendQuestions', (req, res) => {
+    let newQuestions = {};
+    let someQuestions = [];
+    for (let i = 0; i < questions.length; ++i) {
+        newQuestions[i] = questions[i];
+        someQuestions.push(questions[i]);
     }
-}
+    //res.json(newQuestions);
+    res.send(someQuestions);
+});
 
-function question_2(answer, tracker) {
-    if (answer == 'group_only') {
-        tracker['Zhongli'] += 1;
-    }else if (answer == 'nutrion_only') {
-        tracker['Razor'] += 1;
-    }else if (answer == 'Neither') {
-        tracker['Yanfei'] += 1;
-    }else {
-        tracker['Zhongli'] += 1;
-        tracker['Razor'] += 1;   
-    }
-}
-
-function greatest(tracker) {
-    let greatest = -1;
-    let keys = Object.keys(tracker);
-    for (let i = 0; i < keys.length; ++i) {
-        if (tracker[keys[i]] > greatest) {
-            greatest = tracker[keys[i]];
-        }
-    }
+function checkEmail(email) {
+    //can add aol, outlook and other services
+    let gmail = email.slice(-10);
     
-    let coaches = [];
-    for (let i = 0; i < keys.length; ++i) {
-        if (tracker[keys[i]] == greatest) {
-            coaches.push(keys[i]);
+    if (String(gmail) === '@gmail.com') {
+        return 1;
+    }
+
+    return 0;
+}
+
+function sendEmail(email) {
+    /*
+    User: fitnessautomail@gmail.com
+    Pass: verycooljames 
+    */
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'fitnessautomail@gmail.com',
+            pass: 'verycooljames'
         }
-    }
-    if (coaches.length > 1) {
-        let random = Math.floor(Math.random() * coaches.length);
-        return coaches[random];
-    }else {
-        return coaches[0];
-    }
+    });
+    
+    var mailOptions = {
+        from: 'fitnessautomail@gmail.com',
+        to: String(email),
+        subject: 'Sending Email using Node.js',
+        text: 'That was easy!'
+    };
+      
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        }else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
 }
 
 /*

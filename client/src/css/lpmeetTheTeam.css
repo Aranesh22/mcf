@@ -1,12 +1,15 @@
-.testone { 
+.topLeft { 
 
     width: 240px; 
     height: 240px;   
     left: 100px;
+    /* left: 101px; */
+    /* top: 27px; */
     position: absolute;
+    z-index: 1;
 }  
 
-.testTwo { 
+.mid { 
 
     width: 240px; 
     height: 240px;   
@@ -16,32 +19,39 @@
 
 } 
 
-.testThree {  
+.topRight {  
 
     width: 240px; 
     height: 240px;   
     left: 455px; 
+    /* left: 450px; */
+    /* top: 16px; */
+    /* z-index: 1; */
     position: absolute; 
 }
 
-.testFour{ 
+.bottomLeft{ 
  
     width: 240px; 
     height: 240px; 
-    left: 275px; 
-    bottom: 255px; 
+    left: 96px; 
+    /* bottom: 255px;  */
+    bottom: 352px;
     position: absolute; 
 
 } 
 
-.testFive { 
+.bottomRight { 
 
     
     width: 240px; 
     height: 240px;   
-    left: 100px; 
-    bottom: 150px; 
+    /* left: 100px;  */
+    /* bottom: 150px;  */
+    left: 456px;
+    bottom: 355px;
     position: absolute; 
+
 
 }
 .containTeam { 
@@ -60,19 +70,19 @@
         flex-direction: column;
         align-items: center;
     }
-    .testone { 
+    .topLeft { 
         width: 440px; 
         height: 440px;   
         left: 0px;
         position:unset; 
     }  
-    .testThree {  
+    .topRight {  
         width: 440px; 
         height: 440px;  
         left: 0px; 
         position:unset; 
     }
-    .testFour{ 
+    .bottomLeft{ 
         width: 440px; 
         height: 440px;  
         left: 0px; 
@@ -80,10 +90,12 @@
         position: unset; 
     } 
     /* empty hexagons */
-    .testTwo {  
+    .mid {  
         display: none;
     } 
-    .testFive {  
+    .bottomRight {  
         display: none;
     }
 }
+
+

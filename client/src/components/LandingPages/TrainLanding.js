@@ -1,6 +1,6 @@
 import React from 'react'
 import trainLogo from '../../assets/train.png'
-
+import {Button} from 'react-bootstrap'
 export default function TrainLanding() {
     return (
         <div className="trainTxtPanel d-flex flex-column">
@@ -9,16 +9,22 @@ export default function TrainLanding() {
                 <div className="flexAlignEnd d-flex" style={{padding: '4%'}}></div> 
                 
                 <div className='txtBox'>
-                    <p >MyCure Fitness is a team of physical strength optimization coaches, nutritionists, physical therapy specialist, internal health physicians.  We believe that with our experience of working with 1000’s of clients both in Canada and worldwide we have filtered a contemporary program that will give every individual a proprietary program that will address and optimize strength through individualized workout coaching, nutrition coach, physician supervised health assessment and prehab and rehab accelerations with our in house team of physical therapists</p>
+                    <p >" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus lorem sed elit tincidunt pretium. Duis molestie ultrices nisl, ut fringilla lacus imperdiet at. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    <footer className="blockquote-footer">
+                        <i>Quote </i>
+                    </footer>
+                    <div className="flexAlignStart d-flex" style={{padding: '4%'}}>
+                    <Button className="buttonWhite">Know Your Strength ⟶</Button> </div> 
                 </div>
 
-                <div className="flexAlignEnd d-flex">
+                {/* <div className="flexAlignEnd d-flex">
                    <h1 className="mcfH1">WE ARE MYCUREFITNESS</h1>                  
-                </div>
+                </div> */}
             </div>
-            <div className='flexAlignEnd d-flex'>
+            {/* <div style={{height:'50px'}}></div> */}
+            {/* <div className='flexAlignEnd d-flex'>
                 <h1 className="mcfH1"style={{color: '#004c54'}}>WE ARE MYCUREFITNESS</h1>
-           </div>
+           </div> */}
         </div>
     )
 }

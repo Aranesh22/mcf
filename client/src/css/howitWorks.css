@@ -1,0 +1,52 @@
+
+.containStep {
+    display: flex;
+    margin-right: 20px ;   
+    position: relative; 
+}
+
+.hWBg {
+    width: 75%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 75%;
+    height: 0;
+    padding-top: 66.64%; /* (img-height / img-width * container-width) */  
+                /* (853 / 1280 * 100)   --- prob change this/fiddle w this */ 
+}
+
+.longHexContainer{
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+    /* bottom: 66.4%; */
+    bottom: 61.4%;
+    left: 75%;
+}
+
+.longHex {
+    /* position: absolute; */
+     width: 100%;
+    height: auto; 
+}
+
+
+.numberImg {
+    width: 100%;
+    height: auto;
+}
+
+.numberImgContainer {
+    width: 10%;
+    position: absolute;
+    left: 105%;
+    bottom: 30%;
+}
+
+/* will prob need to change this depending on the text volume james gives */
+.hexTxt{
+    position: absolute;
+    padding: 5%;
+    bottom: 10%; 
+}

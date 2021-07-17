@@ -1,7 +1,7 @@
 [
     {
-      "name":"Harold",
-      "position":"somePosition",
+      "name":"Zhongli",
+      "position":"Group Exercise Instructor",
       "story":"Harold is gay",
       "profilePic":"imagepath",
       "images":[
@@ -11,8 +11,8 @@
       ]
     },
     {
-      "name":"Jerald",
-      "position":"somePosition1",
+      "name":"Razor",
+      "position":"Nutrion Coach",
       "story":"Jerald likes big pp",
       "profilePic":"imagepath1",
       "images":[
@@ -22,8 +22,8 @@
       ]
     },
     {
-      "name":"Bagel",
-      "position":"somePosition2",
+      "name":"Yanfei",
+      "position":"Wellness Coach",
       "story":"Bagel supports big pp nation",
       "profilePic":"imagepath2",
       "images":[

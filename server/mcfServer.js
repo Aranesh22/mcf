@@ -21,7 +21,52 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
-app.post('/questions', (req, res) => {
+app.post('/question_1', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_2');
+});
+
+app.post('/question_2', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_3');
+});
+
+app.post('/question_3', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_4');
+});
+
+app.post('/question_4', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_5');
+});
+
+app.post('/question_5', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_6');
+});
+
+app.post('/question_6', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_7');
+});
+
+app.post('/question_7', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_8');
+});
+
+app.post('/question_8', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_9');
+});
+
+app.post('/question_9', (req, res) => {
+    console.log(req.body);
+    res.redirect('/quiz/question_10');
+});
+
+app.post('/question_10', (req, res) => {
     console.log(req.body);
     
     if (checkEmail(req.body.email) == 0) {
@@ -45,6 +90,28 @@ app.get('/sendQuestions', (req, res) => {
     //res.json(newQuestions);
     res.send(someQuestions);
 });
+
+/*
+mc.connect("mongodb://localhost:27017",function(err,client) {
+    if (err) {
+        console.log("Error connecting to database.");
+        //console.log(err);
+        return;
+    }
+
+    db = client.db("testdb");
+
+    db.collection("test").insertOne({key1:1, key2:2}, function(err,result) {
+        if (err) throw err;
+        console.log(result);
+    });
+ 
+    app.listen(5000);
+    console.log('Server is listening at http://localhost:5000');
+});
+*/
+app.listen(5000);
+console.log('Server is listening at http://localhost:5000');
 
 function checkEmail(email) {
     //can add aol, outlook and other services
@@ -86,25 +153,3 @@ function sendEmail(email) {
         }
     });
 }
-
-/*
-mc.connect("mongodb://localhost:27017",function(err,client) {
-    if (err) {
-        console.log("Error connecting to database.");
-        //console.log(err);
-        return;
-    }
-
-    db = client.db("testdb");
-
-    db.collection("test").insertOne({key1:1, key2:2}, function(err,result) {
-        if (err) throw err;
-        console.log(result);
-    });
- 
-    app.listen(5000);
-    console.log('Server is listening at http://localhost:5000');
-});
-*/
-app.listen(5000);
-console.log('Server is listening at http://localhost:5000');

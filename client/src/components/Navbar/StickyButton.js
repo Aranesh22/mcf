@@ -1,0 +1,14 @@
+import React from 'react'
+import { Button } from 'react-bootstrap'
+import '../../css/sticky.css'
+
+export default function StickyButton() {
+    return (
+        <div>
+              <div className="buttonBar">
+         <div className="flexAlignEnd d-flex" style={{paddingRight: '4%', paddingBottom: '1%'}}>
+                    <Button className="buttonWhiteNav">Know Your Strength</Button> </div> 
+         </div>
+        </div>
+    )
+}

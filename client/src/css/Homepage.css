@@ -5,7 +5,7 @@ body {
 
 *{
     color: #F8F8F8;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Messina Sans', sans-serif;
     font-weight: 400;
 }
 
@@ -19,7 +19,7 @@ body {
 
 .mcfH1{
     padding-right: 2%;
-    font-style: italic;
+    /* font-style: italic; */
     font-size: 1.8rem;
     font-weight: bolder;
     letter-spacing: 0.1rem;

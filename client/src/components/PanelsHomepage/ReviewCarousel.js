@@ -1,7 +1,4 @@
 import React from 'react'
-// import { Carousel } from 'react-bootstrap'
-// import Carousel from 'react-bootstrap/Carousel'
-
 import Slider from "react-slick";
 
 export default function ReviewCarousel() {
@@ -25,10 +22,10 @@ export default function ReviewCarousel() {
             <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
           </div>
           <div>
-            <p className="fontTest">Text here</p>
+            <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
           </div>
           <div>
-            <p className="fontTest">slide 3</p>
+            <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
             <footer className="blockquote-footer">
                 <i>Quote </i>
             </footer>

@@ -12,7 +12,7 @@
     background-repeat: no-repeat;
     width: 75%;
     height: 0;
-    padding-top: 66.64%; /* (img-height / img-width * container-width) */  
+    padding-top: 54.64%; /* (img-height / img-width * container-width) */  
                 /* (853 / 1280 * 100)   --- prob change this/fiddle w this */ 
 }
 
@@ -21,7 +21,7 @@
     height: fit-content;
     position: absolute;
     /* bottom: 66.4%; */
-    bottom: 61.4%;
+    bottom: 53.4%;
     left: 75%;
 }
 
@@ -41,7 +41,7 @@
     width: 10%;
     position: absolute;
     left: 105%;
-    bottom: 30%;
+    bottom: 12%;
 }
 
 /* will prob need to change this depending on the text volume james gives */
@@ -50,3 +50,54 @@
     padding: 5%;
     bottom: 10%; 
 }
+
+
+/* Button for FAQ */
+
+.faqBtn{
+    color: #004c54 !important;
+    background-color: #F7FCFF;
+    width: 100%;
+    border-radius: 0px;
+    border:none;
+    border-top: #004c54 thick solid;
+    padding: 2%;
+
+    
+ 
+}
+
+
+.faqBtn:hover {
+    color: #004c54 !important;
+    background-color: #F7FCFF;
+    display: block;
+}
+
+.faqBtn:active{
+    color: #004c54 !important;
+    background-color: #F7FCFF;
+  
+}
+
+.faqBtn:focus{
+    color: #004c54 !important;
+    background-color: #F7FCFF;
+    border-bottom: none;
+}
+
+
+#collapse-text{
+    padding: 0 2% 2% 2%;
+    /* /* font-weight: 500; */
+    font-size: 1.15rem; 
+    font-weight: lighter;
+}
+
+
+
+
+/* button:focus:not(:focus-visible){
+    outline: none;
+} */
+

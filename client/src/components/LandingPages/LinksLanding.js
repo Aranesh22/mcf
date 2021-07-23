@@ -1,7 +1,7 @@
 import React from 'react'
-import backgroundImage from '../../assets/BackGroundImage.svg'
-import AA from '../../assets/aATransparent.svg'
-import mcf from '../../assets/mcf.svg'
+import backgroundImage from '../../assets/landingImgs/BackGroundImage.svg'
+import AA from '../../assets/landingImgs/aATransparent.svg'
+import mcf from '../../assets/landingImgs/mcf.svg'
 
 export default function LinksLanding() {
     return (

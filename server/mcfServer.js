@@ -21,72 +21,28 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
-app.post('/question_1', (req, res) => {
+app.post('/question/:quesNum',(req,res) => {
     console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_2');
-});
 
-app.post('/question_2', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_3');
-});
+    let questionNumber = parseInt(req.params.quesNum);
 
-app.post('/question_3', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_4');
-});
-
-app.post('/question_4', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_5');
-});
-
-app.post('/question_5', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_6');
-});
-
-app.post('/question_6', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_7');
-});
-
-app.post('/question_7', (req, res) => {
-    console.log(req.body);
-    updateDoc(req.body.answer);
-    res.redirect('/quiz/question_8');
-});
-
-app.post('/question_8', (req, res) => {
-    console.log(req.body);
-    res.redirect('/quiz/question_9');
-});
-
-app.post('/question_9', (req, res) => {
-    console.log(req.body);
-    res.redirect('/quiz/question_10');
-});
-
-app.post('/question_10', (req, res) => {
-    console.log(req.body);
-    
-    if (checkEmail(req.body.email) == 0) {
-        return res.status(400).send({
-            message: "Email was not entered properly!"
-        });
+    if (questionNumber == 12) {
+        if (checkEmail(req.body.email) == 0) {
+            return res.status(400).send({
+                message: "Email was not entered properly!"
+            });
+        }
+        sendEmail(req.body.email);
+        //updateDoc(req.body.answer);
+        res.redirect('/');
+        return;
     }
 
-
+    questionNumber += 1;
     
-    sendEmail(req.body.email);
-
-    res.redirect('/');
+    let newPath = "/quiz/question_" + String(questionNumber);
+    //updateDoc(req.body.answer);
+    res.redirect(newPath);
 });
 
 app.get('/sendQuestions', (req, res) => {
@@ -163,7 +119,7 @@ function sendEmail(email) {
         }
     });
 }
-
+/*
 function updateDoc(ans) {
     const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
@@ -190,25 +146,4 @@ function updateDoc(ans) {
     
      console.log("Google doc successfully submitted!");
 }
-
-//this is pseudocode, shortens the question post requests
-/*
-app.post(begins_with("/questions_"), (req, res) => {
-    //let q = url[url.length-1]; //last character of ths string, which is the question number
-    console.log(req.body);
-
-    if(url.equals("/questions_10")){
-        if (checkEmail(req.body.email) == 0) {
-            return res.status(400).send({
-                message: "Email was not entered properly!"
-            });
-        }
-        sendEmail(req.body.email);
-        updateDoc(req.body.answer);
-        res.redirect('/');
-        return;
-    }
-
-    updateDoc(req.body.answer);
-    res.redirect("/quiz/question_" + q++);
-});*/
+*/

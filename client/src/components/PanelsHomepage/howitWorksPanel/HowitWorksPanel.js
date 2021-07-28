@@ -9,10 +9,10 @@ import no4 from '../../../assets/hWimgs/no4.svg'
 import hWBg from '../../../assets/hWimgs/hWBg.png'
 
 const stepInfo = [
-    {bgImg: hWBg, numImg: no1, text: "assess"},
-    {bgImg: hWBg, numImg: no2, text: "execute"},
-    {bgImg: hWBg, numImg: no3, text: "reassess"},
-    {bgImg: hWBg, numImg: no4, text: "progress"}
+    {bgImg: hWBg, numImg: no1, hText: "Assess", text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."},
+    {bgImg: hWBg, numImg: no2, hText: "Execute", text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident"},
+    {bgImg: hWBg, numImg: no3, hText: "Reassess", text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident"},
+    {bgImg: hWBg, numImg: no4, hText: "Progress", text: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident"}
 
 ]
 const renderStep = (step, index) => {
@@ -20,6 +20,7 @@ const renderStep = (step, index) => {
       <HowitWorksStep key={index}
             bgImg={step.bgImg}
             numImg={step.numImg}
+            hText={step.hText}
             text={step.text}
       />
     ) 

@@ -6,11 +6,9 @@ import FaqQuestion from './FaqQuestion'
 export default function Faq() {
 
     const questions = [
-      {ekey: "0", question: "So how much does this cost?", answer: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."},
-      {ekey: "1", question: "What do I get?", answer: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."},
-      {ekey: "2", question: "Is it really for me?", answer: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."},
-      {ekey: "3", question: "What if I don't like it?", answer: "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."}
-    
+      {ekey: "0", question: "How will I guarantee fitness improvement?", answer: "money back guarantee in first 2 month or 10 sessions or your money back"},
+      {ekey: "1", question: "I have never done any strength or resistance training - Is this for me?", answer: "we do a thorough intake process and we encourage to find our where you are now, you just might surprise yourself in finding out, you are stronger than you think"}
+      
     ]
 
     const renderQA = (qa, index) => {

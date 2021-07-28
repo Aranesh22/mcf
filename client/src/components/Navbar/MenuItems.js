@@ -3,17 +3,17 @@ import logo from '../../assets/logo.png'
 export const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '/',
         cName: 'nav-links'
     },
     {
         title: 'About Us',
-        url: '#',
+        url: '../about',
         cName: 'nav-links'
     },
     {
         img: logo,
-        url: '#',
+        url: '/',
         cName:'nav-img'
     },
     {

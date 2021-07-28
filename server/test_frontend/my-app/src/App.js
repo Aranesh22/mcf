@@ -232,7 +232,8 @@ class App extends React.Component {
 
               <Route exact path="/quiz/question_11">
                 <form action='/question/11' method='POST'>
-                  <h1>Current count: {count}</h1>
+                  <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
+                  <div class="hexagon"><span></span></div>
                   <label>Enter the amount of squats.</label><br/>
                   <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                   <input type="submit" value="Submit"/>

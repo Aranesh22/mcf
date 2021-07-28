@@ -23,12 +23,23 @@
     /* bottom: 66.4%; */
     bottom: 53.4%;
     left: 75%;
+  
+
 }
 
 .longHex {
     /* position: absolute; */
-     width: 100%;
-    height: auto; 
+     /* width: 100%;
+    height: auto;  */
+
+
+    /* width: 75%; */
+    height: 37%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /* height: 0; */
+    /* padding-top: 54.64%; */
 }
 
 
@@ -45,12 +56,48 @@
 }
 
 /* will prob need to change this depending on the text volume james gives */
-.hexTxt{
+/* .hexTxt{
     position: absolute;
     padding: 5%;
     bottom: 10%; 
 }
+*/
+.hexH1Text{
+    padding: 1% 0 0 15%;
+    /* border: purple solid; */
+}
 
+/* prob use media tags for this */
+.hexPText{
+    /* border: burlywood solid; */
+    padding: 0 4% 0;
+}
+
+
+@media only screen and (min-width: 1060px){
+    .hexH1Text{
+        padding: 5% 0 0 15%;
+        letter-spacing: 2px;
+        /* border: purple solid; */
+    }
+    .hexPText{
+        /* border: burlywood solid; */
+        
+        padding: 8% ;
+        font-size: large;
+        letter-spacing: 1px;
+    }
+}
+
+
+.hexTxtBox{
+    height: 100%;
+    /* padding: 0 14% 1%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+}
 
 /* Button for FAQ */
 

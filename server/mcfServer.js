@@ -119,7 +119,7 @@ function sendEmail(email) {
         }
     });
 }
-/*
+
 function updateDoc(ans) {
     const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
@@ -146,4 +146,3 @@ function updateDoc(ans) {
     
      console.log("Google doc successfully submitted!");
 }
-*/

@@ -1,5 +1,6 @@
 .NavbarItems {
-    background: white;
+    /* background: #F7FCFF; */
+    background-color: #35B686;
     height: 120px;
     font-size: 1.2rem; 
     z-index: 10;
@@ -26,7 +27,9 @@
 }
 
 .nav-links {
-    color: #892222;
+    /* color: #004c54; */
+    color: #F0F4F7;
+
     text-decoration: none;
     top: 10px;
     display: block;
@@ -37,9 +40,14 @@
 }
 
 .nav-links:hover {
-    background-color: rgb(187, 184, 184);
+    /* background-color: rgb(187, 184, 184); */
+    color: rgb(187, 184, 184);
     border-radius: 4px;
     transition: all 0.2s ease-out;
+}
+
+.nav-links:focus {
+    box-shadow: none;
 }
 
 .fa-bars{
@@ -129,7 +137,7 @@
         margin: auto;
         border-radius: 4px;
         width: 80%;
-        background: #4ad9e4;
+        background: #004c54;
         text-decoration: none;
         color: white;
         font-size: 1.5rem;

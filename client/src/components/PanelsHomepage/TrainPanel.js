@@ -1,11 +1,32 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import useElementOnScreen from '../../hooks/useElementOnScreen';
 import trainLogo from '../../assets/train.png'
+import strongerLogo from '../../assets/stronger.png'
 import {Button} from 'react-bootstrap'
+import StickyButton from '../Navbar/StickyButton';
+import '../../css/Landing.css'
 export default function TrainPanel() {
+    const targetRef = useRef(null);
+    const isVisible = useElementOnScreen({
+        root: null, 
+        rootMargin: '0px',
+        threshold: 0.3
+    }, targetRef)
+ 
+//    document.body.style.backgroundColor= isVisible ? 'purple !important' : 'yellow !important'
+
     return (
-        <div className="trainTxtPanel d-flex flex-column">
-            <div className="bgDiv">
-                <img style={{width: '95%', marginTop: '-16%'}} src={trainLogo} />
+  
+        <div className="trainTxtPanel d-flex flex-column" ref={targetRef}>
+            {!isVisible ? 
+                <StickyButton /> 
+            : ''} 
+       
+            <div className="greenBehind" fluid></div>
+           
+            <div className="bgDiv">  
+            {/* marginTop: '-16%' */}
+                <img style={{width: '95%', marginTop: '-7.5%'}} src={strongerLogo} />
                 <div className="flexAlignEnd d-flex" style={{padding: '4%'}}></div> 
                 
                 <div className='txtBox'>
@@ -17,15 +38,8 @@ export default function TrainPanel() {
                     <div className="flexAlignStart d-flex" style={{padding: '4%'}}>
                     <Button className="buttonWhite">Know Your Strength ⟶</Button> </div> 
                 </div>
-
-                {/* <div className="flexAlignEnd d-flex">
-                   <h1 className="mcfH1">WE ARE MYCUREFITNESS</h1>                  
-                </div> */}
             </div>
-            {/* <div style={{height:'50px'}}></div> */}
-            {/* <div className='flexAlignEnd d-flex'>
-                <h1 className="mcfH1"style={{color: '#004c54'}}>WE ARE MYCUREFITNESS</h1>
-           </div> */}
+           
         </div>
     )
 }

@@ -1,5 +1,6 @@
 body {
     background: #F7FCFF !important;
+    /* background: #F7FCFF; */
     overflow-x: hidden;
 }
 
@@ -20,7 +21,7 @@ body {
 .mcfH1{
     padding-right: 2%;
     font-style: italic;
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
     font-weight: bolder;
     letter-spacing: 0.1rem;
 }
@@ -32,6 +33,7 @@ body {
 
 .trainTxtPanel{
     margin-top: 25%;
+    /* margin-top: 15%; */
 }
 .bgDiv{
     background: #004c54 ;
@@ -127,7 +129,7 @@ body {
     border-color: #FFFFFF; 
     border-radius: 0px;
 
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
 }
 
@@ -145,7 +147,7 @@ body {
     color: #FFFFFF;
     background-color: #004c54;
     border-color: #FFFFFF; 
-    
+    box-shadow: none;
     border-radius: 0px;
   
 
@@ -177,4 +179,17 @@ body {
 
 p.fontTest{
     color: #004c54;
+}
+
+
+
+.greenBehind{ 
+    background-color: #35B686;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    bottom: 25%;
+    z-index: -1;
+
 }

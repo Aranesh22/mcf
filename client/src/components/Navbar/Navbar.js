@@ -20,11 +20,11 @@ class Navbar extends Component {
                 </div>
                 <ul className = {this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
-                        if(index==2){
-                            return(
-                                <img src={item.img} href={item.url} alt={item.img} className={item.cName}></img>
-                            )
-                        }
+                        // if(index==2){
+                        //     return(
+                        //         <img src={item.img} href={item.url} alt={item.img} className={item.cName}></img>
+                        //     )
+                        // }
                         
                         return (
                             <li key={index}>

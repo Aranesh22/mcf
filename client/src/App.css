@@ -4,13 +4,19 @@
   text-align: center;
 }
 
-
+.body{
+    background-color: #F7FCFF !important;
+    
+}
 
 *{
   color: #F8F8F8;
   
   font-family: 'Messina Sans', sans-serif;
   font-weight: 400;
+  font-size: calc(1rem + ((1vw - 2.5px) * 0.479)); 
+  /* font-size: calc(0.75rem + ((1vw - 2.5px) * 0.4364)); */
+  min-height: 0vw;
 
 }
 

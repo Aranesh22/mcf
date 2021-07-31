@@ -3,32 +3,37 @@ import logo from '../../assets/logo.png'
 export const MenuItems = [
     {
         title: 'Home',
-        url: '/',
+        url: '../',
         cName: 'nav-links'
     },
     {
-        title: 'About Us',
-        url: '../about',
+        title: 'Your Team',
+        url: '../aboutUs',
+        cName: 'nav-links'
+    },
+    // {
+    //     img: logo,
+    //     url: '/',
+    //     cName:'nav-img'
+    // },
+    {
+        title: 'Products We Trust',
+        url: '../products',
         cName: 'nav-links'
     },
     {
-        img: logo,
-        url: '/',
-        cName:'nav-img'
-    },
-    {
-        title: 'Plans',
-        url: '#',
+        title: 'Know your Strength?',
+        url: '../knowYourStrength',
         cName: 'nav-links'
     },
     {
         title: 'Contact Us',
-        url: '#',
+        url: '../contactUs',
         cName: 'nav-links'
     },
     {
         title: 'Mobile',
-        url: '#',
+        url: '../m.mobileUrl??? ',
         cName: 'nav-links-mobile'
     }
 ]

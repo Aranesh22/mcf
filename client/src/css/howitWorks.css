@@ -62,10 +62,11 @@
     bottom: 10%; 
 }
 */
-.hexH1Text{
-    padding: 1% 0 0 15%;
-    /* border: purple solid; */
-}
+/* .hexH1Text{
+    padding: 10% 0 0 15%; 
+  
+}*/
+
 
 /* prob use media tags for this */
 .hexPText{
@@ -73,30 +74,32 @@
     padding: 0 4% 0;
 }
 
-
+/* 
 @media only screen and (min-width: 1060px){
     .hexH1Text{
         padding: 5% 0 0 15%;
         letter-spacing: 2px;
-        /* border: purple solid; */
+      
     }
     .hexPText{
-        /* border: burlywood solid; */
+       
         
         padding: 8% ;
         font-size: large;
         letter-spacing: 1px;
     }
-}
+} */
 
 
 .hexTxtBox{
     height: 100%;
     /* padding: 0 14% 1%; */
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
-    /* justify-content: space-around; */
+
 }
 
 /* Button for FAQ */
@@ -147,4 +150,22 @@
 /* button:focus:not(:focus-visible){
     outline: none;
 } */
+
+
+.btn-custom.seeMoreBtn{
+    color: #F7FCFF;
+}
+
+.btn-custom.seeMoreBtn:hover{
+    color: #F7FCFF;
+    text-decoration: underline;
+
+}
+
+.btn-custom.seeMoreBtn:focus{
+    color: #F7FCFF;
+    border: none !important;
+    box-shadow: none !important;
+    text-decoration: underline;
+}
 

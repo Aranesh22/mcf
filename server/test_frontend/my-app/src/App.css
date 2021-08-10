@@ -1,14 +1,23 @@
+html, body {
+    background-color: whitesmoke;
+    color: #184E58;
+    text-align: center;
+}
+
+#hexagons {
+    margin: auto;
+    width: 60%;
+}
+
 form {
     display: inline-block;
+    max-width: 90vw;
+    margin-top: 5%;
+    /*
     margin-top: 5%;
 
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
-    font-weight: bold;
-
-    border: solid;
-    border-radius: 15px;
-    border-color: grey;
 
     min-width: 890px;
     min-height: 150px;
@@ -18,12 +27,14 @@ form {
     margin-left: 10%;
     margin-right:10%;
     width: 50%;
+    */
 }
 
-input[type=number], option, select {
-    width: 100%;
+input[type=number], option, select, input[type=text] {
+    max-width: 99vw;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-left: 5%;
+    margin-right: 5%;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -31,19 +42,22 @@ input[type=number], option, select {
 }
 
 input[type=submit] {
-    background-color: #1d1b1b;
+
+    background-color: #184E58;
     color: white;
-    display: inline-block;
     font-size: 20px;
     margin: 4px 2px;
     padding: 12px 30px;
-    text-align: center;
     cursor: pointer;
-    margin-left: 43%;
 
     border: solid;
     border-radius: 15px;
     border-color: grey;
+    
+
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .container {
@@ -111,13 +125,13 @@ input[type=submit] {
 
 #current_count {
     text-align: center;
+    color: #184E58;
 }
 
 #count {
     text-align: center;
     color: white;
     font-size: 25px;
-    margin-left: 15px;
 }
 
 .hexagon {
@@ -125,15 +139,15 @@ input[type=submit] {
   width: 100px;
   height: 55px;
   position: relative;
-  left: 405px;
+  left: 62px;
   bottom: 70px;
 }
 
 .hexagon, 
 .hexagon:before, 
 .hexagon:after {
-  background: rgb(20, 20, 20);
-  box-shadow: 0 0 10px rgba(0,0,0,0.8);   
+  background: #184E58;;
+  box-shadow: 0 0 10px #184E58; 
 }
 
 .hexagon:before,
@@ -160,6 +174,114 @@ input[type=submit] {
   left: 0;
   width: 100px;
   height: 55px;
-  background: rgb(20, 20, 20);
+  background: #184E58;
   z-index: 1;
+}
+
+.chosen_one {
+    animation: action 0.3s linear alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes action {
+    0% { 
+        transform: translateY(0); 
+        transition-timing-function: ease-in-out;
+    }
+    100% { 
+        transform: translateY(-25px); 
+        transition-timing-function: ease-in-out;
+    }
+}
+
+#hex_1 {
+
+    background: #679096;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+    margin-top: -50px;
+
+    /*
+    position: relative;
+    left: 570px;
+    top: 200px;
+    */
+    position: fixed;
+    bottom: 25px;
+    right: 260px;
+}
+
+#hex_2 {
+
+    background: #518087;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+
+    position: fixed;
+    bottom: 25px;
+    right: 210px;
+} 
+
+#hex_3 {
+    background: #4B757D;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+
+    position: fixed;
+    bottom: 25px;
+    right: 160px;
+}
+
+#hex_4 {
+
+    background: #3B7078;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+
+    position: fixed;
+    bottom: 25px; 
+    right: 110px;
+}
+
+#hex_5 {
+
+    background: #31616A;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+
+    position: fixed;
+    bottom: 25px;
+    right: 60px;
+}
+
+#hex_6 {
+    background: #184E58;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 50px;
+    width: 50px;
+
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+}
+
+.hexagons {
+    max-height: 50px;
+}
+
+#mc_question {
+    font-size: 25px;
+    font-weight: bold;
 }

@@ -19,16 +19,16 @@ export default function ReviewCarousel() {
        
         <Slider {...settings}>
           <div>
-            <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
+            <p className="carouselText">My virtual  group session kept me motivated and built community - Ive lost 20lbs and stronger.</p>
           </div>
           <div>
-            <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
+            <p className="carouselText">I’ve tried personal training before and I can tell that the  full movement and strength programs are very specific to me - the team with  Mycure gave me the exact way to better my lifestyle to getting to my goals.</p>
           </div>
           <div>
-            <p className="fontTest">Fusce feugiat ipsum sed justo molestie aliquet ut eu arcu. Vivamus at finibus nulla. Proin varius leo nec velit commodo, vitae ornare nunc molestie. Praesent nulla quam, convallis non venenatis id, sodales sit amet dui. Cras semper mauris vel congue vestibulum. Mauris varius tellus pellentesque nulla interdum porta. Nunc tincidunt a nulla malesuada dignissim. Ut mattis dolor libero, vel tempus odio malesuada </p>
-            <footer className="blockquote-footer">
-                <i>Quote </i>
-            </footer>
+            <p className="carouselText">The human experience is something I missed with COVID but found it with MyCure.</p>
+          </div>
+          <div>
+            <p className="carouselText">They got the team and the knowledge to start me from scratch and now doing push ups, which was something I never thought I could, but im doing it!</p>
           </div>
         </Slider>
       </div>

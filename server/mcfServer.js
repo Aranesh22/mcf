@@ -9,6 +9,7 @@ const { google } = require("googleapis");
 const nodemailer = require('nodemailer');
 
 let db;
+let clientAnswers = {current_age: null, "What's your biological sex?": null, "feet": '', "cms": '', kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
 
 app.use('/aboutUs',aboutUs);
 app.use('/',index);
@@ -22,9 +23,24 @@ app.get('/whoweare',function(req,res) {
 });
 
 app.post('/question/:quesNum',(req,res) => {
+    //updateDoc(req.body);
     console.log(req.body);
-
     let questionNumber = parseInt(req.params.quesNum);
+
+    if (questionNumber == 3) {
+        clientAnswers['feet'] = req.body.feet;
+        clientAnswers['cms'] = req.body.cms;
+    }else if (questionNumber == 4) {
+        clientAnswers['kgs'] = req.body.kgs;
+        clientAnswers['pounds'] = req.body.pounds;
+    }else if (questionNumber == 5) {
+        clientAnswers['ideal_kgs'] = req.body.ideal_kgs;
+        clientAnswers['ideal_pounds'] = req.body.ideal_pounds;
+    }else {
+        clientAnswers[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
+    }
+    
+    console.log(clientAnswers);
 
     if (questionNumber == 12) {
         if (checkEmail(req.body.email) == 0) {
@@ -32,8 +48,11 @@ app.post('/question/:quesNum',(req,res) => {
                 message: "Email was not entered properly!"
             });
         }
+
         sendEmail(req.body.email);
-        //updateDoc(req.body.answer);
+        updateDoc(clientAnswers);
+
+        clientAnswers = {current_age: null, "What's your biological sex?": null, feet: null, cms: null, kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
         res.redirect('/');
         return;
     }
@@ -120,8 +139,8 @@ function sendEmail(email) {
     });
 }
 
-function updateDoc(ans) {
-    const auth = new google.auth.GoogleAuth({
+async function updateDoc(ans) {
+      const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
         scopes: "https://www.googleapis.com/auth/spreadsheets",
       });
@@ -133,16 +152,32 @@ function updateDoc(ans) {
       const googleSheets = google.sheets({ version: "v4", auth: client });
       const spreadsheetId = "1KLhPxPibw0hN5fKMZxdyEqzf5UsPXV0N7pChMzPIuVg";
     
+      let d = new Date();
+      let months = ["Jan", "Feb", "March", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+      let date = months[d.getMonth()]+ " " + d.getFullYear();
+    
+      if(d.getDate() == 23) //issue: what if no requests are made for that specific date?
+      {
+        console.log("yeehaw!");
+        if ((await googleSheets.spreadsheets.get({spreadsheetId: spreadsheetId})).data.sheets
+            .filter(sheet => sheet.properties.title === date).length === 0) 
+            {
+    
+              await googleSheets.spreadsheets.batchUpdate ({ 
+                spreadsheetId: spreadsheetId, 
+                resource: {requests: [ {addSheet: {properties: {title: date }}}]}});
+    
+            }
+      }
+    
       // Write row(s) to spreadsheet
       await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range: "Sheet1",
+        range: "July 2021",
         valueInputOption: "USER_ENTERED",
         resource: {
-          values: [[ans]],
+          values: [["aug 9 "]],
         },
       });
-    
-     console.log("Google doc successfully submitted!");
 }

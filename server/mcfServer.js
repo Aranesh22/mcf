@@ -156,25 +156,19 @@ async function updateDoc(ans) {
       let months = ["Jan", "Feb", "March", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
       let date = months[d.getMonth()]+ " " + d.getFullYear();
     
-      if(d.getDate() == 23) //issue: what if no requests are made for that specific date?
-      {
-        console.log("yeehaw!");
-        if ((await googleSheets.spreadsheets.get({spreadsheetId: spreadsheetId})).data.sheets
-            .filter(sheet => sheet.properties.title === date).length === 0) 
-            {
-    
-              await googleSheets.spreadsheets.batchUpdate ({ 
-                spreadsheetId: spreadsheetId, 
-                resource: {requests: [ {addSheet: {properties: {title: date }}}]}});
-    
-            }
-      }
+      if ((await googleSheets.spreadsheets.get({spreadsheetId: spreadsheetId})).data.sheets
+        .filter(sheet => sheet.properties.title === date).length === 0) 
+        {
+            await googleSheets.spreadsheets.batchUpdate ({ 
+            spreadsheetId: spreadsheetId, 
+            resource: {requests: [ {addSheet: {properties: {title: date }}}]}});
+        }
     
       // Write row(s) to spreadsheet
       await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range: "July 2021",
+        range: date,
         valueInputOption: "USER_ENTERED",
         resource: {
           values: [["aug 9 "]],

@@ -62,3 +62,55 @@
 }
 
 
+
+
+
+
+.buttonBar{
+   
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    background: rgb(247,252,255);
+/* background: linear-gradient(0deg, rgba(247,252,255,0.01) 0%,  rgba(247, 252, 255, 0.815) 25%); */
+
+}
+
+
+
+/* sticky button  */
+/* Find your plan button */
+.btn-primary.buttonWhiteNav{
+    color: #004c54;
+    /* background-color: #FFFFFF; */
+    background-color: rgba(247, 252, 255, 0.815);
+    border-color: #FFFFFF; 
+    border-radius: 0px;
+
+    /* font-size: 1.2rem; */
+    letter-spacing: 0.15rem;
+}
+
+.btn-primary.buttonWhiteNav:hover{
+    color: #FFFFFF;
+    /* background-color: #004c54; */
+    background-color: rgba(0,76,84,0.815);
+    border-color: #FFFFFF; 
+    border-radius: 0px;
+
+    /* font-size: 1.2rem; */
+    letter-spacing: 0.15rem;
+}
+
+.btn-primary.buttonWhiteNav:focus{
+    color: #FFFFFF;
+    background-color: #004c54;
+    border-color: #FFFFFF; 
+    
+    border-radius: 0px;
+  
+
+    /* font-size: 1.2rem; */
+    letter-spacing: 0.15rem;
+}

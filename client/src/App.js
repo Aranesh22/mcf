@@ -3,35 +3,33 @@ import './App.css';
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-
 import Homepage from './components/PanelsHomepage/Homepage';
 import LinksLanding from './components/LandingPages/LinksLanding';
 import Navbar from './components/Navbar/Navbar';
-// import meetTheTeam from './components/LandingPages/meetTheTeam'
-import MeetTheTeam from './components/LandingPages/meetTheTeam';
+import MeetTheTeam from './components/LandingPages/meetTheTeam/meetTheTeam';
+import ContactUs from './components/LandingPages/Contact/ContactUs';
 
 
 function App() {
   return (
     <div className="App"
     >
-    
       <Router>
- 
-         <Navbar />
-
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/about">
+          <Route path="/aboutUs">
             <MeetTheTeam />
           </Route>
+          <Route path="/contactUs">
+            <ContactUs />
+          </Route>
+          {/* add more routes as pages become available  */}
         </Switch>
 
       </Router>
-     
-  
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Accordion } from 'react-bootstrap'
-// import '../../../css/howitWorks.css'
+import '../../../css/Home.css'
 import FaqQuestion from './FaqQuestion'
 
 export default function Faq() {

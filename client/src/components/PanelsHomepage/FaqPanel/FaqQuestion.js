@@ -1,18 +1,24 @@
 import React from 'react'
 import { Accordion } from 'react-bootstrap';
-// import '../../../css/howitWorks.css'
+
+import ScaleText from "react-scale-text";
 
 export default function FaqQuestion({ekey, question, answer }) { 
-// dynamic variables needed: Question: "string", Answer: "string", 
-
+      const FaqQ = (props) => (
+        <ScaleText minFontSize={16} maxFontSize={28} >
+          <span style={{color: '#004c54', textAlign:"start", fontWeight:'600'}}>{props.question}</span>
+        </ScaleText>
+      );
     return (
       <>      
-        <Accordion.Toggle eventKey={ekey} variant="custom" className="faqBtn" >    
-            <h1 className="mcfH1" style={{color: '#004c54', textAlign:"start", fontWeight:'900', fontSize: '26px' }}>{question}</h1>
+        <Accordion.Toggle eventKey={ekey}  className="faqBtn" >    
+        
+  
+            <h1 className="mcfH1" style={{color: '#004c54', textAlign:"start", fontWeight:'600'}}><FaqQ question={question} /></h1>
         </Accordion.Toggle>
             <Accordion.Collapse eventKey={ekey} >
                 <div id="collapse-text" style={{color: '#004c54'}}>
-                    {answer}
+                    <p className="carouselText">{answer}</p>
                 </div>
            </Accordion.Collapse>
         </>

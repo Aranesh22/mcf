@@ -79,6 +79,14 @@ class App extends React.Component {
                 <label>What is your age?</label><br/>
                 <input type="number" id="age" name="current_age" min="0" max="100"/><br/><br/>
                 <input type="submit" value="Submit"/>
+                <div id="hexagons">
+                    <div id="hex_1" class="chosen_one"></div>
+                    <div id="hex_2"></div>
+                    <div id="hex_3"></div>
+                    <div id="hex_4"></div>
+                    <div id="hex_5"></div>
+                    <div id="hex_6"></div>
+                </div>
               </form>
             </Route>
 
@@ -91,6 +99,14 @@ class App extends React.Component {
                     <option value="other">{answer_1[2]}</option>
                   </select><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2" class="chosen_one"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -100,6 +116,14 @@ class App extends React.Component {
                   <input type="number" id="height_ft" name="feet" min="0" max="10" placeholder="feet"/>
                   <input type="number" id="height_ft" name="cms" min="0" max="400" placeholder="cms"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3" class="chosen_one"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -109,6 +133,14 @@ class App extends React.Component {
                   <input type="number" id="weight_kg" name="kgs" min="0" max="300" placeholder="kgs"/>
                   <input type="number" id="weight_pds" name="pounds" min="0" max="500" placeholder="pounds"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4" class="chosen_one"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -118,12 +150,20 @@ class App extends React.Component {
                   <input type="number" id="weight_kg_ideal" name="ideal_kgs" min="0" max="300" placeholder="kgs"/>
                   <input type="number" id="weight_pds_ideal" name="ideal_pounds" min="0" max="500" placeholder="pounds"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5" class="chosen_one"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_6">
                 <form className='form-field' action='/question/6' method='POST'>
-                  <p>{question_2.question}</p>
+                  <p id="mc_question">{question_2.question}</p>
                   <label className="container">
                       <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/>
                       <label for='goal_1'>{answer_2[0]}</label>
@@ -149,12 +189,21 @@ class App extends React.Component {
                   </label>
 
                   <input type="submit" value="Submit"/>
+
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6" class="chosen_one"></div>
+                  </div>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_7">
                 <form action='/question/7' method='POST'>
-                  <p>{question_3.question}</p>
+                  <p id="mc_question">{question_3.question}</p>
                   <label className="container">
                       <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/>
                       <label for='time_1'>{answer_3[0]}</label>
@@ -174,6 +223,15 @@ class App extends React.Component {
                   </label>
 
                   <input type="submit" value="Submit"/>
+
+                  <div class="hexagons">
+                      <div id="hex_1" class="chosen_one"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -182,12 +240,20 @@ class App extends React.Component {
                   <label>What is your activity level?</label><br/>
                   <input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2" class="chosen_one"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_9">
                 <form action='/question/9' method='POST'>
-                  <p>{question_4.question}</p>
+                  <p id="mc_question">{question_4.question}</p>
 
                   <label className="container">
                       <input type="radio" id='diet_1' name='What best describes your diet?' value='No restriction'/>
@@ -220,6 +286,15 @@ class App extends React.Component {
                   </label>
                   
                   <input type="submit" value="Submit"/>
+
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3" class="chosen_one"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -227,6 +302,14 @@ class App extends React.Component {
                 <form action='/question/10' method='POST'>
                   <p>Do as many squats as you can for 30 seconds. Press start to begin!"</p>
                   <input type="submit" value="Start"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4" class="chosen_one"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -237,6 +320,14 @@ class App extends React.Component {
                   <label>Enter the amount of squats.</label><br/>
                   <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5" class="chosen_one"></div>
+                      <div id="hex_6"></div>
+                  </div>
                 </form>
               </Route>
 
@@ -245,6 +336,14 @@ class App extends React.Component {
                   <label for="email">Please enter your email: </label><br/>
                   <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                   <input type="submit" value="Submit"/>
+                  <div class="hexagons">
+                      <div id="hex_1"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                      <div id="hex_4"></div>
+                      <div id="hex_5"></div>
+                      <div id="hex_6" class="chosen_one"></div>
+                  </div>
                 </form>
               </Route>
           </Switch>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import '../../css/sticky.css'
+import '../../css/main.css'
 
 export default function StickyButton() {
     return (

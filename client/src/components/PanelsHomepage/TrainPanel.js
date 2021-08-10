@@ -4,7 +4,7 @@ import trainLogo from '../../assets/train.png'
 import strongerLogo from '../../assets/stronger.png'
 import {Button} from 'react-bootstrap'
 import StickyButton from '../Navbar/StickyButton';
-import '../../css/Landing.css'
+// import '../../css/Landing.css'
 export default function TrainPanel() {
     const targetRef = useRef(null);
     const isVisible = useElementOnScreen({

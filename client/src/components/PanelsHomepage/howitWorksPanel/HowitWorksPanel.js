@@ -27,7 +27,7 @@ const renderStep = (step, index) => {
   }
 export default function howitWorksPanel() {
     return (
-        <div>
+        <div className="mb-5 pb-5">
             {stepInfo.map(renderStep)}
         </div>
     )

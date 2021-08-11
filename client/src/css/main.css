@@ -87,7 +87,7 @@
     background-color: rgba(247, 252, 255, 0.815);
     border-color: #FFFFFF; 
     border-radius: 0px;
-
+    box-shadow: none;
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
 }
@@ -98,7 +98,7 @@
     background-color: rgba(0,76,84,0.815);
     border-color: #FFFFFF; 
     border-radius: 0px;
-
+    box-shadow: none;
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
 }
@@ -109,7 +109,7 @@
     border-color: #FFFFFF; 
     
     border-radius: 0px;
-  
+    box-shadow: none;
 
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;

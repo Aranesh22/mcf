@@ -36,9 +36,26 @@ label.form-label{
 .contactFormInputs{
     background: #E8F7F2 !important;
     border: none !important;
+    box-shadow: none;
+}
+
+.contactFormInputs:active{
+    box-shadow: none;
 }
 /* 
 .form-control { 
 
     background: red;
 } */
+
+input.contactFormInputs.form-control{
+    box-shadow: none;
+}
+
+textarea.contactFormInputs.form-control{
+    box-shadow: none;
+}
+
+a.linkTo {
+    text-decoration: none;
+}

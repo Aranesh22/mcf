@@ -2,11 +2,12 @@
 
 .App {
   text-align: center;
+  font-family: 'Messina Sans', sans-serif;
 }
 
 .body{
     background-color: #F7FCFF !important;
-    
+    font-family: 'Messina Sans', sans-serif;
     
 }
 

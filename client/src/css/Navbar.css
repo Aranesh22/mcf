@@ -4,7 +4,10 @@
     background-color: transparent;
     height: 120px;
     /* font-size: 1.2rem;  */
+    letter-spacing: 0.15rem;
     z-index: 10;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .navbar-logo {
@@ -13,6 +16,7 @@
     margin-left: 20px;
     cursor: pointer;
     visibility: hidden;
+    letter-spacing: 0.15rem;
 }
 
 .fa-react {
@@ -69,7 +73,7 @@
     top:-40px;
     /*padding:0px 75px;*/
 }
-
+/* 
 @media screen and (max-width: 960px) {
     .NavbarItems {
         position: relative;
@@ -122,13 +126,13 @@
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        /* font-size: 1.8rem; */
+ 
         cursor: pointer;
     }
 
     .fa-times {
         color: white;
-        /* font-size: 2rem; */
+      
     }
 
     .nav-links-mobile{
@@ -141,16 +145,18 @@
         background: #004c54;
         text-decoration: none;
         color: white;
-        /* font-size: 1.5rem; */
+      
     }
 
     .nav-links-mobile:hover{
         background: white;
         color: #6568f4;
         transition: 250ms;
-    }
+    }*/
 
     /* Button{
         display: none;
     } */
-}
+
+
+    /* media tag for 650px to morph the navbar into something else that fits */

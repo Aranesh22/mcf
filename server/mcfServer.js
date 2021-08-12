@@ -8,6 +8,9 @@ const questions = require('./questions.json');
 const { google } = require("googleapis");
 const nodemailer = require('nodemailer');
 
+const session = require('express-session');
+app.use(session({secret: 'EgiNAjvvFVcbgAz'}));
+
 let db;
 let clientAnswers = {current_age: null, "What's your biological sex?": null, "feet": '', "cms": '', kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
 
@@ -24,23 +27,29 @@ app.get('/whoweare',function(req,res) {
 
 app.post('/question/:quesNum',(req,res) => {
     //updateDoc(req.body);
-    console.log(req.body);
     let questionNumber = parseInt(req.params.quesNum);
 
     if (questionNumber == 3) {
-        clientAnswers['feet'] = req.body.feet;
-        clientAnswers['cms'] = req.body.cms;
+        req.session.feet = req.body.feet;
+        req.session.cms = req.body.cms;
+        // clientAnswers['feet'] = req.body.feet;
+        // clientAnswers['cms'] = req.body.cms;
     }else if (questionNumber == 4) {
-        clientAnswers['kgs'] = req.body.kgs;
-        clientAnswers['pounds'] = req.body.pounds;
+        req.session.kgs = req.body.kgs;
+        req.session.pounds = req.body.pounds;
+        // clientAnswers['kgs'] = req.body.kgs;
+        // clientAnswers['pounds'] = req.body.pounds;
     }else if (questionNumber == 5) {
-        clientAnswers['ideal_kgs'] = req.body.ideal_kgs;
-        clientAnswers['ideal_pounds'] = req.body.ideal_pounds;
+        req.session.ideal_kgs = req.body.ideal_kgs;
+        req.session.ideal_pounds = req.body.ideal_pounds;
+        // clientAnswers['ideal_kgs'] = req.body.ideal_kgs;
+        // clientAnswers['ideal_pounds'] = req.body.ideal_pounds;
     }else {
-        clientAnswers[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
+        req.session[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
+        // clientAnswers[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
     }
     
-    console.log(clientAnswers);
+    //console.log(clientAnswers);
 
     if (questionNumber == 12) {
         if (checkEmail(req.body.email) == 0) {
@@ -49,10 +58,15 @@ app.post('/question/:quesNum',(req,res) => {
             });
         }
 
-        sendEmail(req.body.email);
-        updateDoc(clientAnswers);
+        // console.log("ARRVIED TO Q12");
+        // console.log(req.session);
 
-        clientAnswers = {current_age: null, "What's your biological sex?": null, feet: null, cms: null, kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
+        sendEmail(req.body.email);
+        delete req.session.cookie;
+        updateDoc(req.session);
+        req.session.destroy();
+
+        // clientAnswers = {current_age: null, "What's your biological sex?": null, feet: null, cms: null, kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
         res.redirect('/');
         return;
     }
@@ -140,6 +154,9 @@ function sendEmail(email) {
 }
 
 async function updateDoc(ans) {
+    //   console.log("IN UPDATE DOC");
+    //   console.log(ans);
+
       const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
         scopes: "https://www.googleapis.com/auth/spreadsheets",
@@ -171,7 +188,8 @@ async function updateDoc(ans) {
         range: date,
         valueInputOption: "USER_ENTERED",
         resource: {
-          values: [["aug 9 "]],
+          //values: [["aug 12 "]],
+          values: [Object.values(ans)],
         },
       });
 }

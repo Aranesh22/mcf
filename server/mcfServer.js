@@ -144,8 +144,7 @@ function sendEmail(email) {
 }
 
 async function updateDoc(ans) {
-      console.log("IN UPDATE DOC");
-      console.log(ans);
+    //   console.log(ans);
 
       const auth = new google.auth.GoogleAuth({
         keyFile: "credentials.json",
@@ -178,7 +177,6 @@ async function updateDoc(ans) {
         range: date,
         valueInputOption: "USER_ENTERED",
         resource: {
-          //values: [["aug 12 "]],
           values: [Object.values(ans)],
         },
       });

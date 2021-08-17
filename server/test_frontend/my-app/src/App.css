@@ -1,5 +1,4 @@
 html, body {
-    background-color: whitesmoke;
     color: #184E58;
     text-align: center;
 }
@@ -12,7 +11,7 @@ html, body {
 form {
     display: inline-block;
     max-width: 90vw;
-    margin-top: 5%;
+    margin-top: 150px;
     /*
     margin-top: 5%;
 
@@ -130,24 +129,26 @@ input[type=submit] {
 
 #count {
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-size: 25px;
 }
 
 .hexagon {
-  z-index: -2;
   width: 100px;
   height: 55px;
   position: relative;
-  left: 62px;
-  bottom: 70px;
+  left: 28%;
+  bottom: 50px;
+  z-index: -22;
+  background-color: #184E58;
+  bottom: 65px;
 }
 
 .hexagon, 
 .hexagon:before, 
 .hexagon:after {
-  background: #184E58;;
-  box-shadow: 0 0 10px #184E58; 
+  background: #184E58;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);   
 }
 
 .hexagon:before,
@@ -202,15 +203,14 @@ input[type=submit] {
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     height: 50px;
     width: 50px;
-    margin-top: -50px;
 
     /*
     position: relative;
     left: 570px;
     top: 200px;
     */
-    position: fixed;
-    bottom: 25px;
+    position: absolute;
+    top: 30px;
     right: 260px;
 }
 
@@ -222,8 +222,8 @@ input[type=submit] {
     height: 50px;
     width: 50px;
 
-    position: fixed;
-    bottom: 25px;
+    position: absolute;
+    top: 30px;
     right: 210px;
 } 
 
@@ -234,8 +234,8 @@ input[type=submit] {
     height: 50px;
     width: 50px;
 
-    position: fixed;
-    bottom: 25px;
+    position: absolute;
+    top: 30px;
     right: 160px;
 }
 
@@ -247,8 +247,8 @@ input[type=submit] {
     height: 50px;
     width: 50px;
 
-    position: fixed;
-    bottom: 25px; 
+    position: absolute;
+    top: 30px;
     right: 110px;
 }
 
@@ -260,8 +260,8 @@ input[type=submit] {
     height: 50px;
     width: 50px;
 
-    position: fixed;
-    bottom: 25px;
+    position: absolute;
+    top: 30px;
     right: 60px;
 }
 
@@ -272,8 +272,8 @@ input[type=submit] {
     height: 50px;
     width: 50px;
 
-    position: fixed;
-    bottom: 25px;
+    position: absolute;
+    top: 30px;
     right: 10px;
 }
 

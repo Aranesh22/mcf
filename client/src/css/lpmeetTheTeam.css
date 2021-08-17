@@ -69,22 +69,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
     .topLeft { 
-        width: 440px; 
-        height: 440px;   
+        width: 100%;
+        height: auto;
+        /* width: 440px; 
+        height: 440px;    */
         left: 0px;
         position:unset; 
     }  
     .topRight {  
-        width: 440px; 
-        height: 440px;  
+        /* width: 440px; 
+        height: 440px;   */
+        width: 100%;
+        height: auto;
         left: 0px; 
         position:unset; 
     }
     .bottomLeft{ 
-        width: 440px; 
-        height: 440px;  
+        /* width: 440px; 
+        height: 440px;   */
+        width: 100%;
+        height: auto;
         left: 0px; 
         bottom: 0px; 
         position: unset; 

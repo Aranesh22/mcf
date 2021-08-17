@@ -90,6 +90,7 @@
     box-shadow: none;
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
+    height: max-content;
 }
 
 .btn-primary.buttonWhiteNav:hover{
@@ -110,7 +111,7 @@
     
     border-radius: 0px;
     box-shadow: none;
-
+    
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
 }

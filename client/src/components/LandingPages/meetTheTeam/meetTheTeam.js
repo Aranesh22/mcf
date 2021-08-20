@@ -8,12 +8,11 @@ import jG from '../../../assets/mTimages/updated/JG_HP.svg'
 import '../../../css/lpmeetTheTeam.css'
 import TeamMember from './TeamMember'
 
-
 export default function MeetTheTeam() {
     const memberInfo = [
-        {img: rS, imgClass: "topLeft", text: "tester01"},
-        {img: jG, imgClass: "mid", text: "tester02"},
-        {img: dPP, imgClass: "topRight", text: "tester03"}
+        {img: rS, imgClass: "topLeft", text: "Rohit began his career working as a strength and conditioning coach and personal trainer. He used exercise to help athletes and clients lose weight, get stronger, and move better. This approach to physical training being the foundation of health continues in his practice today as all his patients leave stronger than they came! He is certified with the Functional Range Systems as a manual therapist and mobility specialist. This system is currently used by professional organizations such as Chicago Cubs, Portland Trailblazers, Houston Rockets, and many more."},
+        {img: jG, imgClass: "mid", text: "James has always used nutrition, movement and strength improvements to live a happier life.  Combining his Neuroscience background with strength training has been a rewarding journey that has led to him personally coaching over 200 individuals in 13+ years in the health and strength improvement world. This experience has led to the development of MyCure FItness’s Propreitary approach to lifelong fitness and cognitive improvements. Mycure Fitness "},
+        {img: dPP, imgClass: "topRight", text: "After finishing his neuroscience degree at the U of T, Dr Paul finished his medical school at University of Sydney in Australia and has practiced within the orthopaedic fields there as well as in the Family Physician role. He currently is a practicing Physician in Canada. Specializing in multiple medical health fields, Dr. Paul is an expert in preventative and optimization medicine where he practices in his philosophy: strength is ultimate health."}
     ]
     const renderMember = (member, index) => {
         return (

@@ -73,6 +73,8 @@
     z-index: 2;
     width: 100%;
     background: rgb(247,252,255);
+    display: flex;
+    justify-content: space-between;
 /* background: linear-gradient(0deg, rgba(247,252,255,0.01) 0%,  rgba(247, 252, 255, 0.815) 25%); */
 
 }
@@ -95,7 +97,7 @@
 
 .btn-primary.buttonWhiteNav:hover{
     color: #FFFFFF;
-    /* background-color: #004c54; */
+    /* background-color: #2cdc83; */
     background-color: rgba(0,76,84,0.815);
     border-color: #FFFFFF; 
     border-radius: 0px;

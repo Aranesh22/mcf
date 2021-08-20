@@ -15,7 +15,7 @@ export default function MeetTheTeamModal (props) {
             centered>
 
       <Modal.Body>
-        <p style={{color: "blue"}}>{props.text}</p>
+        <p style={{color: "#004c54"}}>{props.text}</p>
       </Modal.Body>
       </Modal>
     

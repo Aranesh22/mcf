@@ -10,11 +10,12 @@ body {
     margin-top: 25%;
 }
 .greenBehind{ 
-    background-color: #35B686;
+    /* background-color: #35B686; */
+    background-color: #2cdc83;
     height: 100%;
     width: 100%;
     position: absolute;
-    bottom: 25%;
+    bottom: 30%;
     z-index: -1;
 }
 
@@ -163,4 +164,12 @@ p.carouselText{
 
 .scaletext-wrapper{
     overflow: visible !important;
+}
+
+
+/* Why you succeed  */
+
+.wYSMobile{
+    width: 90%;
+    border-top: solid white;
 }

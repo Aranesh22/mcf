@@ -18,7 +18,7 @@ label.form-label{
     width: 50%;
 }
 
-@media(max-width: 768px){ 
+@media(max-width: 900px){ 
     .contactForm{
        flex-direction: column;
     }

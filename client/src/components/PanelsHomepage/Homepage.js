@@ -8,8 +8,9 @@ import TrainPanel from './TrainPanel';
 import ReviewCarousel from './ReviewCarousel';
 import HowitWorksPanel from './howitWorksPanel/HowitWorksPanel';
 import Faqq from './FaqPanel/Faq';
-import AltPanel from './AltPanel';
-import HexPanelText from './HexPanelText';
+import AltPanel from './whyYouSuceed/AltPanel';
+import HexPanelText from './whyYouSuceed/HexPanelText';
+import WyS from './whyYouSuceed/WyS';
 
 
 export default function Homepage() {
@@ -29,10 +30,10 @@ export default function Homepage() {
             <h1 className="mcfH1"style={{ padding: "2%", }}>WHY YOU SUCCEED</h1>
          </div>
          {/* <AltPanel /> */}
-         <HexPanelText />
+         <WyS />
          </div>
          <div className="flexAlignStart d-flex" style={{paddingLeft: '2%', backgroundColor: '#004c54'}}>
-            <h1 className="mcfH1"style={{ padding: "2%", }}>HOW IT WORKS</h1>
+            <h1 className="mcfH1"style={{ padding: "2%", textAlign: 'start' }}>The 4 step Mycure Fitness success </h1>
          </div>
         <HowitWorksPanel />
         <div className="flexAlignStart d-flex" style={{paddingLeft: '2%', backgroundColor: '#004c54'}}>

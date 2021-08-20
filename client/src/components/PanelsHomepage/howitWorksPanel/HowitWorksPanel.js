@@ -9,10 +9,10 @@ import no4 from '../../../assets/hWimgs/no4.svg'
 import hWBg from '../../../assets/hWimgs/hWBg.png'
 
 const stepInfo = [
-    {bgImg: hWBg, numImg: no1, hText: "Assess", text: 'Start here, Know your strength Sit strong and a strength and optimization expert will give you a call to discuss your next move, after a comprehensive intake that will give the clearest picture of where you are in your journey and the vision to carry it to success'},
-    {bgImg: hWBg, numImg: no2, hText: "Execute", text: 'Programming that reflects your strength, health, nutrition, and cognitive behavioural enhancement is rolled out This is according to the intake'},
-    {bgImg: hWBg, numImg: no3, hText: "Reassess your potential", text: 'Feedback is a paramount here'},
-    {bgImg: hWBg, numImg: no4, hText: "Automate your strength", text: 'With the tools in place to ensure a habit shift and a physical empowerment, its you back in the driver seat, with the tools your need to succeed, don’t worry, we are always here to ensure you stay the course and level up as you an athlete for life'}
+    {bgImg: hWBg, numImg: no1, hText: "Plan your Strength", text: 'Start here, Know your strength Sit strong and a strength and optimization expert will give you a call to discuss your next move, after a comprehensive intake that will give the clearest picture of where you are in your journey and the vision to carry it to success'},
+    {bgImg: hWBg, numImg: no2, hText: "Execute your Vision", text: 'Programming that reflects your strength, health, nutrition, and cognitive behavioural enhancement is rolled out **LINE BREAK HERE**   Wearable technology is something we strongly believe in - knowledge is power and we want you to understand and optimize your own body like nobody can.'},
+    {bgImg: hWBg, numImg: no3, hText: "Reassess your potential", text: 'Structured within your training program are timelines to meet with our experts to discuss your progress and optimize your levels of improvement.'},
+    {bgImg: hWBg, numImg: no4, hText: "Automate your Lifestyle", text: 'With the tools in place to ensure physical empowerment and life long motivation, its you back in the driver seat, with the knowledge needed to succeed, don’t worry, we are always here to ensure you stay the course and level up as an athlete for life.'}
 ]
 
 const renderStep = (step, index) => {

@@ -8,6 +8,7 @@ import LinksLanding from './components/LandingPages/LinksLanding';
 import Navbar from './components/Navbar/Navbar';
 import MeetTheTeam from './components/LandingPages/meetTheTeam/meetTheTeam';
 import ContactUs from './components/LandingPages/Contact/ContactUs';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -15,16 +16,20 @@ function App() {
     <div className="App"
     >
       <Router>
+        {/* media query here? between navbar and overlay  */}
         <Navbar />
         <Switch>
           <Route exact path="/">
             <Homepage />
+            <Footer/>
           </Route>
           <Route path="/aboutUs">
             <MeetTheTeam />
+            <Footer/>
           </Route>
           <Route path="/contactUs">
             <ContactUs />
+            <Footer/>
           </Route>
           {/* add more routes as pages become available  */}
         </Switch>

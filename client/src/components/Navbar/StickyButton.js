@@ -1,12 +1,17 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import '../../css/main.css'
+import NavMobile from './NavMobile'
 
 export default function StickyButton() {
     return (
         <div>
               <div className="buttonBar">
-         <div className="flexAlignEnd d-flex" style={{paddingRight: '4%'}}>
+                
+        <div className="flexAlignStart d-flex" >
+                <NavMobile />
+         </div>
+         <div className="flexAlignEnd d-flex" style={{paddingRight: '4%', paddingTop: '1.5%'}}>
                     <Button className="buttonWhiteNav">Know Your Strength</Button> </div> 
          </div>
         </div>

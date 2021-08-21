@@ -61,10 +61,6 @@ class App extends React.Component {
   }
   */
 
-  clickHandler() {
-      console.log('Clicked the button')
-  }
-
   render() {
     const { question_1 } = this.state;
     const { answer_1 } = this.state;

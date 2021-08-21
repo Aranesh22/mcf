@@ -7,6 +7,7 @@ const coaches = require('./coaches.json');
 const questions = require('./questions.json');
 const { google } = require("googleapis");
 const nodemailer = require('nodemailer');
+const fs = require('fs');
 
 const session = require('express-session');
 app.use(session({secret: 'EgiNAjvvFVcbgAz'}));
@@ -28,6 +29,8 @@ app.get('/whoweare',function(req,res) {
 app.post('/question/:quesNum',(req,res) => {
     //updateDoc(req.body);
     let questionNumber = parseInt(req.params.quesNum);
+
+    console.log(req.body);
 
     if (questionNumber == 3) {
         req.session.feet = req.body.feet;
@@ -51,7 +54,7 @@ app.post('/question/:quesNum',(req,res) => {
 
         console.log(req.session);
 
-        //sendEmail(req.body.email);
+        sendEmail(req.body.email);
         delete req.session.cookie;
         delete req.session.undefined;
         updateDoc(req.session);
@@ -131,7 +134,11 @@ function sendEmail(email) {
         from: 'fitnessautomail@gmail.com',
         to: String(email),
         subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
+        text: 'That was easy!',
+        attachments: [{
+            filename: 'poster.jpg',
+            content: fs.createReadStream('./poster.jpg')
+        }]
     };
       
     transporter.sendMail(mailOptions, function(error, info){

@@ -8,6 +8,10 @@ html, body {
     width: 60%;
 }
 
+input[type=number], #bio_sex, input[type=text] {
+    margin-top: 20px;
+}
+
 form {
     display: inline-block;
     max-width: 90vw;
@@ -40,11 +44,10 @@ input[type=number], option, select, input[type=text] {
     box-sizing: border-box;
 }
 
-input[type=submit] {
-
+.back_button {
     background-color: #184E58;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     margin: 4px 2px;
     padding: 12px 30px;
     cursor: pointer;
@@ -52,24 +55,41 @@ input[type=submit] {
     border: solid;
     border-radius: 15px;
     border-color: grey;
-    
 
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
 
+input[type=submit] {
+    background-color: #184E58;
+    color: white;
+    font-size: 15px;
+    margin: 4px 2px;
+    padding: 12px 30px;
+    cursor: pointer;
+
+    border: solid;
+    border-radius: 15px;
+    border-color: grey;
+
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* Hide the browser's default radio button */
@@ -284,4 +304,74 @@ input[type=submit] {
 #mc_question {
     font-size: 25px;
     font-weight: bold;
+}
+
+#question3 > input[type=number], #question4 > input[type=number], #question5 > input[type=number] {
+    opacity: 0.5;
+}
+
+#question3 > input[type=number]:hover, #question4 > input[type=number]:hover, #question5 > input[type=number]:hover {
+    opacity: 1;
+}
+
+#btnControl {
+    display: none;
+}
+
+#ft_cms, #ft_inches {
+    display: none;
+}
+
+#btnControl:checked + label > input {
+    display: inline-block;
+}
+
+#btnControl_2 {
+    display: none;
+}
+
+#ft_cms_2 {
+    display: none;
+}
+
+#btnControl_2:checked + label > input {
+    display: inline-block;
+}
+
+#feet_text, #kgs_text, #ideal_kgs_text {
+    margin-right: 50px;
+}
+
+.cms, #pounds, #ideal_pounds {
+    margin-bottom: 25px;
+}
+
+#btnControl_3, #btnControl_4 {
+    display: none;
+}
+
+#btnControl_3:checked + label > input, #btnControl_4:checked + label > input {
+    display: inline-block;
+}
+
+#kgs, #pounds {
+    display: none;
+}
+
+#btnControl_5, #btnControl_6 {
+    display: none;
+}
+
+#btnControl_5:checked + label > input, #btnControl_6:checked + label > input {
+    display: inline-block;
+    width: 35%;
+}
+
+#ideal_kgs, #ideal_pounds {
+    display: none;
+}
+
+#cms_text, #feet_text, #kgs_text, #pounds_text, #ideal_kgs_text, #ideal_pounds_text {
+    font-weight: bold;
+    font-size: 20px;
 }

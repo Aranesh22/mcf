@@ -1,6 +1,7 @@
 import './App.css';
-import React from "react";
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -51,12 +52,17 @@ class App extends React.Component {
   componentWillUnmount() {
     clearInterval(this.myInterval);
   }
-
+  /*
   clicked() {
     const { count } = this.state;
     return (
         <h1>Current count: {count}</h1>
     )
+  }
+  */
+
+  clickHandler() {
+      console.log('Clicked the button')
   }
 
   render() {
@@ -87,6 +93,11 @@ class App extends React.Component {
                     <div id="hex_5"></div>
                     <div id="hex_6"></div>
                 </div>
+                <Link to="/">
+                    <button type="button" class="back_button">
+                        ᐊ Back
+                    </button>
+                </Link>
               </form>
             </Route>
 
@@ -107,15 +118,17 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+                  <Link to="/quiz/question_1">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
-
+              
               <Route exact path="/quiz/question_3">
-                <form action='/question/3' method='POST'>
-                  <label>What is your height in feet and centimeters?</label><br/>
-                  <input type="number" id="height_ft" name="feet" min="0" max="10" placeholder="feet"/>
-                  <input type="number" id="height_ft" name="cms" min="0" max="400" placeholder="cms"/><br/><br/>
-                  <input type="submit" value="Submit"/>
+                <form id='question3' action='/question/3' method='POST'>
+                  <label>What is your height in feet or centimeters?</label><br/>
                   <div class="hexagons">
                       <div id="hex_1"></div>
                       <div id="hex_2"></div>
@@ -124,15 +137,35 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+                  <br></br>
+                  <label for="btnControl" id="feet_text" className="ft_txt"> FEET </label>
+                  <input type="checkbox" id="btnControl"/>
+                  <label className="btn" for="btnControl_2" id="cms_text"> CMS
+                      <br></br>
+                      <input type="number" id="ft_cms" name="feet" min="0" max="10" placeholder="feet"/>
+                      <input type="number" id="ft_inches" name="feet_inches" min="0" max="10" placeholder="inches"/>
+                  </label>
+                  <br></br>
+                  <input type="checkbox" id="btnControl_2"/>
+                  <label className="btn" for="btnControl_2" id="disappear">
+                      <input type="number" id="ft_cms" className="cms" name="cms" min="0" max="10" placeholder="cms"/>
+                  </label>
+                  <br></br>
+
+                  <input type="submit" value="Submit"/>
+                  <br></br>
+                  
+                  <Link to="/quiz/question_2">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_4">
-                <form action='/question/4' method='POST'>
-                  <label>What is your CURRENT weight in kilograms and pounds?</label><br/>
-                  <input type="number" id="weight_kg" name="kgs" min="0" max="300" placeholder="kgs"/>
-                  <input type="number" id="weight_pds" name="pounds" min="0" max="500" placeholder="pounds"/><br/><br/>
-                  <input type="submit" value="Submit"/>
+                <form id='question4' action='/question/4' method='POST'>
+                  <label>What is your CURRENT weight or kilograms and pounds?</label><br/>
                   <div class="hexagons">
                       <div id="hex_1"></div>
                       <div id="hex_2"></div>
@@ -141,15 +174,35 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+                  
+                  <br></br>
+                  <label class="btn" id="kgs_text" for="btnControl_3"> KGS </label>
+                  <input type="checkbox" id="btnControl_3"/>
+                  <label class="btn" for="btnControl_4" id="pounds_text"> POUNDS
+                      <br></br>
+                      <input type="number" id="kgs" name="kgs" min="0" max="10" placeholder="kgs"/>
+                      <br></br>
+                  </label>
+                  <input type="checkbox" id="btnControl_4"/>
+                  <label class="btn" for="btnControl_4">
+                      <input type="number" id="pounds" name="pounds" min="0" max="10" placeholder="pounds"/>
+                  </label>
+                  <br></br>
+                  <input type="submit" value="Submit"/>
+                  <br></br>
+
+                  <Link to="/quiz/question_3">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_5">
-                <form action='/question/5' method='POST'>
-                  <label>What is your IDEAL weight in kilograms and pounds?</label><br/>
-                  <input type="number" id="weight_kg_ideal" name="ideal_kgs" min="0" max="300" placeholder="kgs"/>
-                  <input type="number" id="weight_pds_ideal" name="ideal_pounds" min="0" max="500" placeholder="pounds"/><br/><br/>
-                  <input type="submit" value="Submit"/>
+                <form id='question5' action='/question/5' method='POST'>
+                  <label>What is your IDEAL weight in kilograms or pounds?</label><br/>
+                  
                   <div class="hexagons">
                       <div id="hex_1"></div>
                       <div id="hex_2"></div>
@@ -158,6 +211,28 @@ class App extends React.Component {
                       <div id="hex_5" class="chosen_one"></div>
                       <div id="hex_6"></div>
                   </div>
+
+                  <br></br>
+                  <label class="btn" id="ideal_kgs_text" for="btnControl_5"> IDEAL KGS </label>
+                  <input type="checkbox" id="btnControl_5"/>
+                  <label class="btn" for="btnControl_6" id="ideal_pounds_text"> IDEAL POUNDS
+                      <br></br>
+                      <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="10" placeholder="Ideal kgs"/>
+                      <br></br>
+                  </label>
+                  <input type="checkbox" id="btnControl_6"/>
+                  <label class="btn" for="btnControl_6">
+                      <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal pounds"/>
+                  </label>
+                  <br></br>
+                  <input type="submit" value="Submit"/>
+                  <br></br>
+
+                  <Link to="/quiz/question_4">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -198,6 +273,12 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6" class="chosen_one"></div>
                   </div>
+
+                  <Link to="/quiz/question_5">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -232,12 +313,18 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+
+                  <Link to="/quiz/question_6">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_8">
                 <form action='/question/8' method='POST'>
-                  <label>What is your activity level?</label><br/>
+                  <label>What is your activity level? (From 0-10)</label><br/>
                   <input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>
                   <input type="submit" value="Submit"/>
                   <div class="hexagons">
@@ -248,6 +335,11 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+                  <Link to="/quiz/question_7">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -295,6 +387,12 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+
+                  <Link to="/quiz/question_8">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -310,6 +408,12 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6"></div>
                   </div>
+
+                  <Link to="/quiz/question_9">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -328,6 +432,12 @@ class App extends React.Component {
                       <div id="hex_5" class="chosen_one"></div>
                       <div id="hex_6"></div>
                   </div>
+
+                  <Link to="/quiz/question_10">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
 
@@ -344,6 +454,11 @@ class App extends React.Component {
                       <div id="hex_5"></div>
                       <div id="hex_6" class="chosen_one"></div>
                   </div>
+                  <Link to="/quiz/question_11">
+                      <button type="button" class="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
                 </form>
               </Route>
           </Switch>

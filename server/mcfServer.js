@@ -13,7 +13,6 @@ const session = require('express-session');
 app.use(session({secret: 'EgiNAjvvFVcbgAz'}));
 
 let db;
-let clientAnswers = {current_age: null, "What's your biological sex?": null, "feet": '', "cms": '', kgs: null, pounds: null, ideal_kgs: null, ideal_pounds: null, "Making time for exercise + workout is...": null, activity: null, "What best describes your diet?": null, squat: null, email: null};
 
 app.use('/aboutUs',aboutUs);
 app.use('/',index);

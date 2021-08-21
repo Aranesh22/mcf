@@ -12,8 +12,14 @@
     "react-bootstrap": "^1.6.0",
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.32.0",
+    "react-media": "^1.10.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scale-text": "^1.2.2",
     "react-scripts": "4.0.3",
+    "react-slick": "^0.28.1",
     "react-vertical-timeline-component": "^3.3.3",
+    "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

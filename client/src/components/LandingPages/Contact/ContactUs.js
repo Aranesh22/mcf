@@ -11,7 +11,7 @@ export default function ContactUs() {
             <div className="flexAlignStart d-flex px-4 mb-5 mt-5">
                 <h1 className="mcfH1"style={{color: '#004c54'}}>CONTACT US</h1>
             </div>
-            <Form className="contactForm  d-flex flex-direction-row"> 
+            <Form action="/sendEmail" method="POST" className="contactForm  d-flex flex-direction-row"> 
                 <div className="contactForm_col-1">
                     <Form.Group className="mb-5 px-4" controlId="formName">
                         <Form.Label className="flexAlignStart d-flex">Name</Form.Label>

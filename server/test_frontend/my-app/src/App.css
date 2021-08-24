@@ -1,18 +1,18 @@
-html, body {
+.questionnaire html, body.questionnaire {
     color: #184E58;
     text-align: center;
 }
 
-#hexagons {
+.questionnaire #hexagons {
     margin: auto;
     width: 60%;
 }
 
-input[type=number], #bio_sex, input[type=text] {
+.questionnaire input[type=number], .questionnaire #bio_sex, .questionnaire input[type=text] {
     margin-top: 20px;
 }
 
-form {
+.questionnaire form {
     display: inline-block;
     max-width: 90vw;
     margin-top: 150px;
@@ -33,7 +33,7 @@ form {
     */
 }
 
-input[type=number], option, select, input[type=text] {
+.questionnaire input[type=number], .questionnaire option, .questionnaire select, .questionnaire input[type=text] {
     max-width: 99vw;
     padding: 12px 20px;
     margin-left: 5%;
@@ -44,7 +44,7 @@ input[type=number], option, select, input[type=text] {
     box-sizing: border-box;
 }
 
-.back_button {
+.questionnaire .back_button {
     background-color: #184E58;
     color: white;
     font-size: 15px;
@@ -61,7 +61,7 @@ input[type=number], option, select, input[type=text] {
     vertical-align: middle;
 }
 
-input[type=submit] {
+.questionnaire input[type=submit] {
     background-color: #184E58;
     color: white;
     font-size: 15px;
@@ -79,7 +79,7 @@ input[type=submit] {
     margin-bottom: 20px;
 }
 
-.container {
+.questionnaire .container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -93,14 +93,14 @@ input[type=submit] {
 }
 
 /* Hide the browser's default radio button */
-.container input {
+.questionnaire .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
 /* Create a custom radio button */
-.checkmark {
+.questionnaire .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -111,29 +111,29 @@ input[type=submit] {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.questionnaire .container:hover input ~ .questionnaire .checkmark {
   background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.questionnaire .container input:checked ~ .questionnaire .checkmark {
   background-color: #2196F3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
+.questionnaire .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
+.questionnaire .container input:checked ~ .questionnaire .checkmark:after {
   display: block;
 }
 
 /* Style the indicator (dot/circle) */
-.container .checkmark:after {
+.questionnaire .container .questionnaire .checkmark:after {
  	top: 9px;
 	left: 9px;
 	width: 8px;
@@ -142,18 +142,18 @@ input[type=submit] {
 	background: white;
 }
 
-#current_count {
+.questionnaire #current_count {
     text-align: center;
     color: #184E58;
 }
 
-#count {
+.questionnaire #count {
     text-align: center;
     color: whitesmoke;
     font-size: 25px;
 }
 
-.hexagon {
+.questionnaire .hexagon {
   width: 100px;
   height: 55px;
   position: relative;
@@ -164,15 +164,15 @@ input[type=submit] {
   bottom: 65px;
 }
 
-.hexagon, 
-.hexagon:before, 
-.hexagon:after {
+.questionnaire .hexagon, 
+.questionnaire .hexagon:before, 
+.questionnaire .hexagon:after {
   background: #184E58;
   box-shadow: 0 0 10px rgba(0,0,0,0.8);   
 }
 
-.hexagon:before,
-.hexagon:after {
+.questionnaire .hexagon:before,
+.questionnaire .hexagon:after {
   content: "";
   position: absolute;
   left: 22px;
@@ -181,15 +181,15 @@ input[type=submit] {
   transform: rotate(145deg) skew(22.5deg);
 }
 
-.hexagon:before {
+.questionnaire .hexagon:before {
   top: -29px;
 }
 
-.hexagon:after {
+.questionnaire .hexagon:after {
   top: 27px;
 }
 
-.hexagon span {
+.questionnaire .hexagon span {
   position: absolute;
   top: 0;
   left: 0;
@@ -199,7 +199,7 @@ input[type=submit] {
   z-index: 1;
 }
 
-.chosen_one {
+.questionnaire .chosen_one {
     animation: action 0.3s linear alternate;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -216,7 +216,7 @@ input[type=submit] {
     }
 }
 
-#hex_1 {
+.questionnaire #hex_1 {
 
     background: #679096;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -234,7 +234,7 @@ input[type=submit] {
     right: 260px;
 }
 
-#hex_2 {
+.questionnaire #hex_2 {
 
     background: #518087;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -247,7 +247,7 @@ input[type=submit] {
     right: 210px;
 } 
 
-#hex_3 {
+.questionnaire #hex_3 {
     background: #4B757D;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -259,7 +259,7 @@ input[type=submit] {
     right: 160px;
 }
 
-#hex_4 {
+.questionnaire #hex_4 {
 
     background: #3B7078;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -272,7 +272,7 @@ input[type=submit] {
     right: 110px;
 }
 
-#hex_5 {
+.questionnaire #hex_5 {
 
     background: #31616A;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -285,7 +285,7 @@ input[type=submit] {
     right: 60px;
 }
 
-#hex_6 {
+.questionnaire #hex_6 {
     background: #184E58;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
@@ -297,81 +297,81 @@ input[type=submit] {
     right: 10px;
 }
 
-.hexagons {
+.questionnaire .hexagons {
     max-height: 50px;
 }
 
-#mc_question {
+.questionnaire #mc_question {
     font-size: 25px;
     font-weight: bold;
 }
 
-#question3 > input[type=number], #question4 > input[type=number], #question5 > input[type=number] {
+.questionnaire #question3 > input[type=number], .questionnaire #question4 > input[type=number], .questionnaire #question5 > input[type=number] {
     opacity: 0.5;
 }
 
-#question3 > input[type=number]:hover, #question4 > input[type=number]:hover, #question5 > input[type=number]:hover {
+.questionnaire #question3 > .questionnaire input[type=number]:hover, .questionnaire #question4 > input[type=number]:hover, .questionnaire #question5 > input[type=number]:hover {
     opacity: 1;
 }
 
-#btnControl {
+.questionnaire #btnControl {
     display: none;
 }
 
-#ft_cms, #ft_inches {
+.questionnaire #ft_cms, .questionnaire #ft_inches {
     display: none;
 }
 
-#btnControl:checked + label > input {
+.questionnaire #btnControl:checked + label > input {
     display: inline-block;
 }
 
-#btnControl_2 {
+.questionnaire #btnControl_2 {
     display: none;
 }
 
-#ft_cms_2 {
+.questionnaire #ft_cms_2 {
     display: none;
 }
 
-#btnControl_2:checked + label > input {
+.questionnaire #btnControl_2:checked + label > input {
     display: inline-block;
 }
 
-#feet_text, #kgs_text, #ideal_kgs_text {
+.questionnaire #feet_text, .questionnaire #kgs_text, .questionnaire #ideal_kgs_text {
     margin-right: 50px;
 }
 
-.cms, #pounds, #ideal_pounds {
+.questionnaire .cms, .questionnaire #pounds, .questionnaire #ideal_pounds {
     margin-bottom: 25px;
 }
 
-#btnControl_3, #btnControl_4 {
+.questionnaire #btnControl_3, .questionnaire #btnControl_4 {
     display: none;
 }
 
-#btnControl_3:checked + label > input, #btnControl_4:checked + label > input {
+.questionnaire #btnControl_3:checked + label > input, .questionnaire #btnControl_4:checked + label > input {
     display: inline-block;
 }
 
-#kgs, #pounds {
+.questionnaire #kgs, .questionnaire #pounds {
     display: none;
 }
 
-#btnControl_5, #btnControl_6 {
+.questionnaire #btnControl_5, .questionnaire #btnControl_6 {
     display: none;
 }
 
-#btnControl_5:checked + label > input, #btnControl_6:checked + label > input {
+.questionnaire #btnControl_5:checked + label > input, .questionnaire #btnControl_6:checked + label > input {
     display: inline-block;
     width: 35%;
 }
 
-#ideal_kgs, #ideal_pounds {
+.questionnaire #ideal_kgs, .questionnaire #ideal_pounds {
     display: none;
 }
 
-#cms_text, #feet_text, #kgs_text, #pounds_text, #ideal_kgs_text, #ideal_pounds_text {
+.questionnaire #cms_text, .questionnaire #feet_text, .questionnaire #kgs_text, .questionnaire #pounds_text, .questionnaire #ideal_kgs_text, .questionnaire #ideal_pounds_text {
     font-weight: bold;
     font-size: 20px;
 }

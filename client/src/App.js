@@ -16,7 +16,6 @@ function App() {
     <div className="App"
     >
       <Router>
-        {/* media query here? between navbar and overlay  */}
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -31,6 +30,10 @@ function App() {
             <ContactUs />
             <Footer/>
           </Route>
+          <Route path="/quiz/question_1">
+            {/* Cknow your strength comp herer */}
+          </Route>
+        
           {/* add more routes as pages become available  */}
         </Switch>
 

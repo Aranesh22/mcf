@@ -40,12 +40,11 @@ export default function ContactUs() {
                 <div className="contactForm_col-1">
                     <Form.Group className="mb-5 px-4" controlId="formName">
                         <Form.Label className="flexAlignStart d-flex">Name</Form.Label>
-                        <Form.Control className="contactFormInputs" type="text"  
-                    
-                        value={fname}
-                        name="name"
-                        onChange={event =>{ setName(event.target.value) }}
-           />
+                        <Form.Control className="contactFormInputs" type="text" required
+                            value={fname}
+                            name="name"
+                            onChange={event =>{ setName(event.target.value) }}
+                        />
                     </Form.Group>
                     <Form.Group className="mb-5 px-4" controlId="formEmail">
                         <Form.Label className="flexAlignStart d-flex">Email</Form.Label>

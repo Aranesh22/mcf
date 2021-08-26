@@ -3,6 +3,9 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import muscle from './muscle.png'
+import fatloss from './fatloss.png'
+
 export class Questions extends React.Component {
   constructor(props) {
     super(props);
@@ -86,9 +89,6 @@ export class Questions extends React.Component {
                       <div id="hex_1" className="chosen_one"></div>
                       <div id="hex_2"></div>
                       <div id="hex_3"></div>
-                      <div id="hex_4"></div>
-                      <div id="hex_5"></div>
-                      <div id="hex_6"></div>
                   </div>
                   <Link to="/">
                       <button type="button" className="back_button">
@@ -108,12 +108,9 @@ export class Questions extends React.Component {
                     </select><br/><br/>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2" className="chosen_one"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
                     </div>
                     <Link to="/quiz/question_1">
                         <button type="button" className="back_button">
@@ -127,12 +124,9 @@ export class Questions extends React.Component {
                   <form id='question3' action='/question/3' method='POST'>
                     <label>What is your height in feet or centimeters?</label><br/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
+                        <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2"></div>
-                        <div id="hex_3" className="chosen_one"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
+                        <div id="hex_3"></div>
                     </div>
                     <br></br>
                     <label for="btnControl" id="feet_text" className="ft_txt"> FEET </label>
@@ -164,12 +158,9 @@ export class Questions extends React.Component {
                   <form id='question4' action='/question/4' method='POST'>
                     <label>What is your CURRENT weight or kilograms and pounds?</label><br/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4" className="chosen_one"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
                     </div>
                     
                     <br></br>
@@ -201,25 +192,22 @@ export class Questions extends React.Component {
                     <label>What is your IDEAL weight in kilograms or pounds?</label><br/>
                     
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5" className="chosen_one"></div>
-                        <div id="hex_6"></div>
                     </div>
 
                     <br></br>
                     <label className="btn" id="ideal_kgs_text" for="btnControl_5"> IDEAL KGS </label>
                     <input type="checkbox" id="btnControl_5"/>
-                    <label className="btn" for="btnControl_6" id="ideal_pounds_text"> IDEAL POUNDS
+                    <label className="btn" for="btnControl_6" id="ideal_pounds_text"> IDEAL IBS
                         <br></br>
                         <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="10" placeholder="Ideal kgs"/>
                         <br></br>
                     </label>
                     <input type="checkbox" id="btnControl_6"/>
                     <label className="btn" for="btnControl_6">
-                        <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal pounds"/>
+                        <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal lbs"/>
                     </label>
                     <br></br>
                     <input type="submit" value="Submit"/>
@@ -263,12 +251,9 @@ export class Questions extends React.Component {
                     <input type="submit" value="Submit"/>
 
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6" className="chosen_one"></div>
                     </div>
 
                     <Link to="/quiz/question_5">
@@ -304,11 +289,8 @@ export class Questions extends React.Component {
 
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
                     </div>
 
                     <Link to="/quiz/question_6">
@@ -325,12 +307,9 @@ export class Questions extends React.Component {
                     <input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
+                        <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
                     </div>
                     <Link to="/quiz/question_7">
                         <button type="button" className="back_button">
@@ -377,12 +356,9 @@ export class Questions extends React.Component {
                     <input type="submit" value="Submit"/>
 
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
-                        <div id="hex_3" className="chosen_one"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
+                        <div id="hex_3"></div>
                     </div>
 
                     <Link to="/quiz/question_8">
@@ -398,12 +374,9 @@ export class Questions extends React.Component {
                     <p>Do as many squats as you can for 30 seconds. Press start to begin!"</p>
                     <input type="submit" value="Start"/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4" className="chosen_one"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6"></div>
                     </div>
 
                     <Link to="/quiz/question_9">
@@ -422,12 +395,9 @@ export class Questions extends React.Component {
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5" className="chosen_one"></div>
-                        <div id="hex_6"></div>
                     </div>
 
                     <Link to="/quiz/question_10">
@@ -444,12 +414,9 @@ export class Questions extends React.Component {
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">
-                        <div id="hex_1"></div>
-                        <div id="hex_2"></div>
-                        <div id="hex_3"></div>
-                        <div id="hex_4"></div>
-                        <div id="hex_5"></div>
-                        <div id="hex_6" className="chosen_one"></div>
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
+                        <div id="hex_3" className="chosen_one"></div>
                     </div>
                     <Link to="/quiz/question_11">
                         <button type="button" className="back_button">

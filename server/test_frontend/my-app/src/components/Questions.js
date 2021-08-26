@@ -3,9 +3,6 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-import muscle from './muscle.png'
-import fatloss from './fatloss.png'
-
 export class Questions extends React.Component {
   constructor(props) {
     super(props);

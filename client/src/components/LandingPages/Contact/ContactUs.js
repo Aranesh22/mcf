@@ -29,8 +29,8 @@ export default function ContactUs() {
             },
             body: JSON.stringify(formData)
             // body: new FormData(form.current)
-          });
-        console.log("line 30 states: " + formData.name);
+          }).then(window.location.reload());
+        console.log(formData.name);
       };
 
     // action="/sendEmail" method="POST"

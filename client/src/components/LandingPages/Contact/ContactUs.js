@@ -22,11 +22,15 @@ export default function ContactUs() {
             email,
             inquiry
         }
-        fetch('sendEmail', {
+        fetch('/sendEmail', {
             method: 'POST',
-            body: formData,
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(formData)
+            // body: new FormData(form.current)
           });
-        console.log(formData);
+        console.log("line 30 states: " + formData.name);
       };
 
     // action="/sendEmail" method="POST"

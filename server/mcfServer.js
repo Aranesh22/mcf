@@ -8,6 +8,7 @@ const questions = require('./questions.json');
 const { google } = require("googleapis");
 const nodemailer = require('nodemailer');
 const fs = require('fs');
+require('dotenv').config();
 
 const session = require('express-session');
 app.use(session({secret: 'EgiNAjvvFVcbgAz'}));
@@ -81,6 +82,21 @@ app.get('/sendQuestions', (req, res) => {
     res.send(someQuestions);
 });
 
+app.post('/sendEmail', (req, res) => {
+    // console.log("SEND EMAIL REACHED");
+
+    console.log(req.body);
+    res.redirect('/contactUs');
+
+    
+    let name  = req.body.name;
+    let email = req.body.email;
+    let text  = req.body.inquiry;
+
+    ShadySendMail(name, email, text, res);
+    
+});
+
 /*
 mc.connect("mongodb://localhost:27017",function(err,client) {
     if (err) {
@@ -147,6 +163,35 @@ function sendEmail(email) {
             console.log('Email sent: ' + info.response);
         }
     });
+}
+
+function ShadySendMail(name, email, text, res){
+    // console.log("SENDING EMAIL: ");
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: process.env.FROM,
+            pass: process.env.PASS
+        }
+    });
+
+    var mailOptions = {
+        from: process.env.FROM,
+        to: email,
+        subject: name + " (" + email + ")'s inquiery",
+        text
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
+    });
+
+    res.status(200).send();
 }
 
 async function updateDoc(ans) {

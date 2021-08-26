@@ -39,9 +39,17 @@
     margin-left: 5%;
     margin-right: 5%;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    
+    border: solid;
+    border-radius: 15px;
+    border-color: #184E58;
+    outline: none;
+
     box-sizing: border-box;
+}
+
+.questionnaire input[type="number"] {
+    width: 110px;
 }
 
 .questionnaire .back_button {
@@ -79,7 +87,7 @@
     margin-bottom: 20px;
 }
 
-.questionnaire .container {
+.form .container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -90,57 +98,57 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.questionnaire .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* Create a custom radio button */
-.questionnaire .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.questionnaire .container:hover input ~ .questionnaire .checkmark {
-  background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.questionnaire .container input:checked ~ .questionnaire .checkmark {
-  background-color: #2196F3;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.questionnaire .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.questionnaire .container input:checked ~ .questionnaire .checkmark:after {
-  display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.questionnaire .container .questionnaire .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
+  }
+  
+  /* Hide the browser's default radio button */
+  .form .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .form .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .form .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .form .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .form .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .form .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .form .container .checkmark:after {
+       top: 9px;
+      left: 9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
 
 .questionnaire #current_count {
     text-align: center;
@@ -225,40 +233,54 @@
     width: 50px;
 
     /*
-    position: relative;
-    left: 570px;
-    top: 200px;
-    */
     position: absolute;
     top: 30px;
     right: 260px;
+    */
+
+    position: absolute;
+    top: 30px;
+    right: 110px;
 }
 
 .questionnaire #hex_2 {
 
-    background: #518087;
+    background: #3B7078;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     height: 50px;
     width: 50px;
 
+    /*
+    background: #518087;
     position: absolute;
     top: 30px;
     right: 210px;
+    */
+    position: absolute;
+    top: 30px;
+    right: 60px;
 } 
 
 .questionnaire #hex_3 {
-    background: #4B757D;
+    background: #184E58;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     height: 50px;
     width: 50px;
-
+    
+    /*
+    background: #4B757D;
     position: absolute;
     top: 30px;
     right: 160px;
+    */
+    position: absolute;
+    top: 30px;
+    right: 10px;
 }
 
+/*
 .questionnaire #hex_4 {
 
     background: #3B7078;
@@ -296,6 +318,7 @@
     top: 30px;
     right: 10px;
 }
+*/
 
 .questionnaire .hexagons {
     max-height: 50px;
@@ -374,4 +397,8 @@
 .questionnaire #cms_text, .questionnaire #feet_text, .questionnaire #kgs_text, .questionnaire #pounds_text, .questionnaire #ideal_kgs_text, .questionnaire #ideal_pounds_text {
     font-weight: bold;
     font-size: 20px;
+}
+
+.questionnaire #kgs_text {
+    margin-left: 25px;
 }

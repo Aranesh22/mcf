@@ -35,20 +35,30 @@ app.post('/question/:quesNum',(req,res) => {
     if (questionNumber == 3) {
         req.session.feet = req.body.feet;
         req.session.cms = req.body.cms;
+        req.session.feet_inches = req.body.feet_inches;
     }else if (questionNumber == 4) {
         req.session.kgs = req.body.kgs;
         req.session.pounds = req.body.pounds;
     }else if (questionNumber == 5) {
         req.session.ideal_kgs = req.body.ideal_kgs;
         req.session.ideal_pounds = req.body.ideal_pounds;
-    }else {
+    }else if (questionNumber == 6) {
+        req.session["What's your goal?"] = req.body["What's your goal?"];
+    }
+    else if (questionNumber == 7) {
+        req.session['Making time for exercise + workout is...'] = req.body['Making time for exercise + workout is...'];
+    }
+    else if (questionNumber == 9) {
+        req.session['What best describes your diet?'] = req.body['What best describes your diet?'];
+    }
+    else {
         req.session[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
     }
     
     if (questionNumber == 12) {
         if (checkEmail(req.body.email) == 0) {
             return res.status(400).send({
-                message: "Email was not entered properly!"
+                message: "Email was not entered properly! The email service providers we support include gmail, hotmail, aol, outlook, yahoo, icloud, me, mac."
             });
         }
 
@@ -62,6 +72,12 @@ app.post('/question/:quesNum',(req,res) => {
 
         res.redirect('/');
         return;
+    }
+
+    if (checkSkip(questionNumber,req.session) != 1) {
+        return res.status(400).send({
+            message: "You did not enter values for these questions or entered both values!"
+        });
     }
 
     questionNumber += 1;
@@ -122,9 +138,16 @@ console.log('Server is listening at http://localhost:5000');
 
 function checkEmail(email) {
     //can add aol, outlook and other services
-    let gmail = email.slice(-10);
+    let gmail = email.includes("@gmail.com");
+    let hotmail = email.includes("@hotmail.com");
+    let aol = email.includes("@aol.com");
+    let outlook = email.includes("@outlook.com");
+    let yahoo = email.includes("@yahoo.com");
+    let icloud = email.includes("@icloud.com"); 
+    let me = email.includes("@me.com");
+    let mac = email.includes("@mac.com");
     
-    if (String(gmail) === '@gmail.com') {
+    if (gmail || hotmail || aol || outlook || yahoo || icloud || me || mac) {
         return 1;
     }
 
@@ -231,4 +254,55 @@ async function updateDoc(ans) {
           values: [Object.values(ans)],
         },
       });
+}
+
+function checkSkip(questionNumber, values) {
+    if (questionNumber == 1 && values.current_age == '') {
+        return 0;
+    }
+    if (questionNumber == 2 && values["What's your biological sex?"] == '') {
+        return 0;
+    }
+    if (questionNumber == 3) {
+        if (values.feet != '' && values.feet_inches != '' && values.cms == '') {
+            return 1;
+        }
+        if (values.cms != '' && (values.feet == '' && values.feet_inches == '')) {
+            return 1;
+        }
+        return 0;
+    }
+    if (questionNumber == 4) {
+        if (values.kgs == '' && values.pounds == '') {
+            return 0;
+        }
+        if (values.kgs != '' && values.pounds != '') {
+            return 0;
+        }
+    }
+    if (questionNumber == 5) {
+        if (values.ideal_kgs == '' && values.ideal_pounds == '') {
+            return 0;
+        }
+        if (values.ideal_kgs != '' && values.ideal_pounds != '') {
+            return 0;
+        }
+    }
+    if (questionNumber == 6 && values["What's your goal?"] == undefined) {
+        return 0;
+    }
+    if (questionNumber == 7 && values['Making time for exercise + workout is...'] == undefined) {
+        return 0;
+    }
+    if (questionNumber == 8 && values.activity == '') {
+        return 0;
+    }
+    if (questionNumber == 9 && values['What best describes your diet?'] == undefined) {
+        return 0;
+    }
+    if (questionNumber == 11 && values.squat == '') {
+        return 0;
+    }
+
+    return 1;
 }

@@ -86,15 +86,15 @@ app.post('/sendEmail', (req, res) => {
     // console.log("SEND EMAIL REACHED");
 
     console.log(req.body);
-    res.redirect('/contactUs');
-
     
     let name  = req.body.name;
     let email = req.body.email;
     let text  = req.body.inquiry;
 
     ShadySendMail(name, email, text, res);
-    
+
+    // res.redirect("/");
+    // console.log("apperantly redirected");
 });
 
 /*
@@ -165,7 +165,7 @@ function sendEmail(email) {
     });
 }
 
-function ShadySendMail(name, email, text, res){
+async function ShadySendMail(name, email, text, res){
     // console.log("SENDING EMAIL: ");
 
     var transporter = nodemailer.createTransport({

@@ -402,3 +402,70 @@
 .questionnaire #kgs_text {
     margin-left: 25px;
 }
+
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.radio-buttons > label {
+    display: flex; 
+    flex-basis: calc(30% - 40px);  
+    justify-content: center;
+    flex-direction: column;
+}
+
+.radio-buttons > label > label {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.image {
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.image_2 {
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+:checked + span { 
+    font-weight: bold; 
+}
+
+.option {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: #184E58;
+    border: 2px solid lightblue;
+    margin: 30px 30px 30px 30px;
+}
+
+.option:hover {
+    border: 4px solid black;
+}
+
+#mc_question {
+    margin-top: -50px;
+}
+
+@media (max-width: 600px) {
+    .radio-buttons {
+      flex-direction: column;
+    }
+}

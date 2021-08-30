@@ -3,6 +3,14 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+import muscle from './muscle.svg'
+import fatloss from './fatloss.svg'
+import optimization from './optimization.svg'
+import healthy from './healthy.svg'
+import easy_2 from './easy_2.svg'
+import tough_2 from './tough_2.svg'
+import busy_2 from './busy_2.svg'
+
 export class Questions extends React.Component {
   constructor(props) {
     super(props);
@@ -421,6 +429,100 @@ export class Questions extends React.Component {
                         </button>
                     </Link>
                   </form>
+                </Route>
+
+                <Route exact path="/quiz/question_13">
+                  <form action='/question/13' method='POST'>
+                      <p id="mc_question">{question_2.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
+                            <span>{answer_2[0]}</span>
+                            <img src={muscle} alt="muscle" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/> 
+                            <span>{answer_2[1]}</span>
+                            <img src={fatloss} alt="fatloss" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/> 
+                            <span>{answer_2[2]}</span>
+                            <img src={optimization} alt="optimization" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/> 
+                            <span>{answer_2[3]}</span>
+                            <img src={healthy} alt="healthy" className="image"/>
+                        </label>
+                      </div>
+                      <br></br>
+                      <input type="submit" value="Submit"/>
+                  </form>
+                </Route>
+
+                <Route exact path="/quiz/question_14">
+                  <form action='/question/14' method='POST'>
+                      <p id="mc_question">{question_4.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='diet_1' name='What best describes your diet?' value='No restriction'/> 
+                            <span>{answer_4[0]}</span><br></br><br></br>
+                            <img src={muscle} alt="muscle" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_2' name='What best describes your diet?' value='Vegan or vegetarian'/> 
+                            <span>{answer_4[1]}</span><br></br><br></br>
+                            <img src={fatloss} alt="fatloss" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_3' name='What best describes your diet?' value='Paleo-keto'/> 
+                            <span>{answer_4[2]}<br></br><br></br></span>
+                            <img src={optimization} alt="optimization" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_4' name='What best describes your diet?' value='Mediterranean'/> 
+                            <span>{answer_4[3]}<br></br><br></br></span>
+                            <img src={healthy} alt="healthy" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_5' name='What best describes your diet?' value='Other'/> 
+                            <span>{answer_4[4]}<br></br><br></br></span>
+                            <img src={healthy} alt="healthy" className="image"/>
+                        </label>
+                      </div>
+                      <br></br>
+                      <input type="submit" value="Submit"/>
+                  </form>
+                </Route>
+
+                <Route exact path="/quiz/question_15">
+                  <form action='/question/15' method='POST'>
+                      <p id="mc_question">{question_3.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/> 
+                            <span>{answer_3[0]}</span><br></br><br></br>
+                            <img src={easy_2} alt="easy_2" className="image_2"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='time_2' name='Making time for exercise + workout is...' value='Has been tough so far'/> 
+                            <span>{answer_3[1]}</span><br></br><br></br>
+                            <img src={tough_2} alt="tough_2" className="image_2"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='time_3' name='Making time for exercise + workout is...' value="I'm very busy, but I will make time"/> 
+                            <span>{answer_3[2]}<br></br><br></br></span>
+                            <img src={busy_2} alt="busy_2" className="image_2"/>
+                        </label>
+                      </div>
+                      <br></br>
+                      <input type="submit" value="Submit"/>
+                  </form>
+                </Route>
+
+                <Route exact path="/quiz/question_16">
+                    <button onClick={() => {alert('tits > ass');}}>try me when popup is open</button>
                 </Route>
             </Switch>
           </div>

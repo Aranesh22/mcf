@@ -139,20 +139,21 @@ export class Questions extends React.Component {
                         <div id="hex_3"></div>
                     </div>
                     <br></br>
-                    <label for="btnControl" id="feet_text" className="ft_txt"> FEET </label>
+
                     <input type="checkbox" id="btnControl"/>
-                    <label className="btn" for="btnControl_2" id="cms_text"> CMS
-                        <br></br>
-                        <input type="number" id="ft_cms" name="feet" min="0" max="10" placeholder="feet"/>
-                        <input type="number" id="ft_inches" name="feet_inches" min="0" max="10" placeholder="inches"/>
+                    <label class="btn" for="btnControl">
+                      <h2>Enter Feet and inches</h2>
+                      <input type="number" id="ft_cms" name="feet" min="0" max="10" placeholder="feet"/>
+                      <input type="number" id="ft_inches" name="feet_inches" min="0" max="10" placeholder="inches"/>
                     </label>
                     <br></br>
                     <input type="checkbox" id="btnControl_2"/>
-                    <label className="btn" for="btnControl_2" id="disappear">
-                        <input type="number" id="ft_cms" className="cms" name="cms" min="0" max="10" placeholder="cms"/>
+                    <label class="btn" for="btnControl_2">
+                      <h2>Enter cms</h2>
+                      <input type="number" id="cms" className="cms" name="cms" min="0" max="10" placeholder="cms"/>
                     </label>
-                    <br></br>
 
+                    <br></br>
                     <input type="submit" value="Submit"/>
                     <br></br>
                     
@@ -172,19 +173,20 @@ export class Questions extends React.Component {
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
                     </div>
-                    
                     <br></br>
-                    <label className="btn" id="kgs_text" for="btnControl_3"> KGS </label>
+
                     <input type="checkbox" id="btnControl_3"/>
-                    <label className="btn" for="btnControl_4" id="pounds_text"> POUNDS
-                        <br></br>
-                        <input type="number" id="kgs" name="kgs" min="0" max="10" placeholder="kgs"/>
-                        <br></br>
+                    <label class="btn" for="btnControl_3">
+                      <h2>Enter kgs</h2>
+                      <input type="number" id="kgs" name="kgs" min="0" max="10" placeholder="kgs"/>
                     </label>
+                    <br></br>
                     <input type="checkbox" id="btnControl_4"/>
-                    <label className="btn" for="btnControl_4">
-                        <input type="number" id="pounds" name="pounds" min="0" max="10" placeholder="pounds"/>
+                    <label class="btn" for="btnControl_4">
+                      <h2>Enter pounds</h2>
+                      <input type="number" id="pounds" name="pounds" min="0" max="10" placeholder="pounds"/>
                     </label>
+
                     <br></br>
                     <input type="submit" value="Submit"/>
                     <br></br>
@@ -206,19 +208,20 @@ export class Questions extends React.Component {
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
                     </div>
-
                     <br></br>
-                    <label className="btn" id="ideal_kgs_text" for="btnControl_5"> IDEAL KGS </label>
+
                     <input type="checkbox" id="btnControl_5"/>
-                    <label className="btn" for="btnControl_6" id="ideal_pounds_text"> IDEAL IBS
-                        <br></br>
-                        <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="10" placeholder="Ideal kgs"/>
-                        <br></br>
+                    <label class="btn" for="btnControl_5">
+                      <h2>Enter Ideal kgs</h2>
+                      <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="10" placeholder="Ideal kgs"/>
                     </label>
+                    <br></br>
                     <input type="checkbox" id="btnControl_6"/>
-                    <label className="btn" for="btnControl_6">
-                        <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal lbs"/>
+                    <label class="btn" for="btnControl_6">
+                      <h2>Enter Ideal pounds</h2>
+                      <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal pounds"/>
                     </label>
+
                     <br></br>
                     <input type="submit" value="Submit"/>
                     <br></br>
@@ -399,9 +402,11 @@ export class Questions extends React.Component {
                 </Route>
 
                 <Route exact path="/quiz/question_11">
-                  <form action='/question/11' method='POST'>
-                    <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
+                  <form action='/question/11' method='POST' id="count_form">
                     <div className="hexagon"><span></span></div>
+                    <div id="example_hex"></div>
+                    <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
+                    <br></br>
                     <label>Enter the amount of squats.</label><br/>
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                     <input type="submit" value="Submit"/>
@@ -435,10 +440,6 @@ export class Questions extends React.Component {
                         </button>
                     </Link>
                   </form>
-                </Route>
-
-                <Route exact path="/quiz/question_13">
-                    <button onClick={() => {alert('tits > ass');}}>try me when popup is open</button>
                 </Route>
             </Switch>
           </div>

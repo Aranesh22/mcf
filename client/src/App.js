@@ -31,10 +31,8 @@ function App() {
             <ContactUs />
             <Footer/>
           </Route>
-          <Route path="/quiz/question_1">
-            {/* Cknow your strength comp herer */}
-            <Questions/>
-          </Route>
+
+          <Questions/>
         
           {/* add more routes as pages become available  */}
         </Switch>

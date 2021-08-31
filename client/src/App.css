@@ -11,6 +11,9 @@
     letter-spacing: 0.15rem;
     
 }
+label {
+  color: #184E58;
+}
 
 *{
   color: #F8F8F8;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Questions } from './components/Questions'
+import Questions from './components/Questions'
 
 class App extends React.Component {
   render() {

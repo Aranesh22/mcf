@@ -10,8 +10,13 @@ import healthy from './healthy.svg'
 import easy_2 from './easy_2.svg'
 import tough_2 from './tough_2.svg'
 import busy_2 from './busy_2.svg'
+import lock_3 from './lock_3.svg'
+import vegan_3 from './vegan_3.svg'
+import paleoKeto_3 from './paleoKeto_3.svg'
+import mediterranean_3 from './mediterranean_3.svg'
+import other_3 from './other_3.svg'
 
-export class Questions extends React.Component {
+class Questions extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -227,82 +232,85 @@ export class Questions extends React.Component {
                 </Route>
 
                 <Route exact path="/quiz/question_6">
-                  <form className='form-field' action='/question/6' method='POST'>
-                    <p id="mc_question">{question_2.question}</p>
-                    <label className="container">
-                        <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/>
-                        <label for='goal_1'>{answer_2[0]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
+                  <form action='/question/6' method='POST'>
+                      <p id="mc_question">{question_2.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
+                            <span>{answer_2[0]}</span>
+                            <img src={muscle} alt="muscle" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/> 
+                            <span>{answer_2[1]}</span>
+                            <img src={fatloss} alt="fatloss" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/> 
+                            <span>{answer_2[2]}</span>
+                            <img src={optimization} alt="optimization" className="image"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/> 
+                            <span>{answer_2[3]}</span>
+                            <img src={healthy} alt="healthy" className="image"/>
+                        </label>
+                        <br></br><br></br>
 
-                    <label className="container">
-                        <input type="radio" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/>
-                        <label for='goal_2'>{answer_2[1]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
+                        <div className="hexagons">
+                            <div id="hex_1" className="chosen_one"></div>
+                            <div id="hex_2" className="chosen_one"></div>
+                            <div id="hex_3"></div>
+                        </div>
 
-                    <label className="container">
-                        <input type="radio" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/>
-                        <label for='goal_3'>{answer_2[2]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
+                      </div>
 
-                    <label className="container">
-                        <input type="radio" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/>
-                        <label for='goal_4'>{answer_2[3]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-
-                    <input type="submit" value="Submit"/>
-
-                    <div className="hexagons">
-                        <div id="hex_1" className="chosen_one"></div>
-                        <div id="hex_2" className="chosen_one"></div>
-                        <div id="hex_3"></div>
-                    </div>
-
-                    <Link to="/quiz/question_5">
-                        <button type="button" className="back_button">
-                            ᐊ Back
-                        </button>
-                    </Link>
+                      <input type="submit" value="Submit"/>
+                      <br></br>
+                      <Link to="/quiz/question_5">
+                            <button type="button" className="back_button">
+                                ᐊ Back
+                            </button>
+                      </Link>
+                      
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_7">
                   <form action='/question/7' method='POST'>
-                    <p id="mc_question">{question_3.question}</p>
-                    <label className="container">
-                        <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/>
-                        <label for='time_1'>{answer_3[0]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
+                      <p id="mc_question">{question_3.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/> 
+                            <span>{answer_3[0]}</span><br></br><br></br>
+                            <img src={easy_2} alt="easy_2" className="image_2"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='time_2' name='Making time for exercise + workout is...' value='Has been tough so far'/> 
+                            <span>{answer_3[1]}</span><br></br><br></br>
+                            <img src={tough_2} alt="tough_2" className="image_2"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='time_3' name='Making time for exercise + workout is...' value="I'm very busy, but I will make time"/> 
+                            <span>{answer_3[2]}<br></br><br></br></span>
+                            <img src={busy_2} alt="busy_2" className="image_2"/>
+                        </label>
 
-                    <label className="container">
-                        <input type="radio" id='time_2' name='Making time for exercise + workout is...' value='Has been tough so far'/>
-                        <label for='time_2'>{answer_3[1]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-                    
-                    <label className="container">
-                        <input type="radio" id='time_3' name='Making time for exercise + workout is...' value="I'm very busy, but I will make time"/>
-                        <label for='time_3'>{answer_3[2]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
+                        <div className="hexagons">
+                            <div id="hex_1" className="chosen_one"></div>
+                            <div id="hex_2" className="chosen_one"></div>
+                            <div id="hex_3"></div>
+                        </div>
+                      </div>
 
-                    <input type="submit" value="Submit"/>
-
-                    <div className="hexagons">
-                        <div id="hex_1" className="chosen_one"></div>
-                        <div id="hex_2" className="chosen_one"></div>
-                        <div id="hex_3"></div>
-                    </div>
-
-                    <Link to="/quiz/question_6">
-                        <button type="button" className="back_button">
-                            ᐊ Back
-                        </button>
-                    </Link>
+                      <input type="submit" value="Submit"/>
+                      <br></br>
+                      <Link to="/quiz/question_6">
+                            <button type="button" className="back_button">
+                                ᐊ Back
+                            </button>
+                      </Link>
+                      
                   </form>
                 </Route>
 
@@ -326,51 +334,49 @@ export class Questions extends React.Component {
 
                 <Route exact path="/quiz/question_9">
                   <form action='/question/9' method='POST'>
-                    <p id="mc_question">{question_4.question}</p>
-
-                    <label className="container">
-                        <input type="radio" id='diet_1' name='What best describes your diet?' value='No restriction'/>
-                        <label for='diet_1'>{answer_4[0]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-
-                    <label className="container">
-                        <input type="radio" id='diet_2' name='What best describes your diet?' value='Vegan or vegetarian'/>
-                        <label for='diet_2'>{answer_4[1]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-
-                    <label className="container">
-                        <input type="radio" id='diet_3' name='What best describes your diet?' value='Paleo-keto'/>
-                        <label for='diet_3'>{answer_4[2]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-                    
-                    <label className="container">
-                        <input type="radio" id='diet_4' name='What best describes your diet?' value='Mediterranean'/>
-                        <label for='diet_3'>{answer_4[3]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-
-                    <label className="container">
-                        <input type="radio" id='diet_5' name='What best describes your diet?' value='Other'/>
-                        <label for='diet_3'>{answer_4[4]}</label>
-                        <span className="checkmark"></span><br></br>
-                    </label>
-                    
-                    <input type="submit" value="Submit"/>
-
-                    <div className="hexagons">
-                        <div id="hex_1" className="chosen_one"></div>
-                        <div id="hex_2" className="chosen_one"></div>
-                        <div id="hex_3"></div>
-                    </div>
-
-                    <Link to="/quiz/question_8">
-                        <button type="button" className="back_button">
-                            ᐊ Back
-                        </button>
-                    </Link>
+                      <p id="mc_question">{question_4.question}</p>
+                      <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='diet_1' name='What best describes your diet?' value='No restriction'/> 
+                            <span>{answer_4[0]}</span><br></br><br></br>
+                            <img src={lock_3} alt="lock_3" className="image_3"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_2' name='What best describes your diet?' value='Vegan or vegetarian'/> 
+                            <span>{answer_4[1]}</span><br></br><br></br>
+                            <img src={vegan_3} alt="vegan_3" className="image_3"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_3' name='What best describes your diet?' value='Paleo-keto'/> 
+                            <span>{answer_4[2]}<br></br><br></br></span>
+                            <img src={paleoKeto_3} alt="paleoKeto_3" className="image_3"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_4' name='What best describes your diet?' value='Mediterranean'/> 
+                            <span>{answer_4[3]}<br></br><br></br></span>
+                            <img src={mediterranean_3} alt="mediterranean_3" className="image_3"/>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='diet_5' name='What best describes your diet?' value='Other'/> 
+                            <span>{answer_4[4]}<br></br><br></br></span>
+                            <img src={other_3} alt="other_3" className="image_3"/>
+                        </label>
+                        
+                        <div className="hexagons">
+                            <div id="hex_1" className="chosen_one"></div>
+                            <div id="hex_2" className="chosen_one"></div>
+                            <div id="hex_3"></div>
+                        </div>
+                      </div>
+                      
+                      <input type="submit" value="Submit"/>
+                      <br></br><br></br>
+                      <Link to="/quiz/question_8">
+                            <button type="button" className="back_button">
+                                ᐊ Back
+                            </button>
+                      </Link>
+                      
                   </form>
                 </Route>
 
@@ -432,96 +438,6 @@ export class Questions extends React.Component {
                 </Route>
 
                 <Route exact path="/quiz/question_13">
-                  <form action='/question/13' method='POST'>
-                      <p id="mc_question">{question_2.question}</p>
-                      <div className="radio-buttons">
-                        <label className="option">
-                            <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
-                            <span>{answer_2[0]}</span>
-                            <img src={muscle} alt="muscle" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/> 
-                            <span>{answer_2[1]}</span>
-                            <img src={fatloss} alt="fatloss" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/> 
-                            <span>{answer_2[2]}</span>
-                            <img src={optimization} alt="optimization" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/> 
-                            <span>{answer_2[3]}</span>
-                            <img src={healthy} alt="healthy" className="image"/>
-                        </label>
-                      </div>
-                      <br></br>
-                      <input type="submit" value="Submit"/>
-                  </form>
-                </Route>
-
-                <Route exact path="/quiz/question_14">
-                  <form action='/question/14' method='POST'>
-                      <p id="mc_question">{question_4.question}</p>
-                      <div className="radio-buttons">
-                        <label className="option">
-                            <input type="radio" id='diet_1' name='What best describes your diet?' value='No restriction'/> 
-                            <span>{answer_4[0]}</span><br></br><br></br>
-                            <img src={muscle} alt="muscle" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='diet_2' name='What best describes your diet?' value='Vegan or vegetarian'/> 
-                            <span>{answer_4[1]}</span><br></br><br></br>
-                            <img src={fatloss} alt="fatloss" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='diet_3' name='What best describes your diet?' value='Paleo-keto'/> 
-                            <span>{answer_4[2]}<br></br><br></br></span>
-                            <img src={optimization} alt="optimization" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='diet_4' name='What best describes your diet?' value='Mediterranean'/> 
-                            <span>{answer_4[3]}<br></br><br></br></span>
-                            <img src={healthy} alt="healthy" className="image"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='diet_5' name='What best describes your diet?' value='Other'/> 
-                            <span>{answer_4[4]}<br></br><br></br></span>
-                            <img src={healthy} alt="healthy" className="image"/>
-                        </label>
-                      </div>
-                      <br></br>
-                      <input type="submit" value="Submit"/>
-                  </form>
-                </Route>
-
-                <Route exact path="/quiz/question_15">
-                  <form action='/question/15' method='POST'>
-                      <p id="mc_question">{question_3.question}</p>
-                      <div className="radio-buttons">
-                        <label className="option">
-                            <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/> 
-                            <span>{answer_3[0]}</span><br></br><br></br>
-                            <img src={easy_2} alt="easy_2" className="image_2"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='time_2' name='Making time for exercise + workout is...' value='Has been tough so far'/> 
-                            <span>{answer_3[1]}</span><br></br><br></br>
-                            <img src={tough_2} alt="tough_2" className="image_2"/>
-                        </label>
-                        <label className="option">
-                            <input type="radio" id='time_3' name='Making time for exercise + workout is...' value="I'm very busy, but I will make time"/> 
-                            <span>{answer_3[2]}<br></br><br></br></span>
-                            <img src={busy_2} alt="busy_2" className="image_2"/>
-                        </label>
-                      </div>
-                      <br></br>
-                      <input type="submit" value="Submit"/>
-                  </form>
-                </Route>
-
-                <Route exact path="/quiz/question_16">
                     <button onClick={() => {alert('tits > ass');}}>try me when popup is open</button>
                 </Route>
             </Switch>
@@ -531,3 +447,5 @@ export class Questions extends React.Component {
     );
   }
 }
+
+export default Questions;

@@ -10,6 +10,7 @@ import MeetTheTeam from './components/LandingPages/meetTheTeam/meetTheTeam';
 import ContactUs from './components/LandingPages/Contact/ContactUs';
 import Footer from './components/Footer/Footer';
 
+import { Questions } from './components/Questionnaire/Questions';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           </Route>
           <Route path="/quiz/question_1">
             {/* Cknow your strength comp herer */}
+            <Questions/>
           </Route>
         
           {/* add more routes as pages become available  */}

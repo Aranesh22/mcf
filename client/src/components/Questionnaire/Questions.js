@@ -404,8 +404,8 @@ export class Questions extends React.Component {
                 <Route exact path="/quiz/question_11">
                   <form action='/question/11' method='POST' id="count_form">
                     <div className="hexagon"><span></span></div>
-                    <div id="example_hex"></div>
                     <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
+                    <div id="example_hex"></div>
                     <br></br>
                     <label>Enter the amount of squats.</label><br/>
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>

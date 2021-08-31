@@ -11,8 +11,12 @@
     letter-spacing: 0.15rem;
     
 }
-label {
-  color: #184E58;
+.questionnaire label, input, select > option, select, p:not(h1 + br + p), h2 {
+    color: #184E58 !important;
+}
+
+.questionnaire input[type=submit] {
+    color: whitesmoke !important;
 }
 
 *{
@@ -101,3 +105,4 @@ p{
 /* mobile max - 425px */
 /* tablet  max - 768px*/
 /* desktop min - 769px */
+

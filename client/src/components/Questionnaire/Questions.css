@@ -166,6 +166,7 @@
     color: whitesmoke;
     font-size: 25px;
     position: relative;
+    top: 50px;
     z-index: 1;
 }
 
@@ -173,18 +174,16 @@
     background: #184E58;
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
     clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-    height: 100px;
-    width: 100px;
+    height: 125px;
+    width: 125px;
     
     /*
-    background: #4B757D;
-    position: absolute;
-    top: 30px;
-    right: 160px;
-    */
     position: absolute;
     bottom: 210px;
     left: 582px;
+    */
+    margin: auto;
+    margin-top: -50px;
 }
 
 .questionnaire .hexagon {

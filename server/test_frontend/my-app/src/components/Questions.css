@@ -410,6 +410,7 @@
     align-items: center;
     justify-content: center;
     color: whitesmoke;
+    font-size: 20px;
 }
 
 .radio-buttons > label {
@@ -426,17 +427,26 @@
 }
 
 .image {
-    height: 200px;
+    height: 125px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     width: 75%;
 }
 
 .image_2 {
-    margin-top: -25px;
+    margin-top: -30px;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 85%;
+}
+
+.image_3 {
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    width: 85%;
 }
 
 input[type=radio] {
@@ -448,8 +458,8 @@ input[type=radio] {
 }
 
 .option {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
     padding: 10px;
     background-color: #184E58;
     border: 2px solid lightblue;
@@ -462,6 +472,10 @@ input[type=radio] {
 
 #mc_question {
     margin-top: -50px;
+}
+
+label {
+    color: #184E58 !important;
 }
 
 @media (max-width: 600px) {

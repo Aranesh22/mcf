@@ -26,21 +26,6 @@ app.get('/whoweare',function(req,res) {
     res.sendFile('./dummyPages/whoWeAre.html',{root:__dirname});
 });
 
-app.post('/question/13', (req,res) => {
-    console.log(req.body);
-    res.redirect('/quiz/question_14');
-});
-
-app.post('/question/14', (req,res) => {
-    console.log(req.body);
-    res.redirect('/quiz/question_15');
-});
-
-app.post('/question/15', (req,res) => {
-    console.log(req.body);
-    res.redirect('/');
-});
-
 app.post('/question/:quesNum',(req,res) => {
     //updateDoc(req.body);
     let questionNumber = parseInt(req.params.quesNum);

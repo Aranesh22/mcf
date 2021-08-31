@@ -12,10 +12,10 @@
     margin-top: 20px;
 }
 
-.questionnaire form {
+.questionnaire form:not(#count_form) {
     display: inline-block;
     max-width: 90vw;
-    margin-top: 150px;
+    margin-top: 100px;
     /*
     margin-top: 5%;
 
@@ -31,6 +31,12 @@
     margin-right:10%;
     width: 50%;
     */
+}
+
+#count_form {
+    display: inline-block;
+    max-width: 90vw;
+    margin-top: 50px;
 }
 
 .questionnaire input[type=number], .questionnaire option, .questionnaire select, .questionnaire input[type=text] {
@@ -159,6 +165,26 @@
     text-align: center;
     color: whitesmoke;
     font-size: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.questionnaire #example_hex {
+    background: #184E58;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    height: 100px;
+    width: 100px;
+    
+    /*
+    background: #4B757D;
+    position: absolute;
+    top: 30px;
+    right: 160px;
+    */
+    position: absolute;
+    bottom: 210px;
+    left: 582px;
 }
 
 .questionnaire .hexagon {
@@ -166,10 +192,9 @@
   height: 55px;
   position: relative;
   left: 28%;
-  bottom: 50px;
-  z-index: -22;
-  background-color: #184E58;
-  bottom: 65px;
+  bottom: -100px;
+  z-index: -1;
+  background-color: #184E58 !important;
 }
 
 .questionnaire .hexagon, 
@@ -239,7 +264,7 @@
     */
 
     position: absolute;
-    top: 30px;
+    top: 150px;
     right: 110px;
 }
 
@@ -258,7 +283,7 @@
     right: 210px;
     */
     position: absolute;
-    top: 30px;
+    top: 150px;
     right: 60px;
 } 
 
@@ -276,7 +301,7 @@
     right: 160px;
     */
     position: absolute;
-    top: 30px;
+    top: 150px;
     right: 10px;
 }
 
@@ -337,6 +362,7 @@
     opacity: 1;
 }
 
+/*
 .questionnaire #btnControl {
     display: none;
 }
@@ -346,7 +372,7 @@
 }
 
 .questionnaire #btnControl:checked + label > input {
-    display: inline-block;
+    display: inline-table;
 }
 
 .questionnaire #btnControl_2 {
@@ -389,6 +415,7 @@
     display: inline-block;
     width: 35%;
 }
+*/
 
 .questionnaire #ideal_kgs, .questionnaire #ideal_pounds {
     display: none;
@@ -397,6 +424,21 @@
 .questionnaire #cms_text, .questionnaire #feet_text, .questionnaire #kgs_text, .questionnaire #pounds_text, .questionnaire #ideal_kgs_text, .questionnaire #ideal_pounds_text {
     font-weight: bold;
     font-size: 20px;
+}
+
+#cms_text {
+    width: 500px;
+}
+
+#feet_text {
+    position: absolute;
+    left: 400px;
+}
+
+#cms_text {
+    position: absolute;
+    left: 450px;
+    bottom: 215px;
 }
 
 .questionnaire #kgs_text {
@@ -415,7 +457,7 @@
 
 .radio-buttons > label {
     display: flex; 
-    flex-basis: calc(30% - 40px);  
+    flex-basis: calc(30% - 20px);  
     justify-content: center;
     flex-direction: column;
 }
@@ -474,8 +516,96 @@ input[type=radio] {
     margin-top: -50px;
 }
 
+#btnControl, #ft_cms, #ft_inches, #btnControl_2, #cms {
+    display: none;
+}
+
+#btnControl:checked + label > h2 + input, #btnControl:checked + label > h2 + input +input {
+    display: inline-block;
+    width: 35% !important;
+}
+
+#btnControl_2:checked + label > h2 + input {
+    display: inline-block;
+}
+
+
+#btnControl_3, #kgs, #btnControl_4, #pounds {
+    display: none;
+}
+
+#btnControl_3:checked + label > h2 + input, #btnControl_4:checked + label > h2 + input {
+    display: inline-block;
+    width: 60% !important;
+}
+
+
+#btnControl_5, #ideal_kgs, #btnControl_6, #ideal_pounds {
+    display: none;
+}
+
+#btnControl_5:checked + label > h2 + input, #btnControl_6:checked + label > h2 + input {
+    display: inline-block;
+    width: 56% !important;
+}
+
 @media (max-width: 600px) {
     .radio-buttons {
       flex-direction: column;
+    }
+    .questionnaire #hex_1 {
+
+        background: #679096;
+        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        height: 50px;
+        width: 50px;
+    
+        /*
+        position: absolute;
+        top: 30px;
+        right: 260px;
+        */
+    
+        position: absolute;
+        top: 30px;
+        right: 110px;
+    }
+    
+    .questionnaire #hex_2 {
+    
+        background: #3B7078;
+        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        height: 50px;
+        width: 50px;
+    
+        /*
+        background: #518087;
+        position: absolute;
+        top: 30px;
+        right: 210px;
+        */
+        position: absolute;
+        top: 30px;
+        right: 60px;
+    } 
+    
+    .questionnaire #hex_3 {
+        background: #184E58;
+        -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+        height: 50px;
+        width: 50px;
+        
+        /*
+        background: #4B757D;
+        position: absolute;
+        top: 30px;
+        right: 160px;
+        */
+        position: absolute;
+        top: 30px;
+        right: 10px;
     }
 }

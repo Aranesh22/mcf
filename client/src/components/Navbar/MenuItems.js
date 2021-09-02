@@ -23,7 +23,7 @@ export const MenuItems = [
     },
     {
         title: 'Know your Strength?',
-        url: '../knowYourStrength',
+        url: '../quiz/question_1',
         cName: 'nav-links'
     },
     {

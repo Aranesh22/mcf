@@ -39,8 +39,9 @@
     text-decoration: none;
     top: 10px;
     display: block;
-    padding: 0.5rem 1rem;  
+    padding: 0.5rem 0.5rem;  
     margin: 15px;
+    font-weight: bold;
     /*padding: 0.5rem 1rem;*/
     /*margin: 55px;*/
 }
@@ -178,7 +179,7 @@
   left: 0;
   top: 0;
   /* background-color:#2cdc83;  */
-  background-color: #F7FCFF ;
+  background-color: #F7FCFF;
   color: #004c54;
   overflow: hidden; /* Disable horizontal scroll */
   transition: 0.75s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
@@ -248,7 +249,8 @@
     color: #FFFFFF;
     /* background-color: #004c54; */
     background-color: rgba(0,76,84,0.815);
-    border-color: #FFFFFF; 
+    /* border-color: #FFFFFF;  */
+    border-color: none;
     border-radius: 0px;
     box-shadow: none;
     /* font-size: 1.2rem; */

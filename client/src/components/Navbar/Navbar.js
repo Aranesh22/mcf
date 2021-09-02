@@ -7,7 +7,7 @@ import NavMobile from './NavMobile'
 export default function Navbar() {
     return (
         <div>
-           <Media queries={{ small: { maxWidth: 695 } }}>
+           <Media queries={{ small: { maxWidth: 1139 } }}>
                         {matches =>
                             matches.small ? (
                             <NavMobile/>

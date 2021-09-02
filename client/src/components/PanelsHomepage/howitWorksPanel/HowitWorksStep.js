@@ -5,6 +5,7 @@ import hWHex from '../../../assets/hWimgs/hWHex.svg'
 import HowitWorksModal from './HowitWorksModal'
 import { Button } from 'react-bootstrap'
 import ScaleText from 'react-scale-text';
+import badImg from '../../../assets/bad.png'
 
 
 export default function HowitWorksStep({bgImg, numImg, hText, text}) {

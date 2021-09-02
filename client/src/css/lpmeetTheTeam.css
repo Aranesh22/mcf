@@ -1,3 +1,5 @@
+/*note: the images have been coded into this css file thus any image changes will take place here  */
+
 .topLeft { 
 
     width: 240px; 
@@ -7,6 +9,13 @@
     /* top: 27px; */
     position: absolute;
     /* z-index: 1; */
+    background-image: url('../assets/mTimages/updated/RS_HP_PIC.svg');
+    transition:ease-in-out .2s;
+}
+
+.topLeft:hover{ 
+    background-image: url('../assets/mTimages/RS_HP (1).svg');
+    transition: ease-in-out .2s;
 }  
 
 .mid { 
@@ -16,11 +25,17 @@
     left: 275px; 
     bottom: 450px;
     position: absolute; 
-
+    background-image: url('../assets/mTimages/updated/JG_HP_PIC.svg');
+    transition:ease-in-out .2s;
+    
 } 
 
-.topRight {  
+.mid:hover{
+    background-image: url('../assets/mTimages/updated/JG_HP.svg');
+    transition:ease-in-out .2s;
+}
 
+.topRight {  
     width: 240px; 
     height: 240px;   
     left: 455px; 
@@ -28,6 +43,13 @@
     /* top: 16px; */
     /* z-index: 1; */
     position: absolute; 
+    background-image: url('../assets/mTimages/updated/DPP_HP_PIC.svg');
+    transition:ease-in-out .2s;
+}
+
+.topRight:hover{
+    background-image: url('../assets/mTimages/updated/DPP_HP.svg');
+    transition:ease-in-out .2s;
 }
 
 .bottomLeft{ 
@@ -43,7 +65,6 @@
 
 .bottomRight { 
 
-    
     width: 240px; 
     height: 240px;   
     /* left: 100px;  */
@@ -52,13 +73,11 @@
     bottom: 355px;
     position: absolute; 
 
-
 }
 .containTeam { 
 
     width: 800px; 
     height: 800px; 
-
     margin: 20px auto;   
     position: relative; 
 } 
@@ -78,6 +97,7 @@
         height: 440px;    */
         left: 0px;
         position:unset; 
+        background-image: url('../assets/mTimages/RS_HP (1).svg');
     }  
     .topRight {  
         /* width: 440px; 
@@ -85,7 +105,8 @@
         width: 100%;
         height: auto;
         left: 0px; 
-        position:unset; 
+        position:unset;
+        background-image: url('../assets/mTimages/updated/DPP_HP.svg'); 
     }
     .mid { 
         /* width: 440px; 
@@ -95,6 +116,7 @@
         left: 0px; 
         bottom: 0px; 
         position: unset; 
+        background-image: url('../assets/mTimages/updated/JG_HP.svg');
     } 
     /* empty hexagons */
     .bottomLeft {  

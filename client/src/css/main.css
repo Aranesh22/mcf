@@ -5,7 +5,7 @@
 }
 
 *{
-    color: #F0F4F7;
+    /* color: #F0F4F7; */
     font-family: 'Messina Sans', sans-serif;
     font-weight: 400;
 }
@@ -21,7 +21,6 @@
     flex-direction: column;
     align-items: flex-end;
 }
-
 
 /* Buttons  */
 
@@ -51,7 +50,6 @@
     letter-spacing: 0.15rem;
 }
 
-
 /* Font styles & sizes */
 
 .mcfH1{
@@ -61,33 +59,28 @@
     letter-spacing: 0.1rem; 
 }
 
-
-
-
-
-
-.buttonBar{
-   
+.buttonBar{ 
     position: fixed;
     top: 0;
     z-index: 2;
     width: 100%;
     background: rgb(247,252,255);
+    /* background: #2cdc83; */
     display: flex;
     justify-content: space-between;
 /* background: linear-gradient(0deg, rgba(247,252,255,0.01) 0%,  rgba(247, 252, 255, 0.815) 25%); */
 
 }
 
-
-
 /* sticky button  */
 /* Find your plan button */
 .btn-primary.buttonWhiteNav{
     color: #004c54;
     /* background-color: #FFFFFF; */
-    background-color: rgba(247, 252, 255, 0.815);
-    border-color: #FFFFFF; 
+    /* background-color: rgba(247, 252, 255, 0.815); */
+    background-color: #2cdc83;
+
+    border: none; 
     border-radius: 0px;
     box-shadow: none;
     /* font-size: 1.2rem; */
@@ -97,9 +90,10 @@
 
 .btn-primary.buttonWhiteNav:hover{
     color: #FFFFFF;
-    /* background-color: #2cdc83; */
-    background-color: rgba(0,76,84,0.815);
-    border-color: #FFFFFF; 
+    background-color: #2cdc83;
+    /* background-color: rgba(0,76,84,0.815); */
+    /* border-color: #FFFFFF;  */
+    border: none;
     border-radius: 0px;
     box-shadow: none;
     /* font-size: 1.2rem; */
@@ -108,9 +102,10 @@
 
 .btn-primary.buttonWhiteNav:focus{
     color: #FFFFFF;
-    background-color: #004c54;
-    border-color: #FFFFFF; 
-    
+    /* background-color: #004c54; */
+    /* border-color: #FFFFFF;  */
+    border: none;
+    background-color: #2cdc83;
     border-radius: 0px;
     box-shadow: none;
     

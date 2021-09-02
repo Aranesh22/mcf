@@ -16,18 +16,17 @@ import WyS from './whyYouSuceed/WyS';
 export default function Homepage() {
     return (
         <div>
-            
-         <TrainPanel  />
+         <TrainPanel />
          <div className="flexAlignStart d-flex" style={{paddingLeft: '2%'}}>
             <h1 className="mcfH1"style={{color: '#004c54' }}>What Our Clients Think</h1>
          </div>
         <ReviewCarousel />
-        <div className='flexAlignEnd d-flex'>
+        <div className='flexAlignEnd d-flex mb-5'>
                 <h1 className="mcfH1"style={{color: '#004c54'}}>WE ARE MYCUREFITNESS</h1>
            </div>
          <div>
          <div className="flexAlignStart d-flex mt-5" style={{paddingLeft: '2%', backgroundColor: '#004c54'}}>
-            <h1 className="mcfH1"style={{ padding: "2%", }}>WHY YOU SUCCEED</h1>
+            <h1 className="mcfH1"style={{ padding: "2%" }}>WHY YOU SUCCEED</h1>
          </div>
          {/* <AltPanel /> */}
          <WyS />

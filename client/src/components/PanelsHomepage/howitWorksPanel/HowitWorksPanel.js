@@ -21,6 +21,9 @@ const stepInfo = [
     {bgImg: img04, numImg: no4, hText: "Automate your Lifestyle", text: 'With the tools in place to ensure physical empowerment and life long motivation, its you back in the driver seat, with the knowledge needed to succeed, don’t worry, we are always here to ensure you stay the course and level up as an athlete for life.'}
 ]
 
+
+// Aranesh 
+
 const renderStep = (step, index) => {
     return (
       <HowitWorksStep key={index}

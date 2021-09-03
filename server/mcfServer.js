@@ -82,7 +82,7 @@ app.post('/question/:quesNum',(req,res) => {
 
     questionNumber += 1;
     
-    let newPath = "/quiz/question_" + String(questionNumber);
+    let newPath = "/#/quiz/question_" + String(questionNumber);
     //updateDoc(req.body.answer);
     res.redirect(newPath);
 });

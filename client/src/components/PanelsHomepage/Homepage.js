@@ -22,7 +22,7 @@ export default function Homepage() {
          </div>
         <ReviewCarousel />
         <div className='flexAlignEnd d-flex mb-5'>
-                <h1 className="mcfH1"style={{color: '#004c54'}}>WE ARE MYCUREFITNESS</h1>
+                <h1 className="mcfH1"style={{color: '#004c54', paddingBottom: '10%'}}>WE ARE MYCUREFITNESS</h1>
            </div>
          <div>
          <div className="flexAlignStart d-flex mt-5" style={{paddingLeft: '2%', backgroundColor: '#004c54'}}>

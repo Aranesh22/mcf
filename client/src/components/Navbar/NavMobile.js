@@ -22,7 +22,7 @@ return (
   <Button className="navDropButton flexAlignStart d-flex" onClick={() => setOpen(!open)} >☰</Button>
   <div className="overlay-content">
   <a href="../">Home</a>
-    <a href="../aboutUs">Your Team</a>
+    <a href="../#/aboutUs">Your Team</a>
     <a href="#">Products We Trust</a>
     <a href="../contactUs">Contact Us</a>
   </div>

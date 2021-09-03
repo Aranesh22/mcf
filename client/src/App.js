@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import Homepage from './components/PanelsHomepage/Homepage';
 import LinksLanding from './components/LandingPages/LinksLanding';

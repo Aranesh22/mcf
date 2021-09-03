@@ -92,31 +92,34 @@
     }
     .topLeft { 
         width: 100%;
-        height: auto;
-        /* width: 440px; 
-        height: 440px;    */
+        /* height: auto; */
+   
+        height: 440px;   
         left: 0px;
         position:unset; 
-        background-image: url('../assets/mTimages/RS_HP (1).svg');
+        background-image: url('../assets/mTimages/RS_HP (1).svg') !important;
+        background: no-repeat;
     }  
     .topRight {  
-        /* width: 440px; 
-        height: 440px;   */
+        /* width: 440px;  */
+        height: 440px;  
         width: 100%;
-        height: auto;
+        /* height: auto; */
         left: 0px; 
         position:unset;
-        background-image: url('../assets/mTimages/updated/DPP_HP.svg'); 
+        background-image: url('../assets/mTimages/updated/DPP_HP.svg') !important; 
+        background: no-repeat;
     }
     .mid { 
-        /* width: 440px; 
-        height: 440px;   */
+        /* width: 440px;  */
+        height: 440px;  
         width: 100%;
-        height: auto;
+        /* height: auto; */
         left: 0px; 
         bottom: 0px; 
         position: unset; 
-        background-image: url('../assets/mTimages/updated/JG_HP.svg');
+        background-image: url('../assets/mTimages/updated/JG_HP.svg') !important;
+        background: no-repeat;
     } 
     /* empty hexagons */
     .bottomLeft {  

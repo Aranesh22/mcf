@@ -8,7 +8,7 @@ export const MenuItems = [
     },
     {
         title: 'Your Team',
-        url: '../aboutUs',
+        url: '../#/aboutUs',
         cName: 'nav-links'
     },
     // {
@@ -18,22 +18,17 @@ export const MenuItems = [
     // },
     {
         title: 'Products We Trust',
-        url: '../products',
+        url: '../#/products',
         cName: 'nav-links'
     },
     {
         title: 'Know your Strength?',
-        url: '../quiz/question_1',
+        url: '../#/quiz/question_1',
         cName: 'nav-links'
     },
     {
         title: 'Contact Us',
-        url: '../contactUs',
+        url: '../#/contactUs',
         cName: 'nav-links'
     },
-    {
-        title: 'Mobile',
-        url: '../m.mobileUrl??? ',
-        cName: 'nav-links-mobile'
-    }
 ]

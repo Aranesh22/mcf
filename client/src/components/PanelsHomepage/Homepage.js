@@ -12,6 +12,7 @@ import AltPanel from './whyYouSuceed/AltPanel';
 import HexPanelText from './whyYouSuceed/HexPanelText';
 import WyS from './whyYouSuceed/WyS';
 
+// ferfeg
 
 export default function Homepage() {
     return (

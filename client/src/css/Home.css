@@ -20,6 +20,21 @@ body {
     z-index: -1;
 }
 
+
+@media only screen and (max-width: 700px){
+    .greenBehind{ 
+        /* background-color: #35B686; */
+        background-color: #2cdc83;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        bottom: 60%;
+        z-index: -1;
+    }
+}
+
+
+
 .bgDiv{
     background: #004c54 ;
     height: fit-content;

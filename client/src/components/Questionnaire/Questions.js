@@ -1,7 +1,7 @@
 import './Questions.css';
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { HashRouter, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import muscle from './muscle.svg'
 import fatloss from './fatloss.svg'
@@ -87,7 +87,7 @@ export class Questions extends React.Component {
 
     return (
       <body className="questionnaire">
-        <Router>
+        <HashRouter>
           <div className="form">
             <Switch>
               <Route exact path="/quiz/question_1">
@@ -443,7 +443,7 @@ export class Questions extends React.Component {
                 </Route>
             </Switch>
           </div>
-        </Router>
+        </HashRouter>
       </body>
     );
   }

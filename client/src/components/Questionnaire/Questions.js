@@ -237,6 +237,7 @@ export class Questions extends React.Component {
                 <Route exact path="/quiz/question_6">
                   <form action='/question/6' method='POST'>
                       <p id="mc_question">{question_2.question}</p>
+                      <p>We want to custom plan for your specific goals</p>
                       <div className="radio-buttons">
                         <label className="option">
                             <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
@@ -282,6 +283,7 @@ export class Questions extends React.Component {
                 <Route exact path="/quiz/question_7">
                   <form action='/question/7' method='POST'>
                       <p id="mc_question">{question_3.question}</p>
+                      <p>We can always make workouts more efficient, lets figure out where you are right now.</p>
                       <div className="radio-buttons">
                         <label className="option">
                             <input type="radio" id='time_1' name='Making time for exercise + workout is...' value='Easy for me to do'/> 
@@ -319,8 +321,32 @@ export class Questions extends React.Component {
 
                 <Route exact path="/quiz/question_8">
                   <form action='/question/8' method='POST'>
-                    <label>What is your activity level? (From 0-10)</label><br/>
-                    <input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>
+                    <label>What is your activity level?</label><br/>
+                    {/*<input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>*/}
+                    <div className="radio-buttons">
+                        <label className="option">
+                            <input type="radio" id='activityLevel_1' name='What is your activity level?' value='0 - 1 days'/> 
+                            <span>0 - 1 days</span>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='activityLevel_2' name='What is your activity level?' value='2 - 3 days'/> 
+                            <span>2 - 3 days</span>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='activityLevel_3' name='What is your activity level?' value='4 - 5 days'/> 
+                            <span>4 - 5 days</span>
+                        </label>
+                        <label className="option">
+                            <input type="radio" id='activityLevel_4' name='What is your activity level?' value='6 - 7 days'/> 
+                            <span>6 - 7 days</span>
+                        </label>
+
+                        <div className="hexagons">
+                            <div id="hex_1" className="chosen_one"></div>
+                            <div id="hex_2" className="chosen_one"></div>
+                            <div id="hex_3"></div>
+                        </div>
+                    </div>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -385,7 +411,7 @@ export class Questions extends React.Component {
 
                 <Route exact path="/quiz/question_10">
                   <form action='/question/10' method='POST'>
-                    <p>Do as many squats as you can for 30 seconds. Press start to begin!"</p>
+                    <p>It's time for a little foundational movement! Please do 30 seconds of squats for us (don’t worry we will keep the time). Press start to begin your countdown - and don’t forget to remember how many squats you did!</p>
                     <input type="submit" value="Start"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -426,7 +452,7 @@ export class Questions extends React.Component {
 
                 <Route exact path="/quiz/question_12">
                   <form action='/question/12' method='POST'>
-                    <label for="email">Please enter your email: </label><br/>
+                    <label for="email">Let us connect with you for your unique information and one of our experts will contact you to get more detail about your goals!</label><br/>
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                     <input type="submit" value="Submit"/>
                     <div className="hexagons">

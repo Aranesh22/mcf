@@ -92,6 +92,7 @@ export class Questions extends React.Component {
             <Switch>
               <Route exact path="/quiz/question_1">
                 <form action='/question/1' method='POST'>
+                  <p>At MyCure Fitness our Strength Programs are custom built with your input. Along with a few simple questions, this test will require a squat test so please have the space to complete that. Take the 4 minutes to provide us your details and we will be in touch in less than 24 hours.</p>
                   <label>What is your age?</label><br/>
                   <input type="number" id="age" name="current_age" min="0" max="100"/><br/><br/>
                   <input type="submit" value="Submit"/>

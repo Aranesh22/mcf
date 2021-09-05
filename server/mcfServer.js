@@ -48,6 +48,9 @@ app.post('/question/:quesNum',(req,res) => {
     else if (questionNumber == 7) {
         req.session['Making time for exercise + workout is...'] = req.body['Making time for exercise + workout is...'];
     }
+    else if (questionNumber == 8) {
+        req.session['What is your activity level?'] = req.body['What is your activity level?'];
+    }
     else if (questionNumber == 9) {
         req.session['What best describes your diet?'] = req.body['What best describes your diet?'];
     }
@@ -294,7 +297,7 @@ function checkSkip(questionNumber, values) {
     if (questionNumber == 7 && values['Making time for exercise + workout is...'] == undefined) {
         return 0;
     }
-    if (questionNumber == 8 && values.activity == '') {
+    if (questionNumber == 8 && values['What is your activity level?'] == undefined) {
         return 0;
     }
     if (questionNumber == 9 && values['What best describes your diet?'] == undefined) {

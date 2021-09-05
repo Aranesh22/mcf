@@ -90,17 +90,17 @@ export class Questions extends React.Component {
         <HashRouter>
           <div className="form">
             <Switch>
-              <Route exact path="/quiz/question_1">
+            <Route exact path="/quiz/question_1">
                 <form action='/question/1' method='POST'>
-                  <p>At MyCure Fitness our Strength Programs are custom built with your input. Along with a few simple questions, this test will require a squat test so please have the space to complete that. Take the 4 minutes to provide us your details and we will be in touch in less than 24 hours.</p>
-                  <label>What is your age?</label><br/>
-                  <input type="number" id="age" name="current_age" min="0" max="100"/><br/><br/>
-                  <input type="submit" value="Submit"/>
+                  <p>At MyCure Fitness our Strength Programs are custom built with your input. Along with a few simple questions, this test will require a squat test so please have the space to complete that. Take the 4 minutes to provide us your details and we will be in touch in less than 24 hours. Stronger - Healthier - Happier is achievable.</p>
+                  <input type="submit" value="GO!"/>
+
                   <div id="hexagons">
                       <div id="hex_1" className="chosen_one"></div>
                       <div id="hex_2"></div>
                       <div id="hex_3"></div>
                   </div>
+
                   <Link to="/">
                       <button type="button" className="back_button">
                           ᐊ Back
@@ -110,7 +110,25 @@ export class Questions extends React.Component {
               </Route>
 
               <Route exact path="/quiz/question_2">
-                  <form action='/question/2' method='POST'>
+                <form action='/question/2' method='POST'>
+                  <label>What is your age?</label><br/>
+                  <input type="number" id="age" name="current_age" min="0" max="100"/><br/><br/>
+                  <input type="submit" value="Submit"/>
+                  <div id="hexagons">
+                      <div id="hex_1" className="chosen_one"></div>
+                      <div id="hex_2"></div>
+                      <div id="hex_3"></div>
+                  </div>
+                  <Link to="/quiz/question_1">
+                      <button type="button" className="back_button">
+                          ᐊ Back
+                      </button>
+                  </Link>
+                </form>
+              </Route>
+
+              <Route exact path="/quiz/question_3">
+                  <form action='/question/3' method='POST'>
                     <label for="bio_sex">{question_1.question}</label><br/>
                     <select id="bio_sex" name={question_1.question}>
                       <option value="male">{answer_1[0]}</option>
@@ -123,7 +141,7 @@ export class Questions extends React.Component {
                         <div id="hex_2"></div>
                         <div id="hex_3"></div>
                     </div>
-                    <Link to="/quiz/question_1">
+                    <Link to="/quiz/question_2">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>
@@ -131,8 +149,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
                 
-                <Route exact path="/quiz/question_3">
-                  <form id='question3' action='/question/3' method='POST'>
+                <Route exact path="/quiz/question_4">
+                  <form id='question4' action='/question/4' method='POST'>
                     <label>What is your height in feet or centimeters?</label><br/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -158,7 +176,7 @@ export class Questions extends React.Component {
                     <input type="submit" value="Submit"/>
                     <br></br>
                     
-                    <Link to="/quiz/question_2">
+                    <Link to="/quiz/question_3">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>
@@ -166,8 +184,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_4">
-                  <form id='question4' action='/question/4' method='POST'>
+                <Route exact path="/quiz/question_5">
+                  <form id='question5' action='/question/5' method='POST'>
                     <label>What is your CURRENT weight or kilograms and pounds?</label><br/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -192,7 +210,7 @@ export class Questions extends React.Component {
                     <input type="submit" value="Submit"/>
                     <br></br>
 
-                    <Link to="/quiz/question_3">
+                    <Link to="/quiz/question_4">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>
@@ -200,8 +218,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_5">
-                  <form id='question5' action='/question/5' method='POST'>
+                <Route exact path="/quiz/question_6">
+                  <form id='question6' action='/question/6' method='POST'>
                     <label>What is your IDEAL weight in kilograms or pounds?</label><br/>
                     
                     <div className="hexagons">
@@ -227,7 +245,7 @@ export class Questions extends React.Component {
                     <input type="submit" value="Submit"/>
                     <br></br>
 
-                    <Link to="/quiz/question_4">
+                    <Link to="/quiz/question_5">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>
@@ -235,8 +253,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_6">
-                  <form action='/question/6' method='POST'>
+                <Route exact path="/quiz/question_7">
+                  <form action='/question/7' method='POST'>
                       <p id="mc_question">{question_2.question}</p>
                       <p>We want to custom plan for your specific goals.</p>
                       <div className="radio-buttons">
@@ -272,7 +290,7 @@ export class Questions extends React.Component {
 
                       <input type="submit" value="Submit"/>
                       <br></br>
-                      <Link to="/quiz/question_5">
+                      <Link to="/quiz/question_6">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
@@ -281,8 +299,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_7">
-                  <form action='/question/7' method='POST'>
+                <Route exact path="/quiz/question_8">
+                  <form action='/question/8' method='POST'>
                       <p id="mc_question">{question_3.question}</p>
                       <p>We can always make workouts more efficient, lets figure out where you are right now.</p>
                       <div className="radio-buttons">
@@ -311,7 +329,7 @@ export class Questions extends React.Component {
 
                       <input type="submit" value="Submit"/>
                       <br></br>
-                      <Link to="/quiz/question_6">
+                      <Link to="/quiz/question_7">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
@@ -320,8 +338,9 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_8">
-                  <form action='/question/8' method='POST'>
+                <Route exact path="/quiz/question_9">
+                  <form action='/question/9' method='POST'>
+                    <p id="mc_question">Activity Level</p>
                     <label>How often did you work out last week?</label><br/>
                     <p>Including at the gym, at home, outside, or at a local studio.</p>
                     {/*<input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>*/}
@@ -355,7 +374,7 @@ export class Questions extends React.Component {
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3"></div>
                     </div>
-                    <Link to="/quiz/question_7">
+                    <Link to="/quiz/question_8">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>
@@ -363,8 +382,8 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_9">
-                  <form action='/question/9' method='POST'>
+                <Route exact path="/quiz/question_10">
+                  <form action='/question/10' method='POST'>
                       <p id="mc_question">{question_4.question}</p>
                       <div className="radio-buttons">
                         <label className="option">
@@ -402,7 +421,7 @@ export class Questions extends React.Component {
                       
                       <input type="submit" value="Submit"/>
                       <br></br><br></br>
-                      <Link to="/quiz/question_8">
+                      <Link to="/quiz/question_9">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
@@ -411,33 +430,10 @@ export class Questions extends React.Component {
                   </form>
                 </Route>
 
-                <Route exact path="/quiz/question_10">
-                  <form action='/question/10' method='POST'>
+                <Route exact path="/quiz/question_11">
+                  <form action='/question/11' method='POST'>
                     <p>It's time for a little foundational movement! Please do 30 seconds of squats for us (don’t worry we will keep the time). Press start to begin your countdown - and don’t forget to remember how many squats you did!</p>
                     <input type="submit" value="Start"/>
-                    <div className="hexagons">
-                        <div id="hex_1" className="chosen_one"></div>
-                        <div id="hex_2" className="chosen_one"></div>
-                        <div id="hex_3"></div>
-                    </div>
-
-                    <Link to="/quiz/question_9">
-                        <button type="button" className="back_button">
-                            ᐊ Back
-                        </button>
-                    </Link>
-                  </form>
-                </Route>
-
-                <Route exact path="/quiz/question_11">
-                  <form action='/question/11' method='POST' id="count_form">
-                    <div className="hexagon"><span></span></div>
-                    <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
-                    <div id="example_hex"></div>
-                    <br></br>
-                    <label>Enter the amount of squats.</label><br/>
-                    <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
-                    <input type="submit" value="Submit"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -453,7 +449,30 @@ export class Questions extends React.Component {
                 </Route>
 
                 <Route exact path="/quiz/question_12">
-                  <form action='/question/12' method='POST'>
+                  <form action='/question/12' method='POST' id="count_form">
+                    <div className="hexagon"><span></span></div>
+                    <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
+                    <div id="example_hex"></div>
+                    <br></br>
+                    <label>Enter the amount of squats.</label><br/>
+                    <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
+                    <input type="submit" value="Submit"/>
+                    <div className="hexagons">
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
+                        <div id="hex_3"></div>
+                    </div>
+
+                    <Link to="/quiz/question_11">
+                        <button type="button" className="back_button">
+                            ᐊ Back
+                        </button>
+                    </Link>
+                  </form>
+                </Route>
+
+                <Route exact path="/quiz/question_13">
+                  <form action='/question/13' method='POST'>
                     <label for="email">Let us connect with you for your unique information and one of our experts will contact you to get more detail about your goals!</label><br/>
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                     <input type="submit" value="Submit"/>
@@ -462,7 +481,7 @@ export class Questions extends React.Component {
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3" className="chosen_one"></div>
                     </div>
-                    <Link to="/quiz/question_11">
+                    <Link to="/quiz/question_12">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>

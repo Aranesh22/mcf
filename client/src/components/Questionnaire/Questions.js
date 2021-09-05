@@ -238,7 +238,7 @@ export class Questions extends React.Component {
                 <Route exact path="/quiz/question_6">
                   <form action='/question/6' method='POST'>
                       <p id="mc_question">{question_2.question}</p>
-                      <p>We want to custom plan for your specific goals</p>
+                      <p>We want to custom plan for your specific goals.</p>
                       <div className="radio-buttons">
                         <label className="option">
                             <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
@@ -322,7 +322,8 @@ export class Questions extends React.Component {
 
                 <Route exact path="/quiz/question_8">
                   <form action='/question/8' method='POST'>
-                    <label>What is your activity level?</label><br/>
+                    <label>How often did you work out last week?</label><br/>
+                    <p>Including at the gym, at home, outside, or at a local studio.</p>
                     {/*<input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>*/}
                     <div className="radio-buttons">
                         <label className="option">

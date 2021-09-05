@@ -32,33 +32,33 @@ app.post('/question/:quesNum',(req,res) => {
 
     console.log(req.body);
 
-    if (questionNumber == 3) {
+    if (questionNumber == 4) {
         req.session.feet = req.body.feet;
         req.session.cms = req.body.cms;
         req.session.feet_inches = req.body.feet_inches;
-    }else if (questionNumber == 4) {
+    }else if (questionNumber == 5) {
         req.session.kgs = req.body.kgs;
         req.session.pounds = req.body.pounds;
-    }else if (questionNumber == 5) {
+    }else if (questionNumber == 6) {
         req.session.ideal_kgs = req.body.ideal_kgs;
         req.session.ideal_pounds = req.body.ideal_pounds;
-    }else if (questionNumber == 6) {
+    }else if (questionNumber == 7) {
         req.session["What's your goal?"] = req.body["What's your goal?"];
     }
-    else if (questionNumber == 7) {
+    else if (questionNumber == 8) {
         req.session['Making time for exercise + workout is...'] = req.body['Making time for exercise + workout is...'];
     }
-    else if (questionNumber == 8) {
+    else if (questionNumber == 9) {
         req.session['What is your activity level?'] = req.body['What is your activity level?'];
     }
-    else if (questionNumber == 9) {
+    else if (questionNumber == 10) {
         req.session['What best describes your diet?'] = req.body['What best describes your diet?'];
     }
     else {
         req.session[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
     }
     
-    if (questionNumber == 12) {
+    if (questionNumber == 13) {
         if (checkEmail(req.body.email) == 0) {
             return res.status(400).send({
                 message: "Email was not entered properly! The email service providers we support include gmail, hotmail, aol, outlook, yahoo, icloud, me, mac."
@@ -260,13 +260,13 @@ async function updateDoc(ans) {
 }
 
 function checkSkip(questionNumber, values) {
-    if (questionNumber == 1 && values.current_age == '') {
+    if (questionNumber == 2 && values.current_age == '') {
         return 0;
     }
-    if (questionNumber == 2 && values["What's your biological sex?"] == '') {
+    if (questionNumber == 3 && values["What's your biological sex?"] == '') {
         return 0;
     }
-    if (questionNumber == 3) {
+    if (questionNumber == 4) {
         if (values.feet != '' && values.feet_inches != '' && values.cms == '') {
             return 1;
         }
@@ -275,7 +275,7 @@ function checkSkip(questionNumber, values) {
         }
         return 0;
     }
-    if (questionNumber == 4) {
+    if (questionNumber == 5) {
         if (values.kgs == '' && values.pounds == '') {
             return 0;
         }
@@ -283,7 +283,7 @@ function checkSkip(questionNumber, values) {
             return 0;
         }
     }
-    if (questionNumber == 5) {
+    if (questionNumber == 6) {
         if (values.ideal_kgs == '' && values.ideal_pounds == '') {
             return 0;
         }
@@ -291,19 +291,19 @@ function checkSkip(questionNumber, values) {
             return 0;
         }
     }
-    if (questionNumber == 6 && values["What's your goal?"] == undefined) {
+    if (questionNumber == 7 && values["What's your goal?"] == undefined) {
         return 0;
     }
-    if (questionNumber == 7 && values['Making time for exercise + workout is...'] == undefined) {
+    if (questionNumber == 8 && values['Making time for exercise + workout is...'] == undefined) {
         return 0;
     }
-    if (questionNumber == 8 && values['What is your activity level?'] == undefined) {
+    if (questionNumber == 9 && values['What is your activity level?'] == undefined) {
         return 0;
     }
-    if (questionNumber == 9 && values['What best describes your diet?'] == undefined) {
+    if (questionNumber == 10 && values['What best describes your diet?'] == undefined) {
         return 0;
     }
-    if (questionNumber == 11 && values.squat == '') {
+    if (questionNumber == 12 && values.squat == '') {
         return 0;
     }
 

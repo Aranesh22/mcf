@@ -30,10 +30,11 @@ export const MenuItems = [
         title: 'Contact Us',
         url: '../#/contactUs',
         cName: 'nav-links'
-    },
-    {
-        title: 'Mobile',
-        url: '../#/m.mobileUrl??? ',
-        cName: 'nav-links-mobile'
     }
+    // ,
+    // {
+    //     title: 'Mobile',
+    //     url: '../#/m.mobileUrl??? ',
+    //     cName: 'nav-links-mobile'
+    // }
 ]

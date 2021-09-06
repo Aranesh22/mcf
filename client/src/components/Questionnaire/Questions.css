@@ -548,6 +548,10 @@ input[type=radio] {
     width: 56% !important;
 }
 
+input[type=checkbox] {
+    display: none;
+}
+
 @media (max-width: 600px) {
     .radio-buttons {
       flex-direction: column;

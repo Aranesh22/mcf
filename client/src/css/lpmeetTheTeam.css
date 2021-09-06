@@ -1,5 +1,11 @@
 /*note: the images have been coded into this css file thus any image changes will take place here  */
+.containTeam { 
 
+    width: 800px; 
+    height: 800px; 
+    margin: 20px auto;   
+    position: relative; 
+} 
 .topLeft { 
 
     width: 240px; 
@@ -74,13 +80,7 @@
     position: absolute; 
 
 }
-.containTeam { 
 
-    width: 800px; 
-    height: 800px; 
-    margin: 20px auto;   
-    position: relative; 
-} 
 
 
 @media only screen and (max-width: 700px){
@@ -89,6 +89,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        height: auto;
     }
     .topLeft { 
         width: 100%;
@@ -99,6 +100,7 @@
         position:unset; 
         background-image: url('../assets/mTimages/RS_HP (1).svg') !important;
         background: no-repeat;
+        background-position: center;
     }  
     .topRight {  
         /* width: 440px;  */
@@ -109,6 +111,8 @@
         position:unset;
         background-image: url('../assets/mTimages/updated/DPP_HP.svg') !important; 
         background: no-repeat;
+        background-position: center;
+
     }
     .mid { 
         /* width: 440px;  */
@@ -120,6 +124,8 @@
         position: unset; 
         background-image: url('../assets/mTimages/updated/JG_HP.svg') !important;
         background: no-repeat;
+        background-position: center;
+
     } 
     /* empty hexagons */
     .bottomLeft {  

@@ -259,22 +259,22 @@ export class Questions extends React.Component {
                       <p>We want to custom plan for your specific goals.</p>
                       <div className="radio-buttons">
                         <label className="option">
-                            <input type="radio" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
+                            <input type="checkbox" id='goal_1' name="What's your goal?" value='Muscle build and get stronger'/> 
                             <span>{answer_2[0]}</span>
                             <img src={muscle} alt="muscle" className="image"/>
                         </label>
                         <label className="option">
-                            <input type="radio" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/> 
+                            <input type="checkbox" id='goal_2' name="What's your goal?" value='Fat loss and get leaner'/> 
                             <span>{answer_2[1]}</span>
                             <img src={fatloss} alt="fatloss" className="image"/>
                         </label>
                         <label className="option">
-                            <input type="radio" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/> 
+                            <input type="checkbox" id='goal_3' name="What's your goal?" value='Athletic optimization (A protocol to support long + intense performance)'/> 
                             <span>{answer_2[2]}</span>
                             <img src={optimization} alt="optimization" className="image"/>
                         </label>
                         <label className="option">
-                            <input type="radio" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/> 
+                            <input type="checkbox" id='goal_4' name="What's your goal?" value='Sweat have fun and develop healthy eating lifestyle'/> 
                             <span>{answer_2[3]}</span>
                             <img src={healthy} alt="healthy" className="image"/>
                         </label>

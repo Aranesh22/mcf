@@ -457,7 +457,13 @@ export class Questions extends React.Component {
                     <br></br>
                     <label>Enter the amount of squats.</label><br/>
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
-                    <input type="submit" value="Submit"/>
+                    
+                    {count > 0
+                      ? <input type="submit" value="Submit" className="hexSubmit"/>
+                      : <input type="submit" value="Submit"/>
+                    }
+
+                    
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -471,11 +477,26 @@ export class Questions extends React.Component {
                     </Link>
                   </form>
                 </Route>
-                
+
                 <Route exact path="/quiz/question_13">
                   <form action='/question/13' method='POST'>
-                    <img src={beta} alt="beta" className="beta"/>
-                    <br/><br/>
+                    <img src={beta} alt="beta" className="beta"/><br/>
+                    <input type="submit" value="Proceed to last question"/>
+                    <div className="hexagons">
+                        <div id="hex_1" className="chosen_one"></div>
+                        <div id="hex_2" className="chosen_one"></div>
+                        <div id="hex_3" className="chosen_one"></div>
+                    </div>
+                    <Link to="/quiz/question_12">
+                        <button type="button" className="back_button">
+                            ᐊ Back
+                        </button>
+                    </Link>
+                  </form>
+                </Route>
+                
+                <Route exact path="/quiz/question_14">
+                  <form action='/question/14' method='POST'>
                     <label for="email">Let us connect with you for your unique information and one of our experts will contact you to get more detail about your goals!</label><br/>
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                     <input type="submit" value="Submit"/>
@@ -484,7 +505,7 @@ export class Questions extends React.Component {
                         <div id="hex_2" className="chosen_one"></div>
                         <div id="hex_3" className="chosen_one"></div>
                     </div>
-                    <Link to="/quiz/question_12">
+                    <Link to="/quiz/question_13">
                         <button type="button" className="back_button">
                             ᐊ Back
                         </button>

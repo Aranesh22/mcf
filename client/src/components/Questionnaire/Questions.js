@@ -163,13 +163,13 @@ export class Questions extends React.Component {
                     <label class="btn" for="btnControl">
                       <h2>Enter Feet and inches</h2>
                       <input type="number" id="ft_cms" name="feet" min="0" max="10" placeholder="feet"/>
-                      <input type="number" id="ft_inches" name="feet_inches" min="0" max="10" placeholder="inches"/>
+                      <input type="number" id="ft_inches" name="feet_inches" min="0" max="11" placeholder="inches"/>
                     </label>
                     <br></br>
                     <input type="checkbox" id="btnControl_2"/>
                     <label class="btn" for="btnControl_2">
                       <h2>Enter cms</h2>
-                      <input type="number" id="cms" className="cms" name="cms" min="0" max="10" placeholder="cms"/>
+                      <input type="number" id="cms" className="cms" name="cms" min="0" max="243" placeholder="cms"/>
                     </label>
 
                     <br></br>
@@ -197,13 +197,13 @@ export class Questions extends React.Component {
                     <input type="checkbox" id="btnControl_3"/>
                     <label class="btn" for="btnControl_3">
                       <h2>Enter kgs</h2>
-                      <input type="number" id="kgs" name="kgs" min="0" max="10" placeholder="kgs"/>
+                      <input type="number" id="kgs" name="kgs" min="0" max="635" placeholder="kgs"/>
                     </label>
                     <br></br>
                     <input type="checkbox" id="btnControl_4"/>
                     <label class="btn" for="btnControl_4">
                       <h2>Enter pounds</h2>
-                      <input type="number" id="pounds" name="pounds" min="0" max="10" placeholder="pounds"/>
+                      <input type="number" id="pounds" name="pounds" min="0" max="1400" placeholder="pounds"/>
                     </label>
 
                     <br></br>
@@ -232,13 +232,13 @@ export class Questions extends React.Component {
                     <input type="checkbox" id="btnControl_5"/>
                     <label class="btn" for="btnControl_5">
                       <h2>Enter Ideal kgs</h2>
-                      <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="10" placeholder="Ideal kgs"/>
+                      <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="635" placeholder="Ideal kgs"/>
                     </label>
                     <br></br>
                     <input type="checkbox" id="btnControl_6"/>
                     <label class="btn" for="btnControl_6">
                       <h2>Enter Ideal pounds</h2>
-                      <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="10" placeholder="Ideal pounds"/>
+                      <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="1400" placeholder="Ideal pounds"/>
                     </label>
 
                     <br></br>

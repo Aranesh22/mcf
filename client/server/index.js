@@ -176,8 +176,8 @@ function sendEmail(email) {
     var mailOptions = {
         from: 'fitnessautomail@gmail.com',
         to: String(email),
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!',
+        subject: 'Thank you!',
+        text: 'We appreciate that you took the time to complete our questionnaire. Please take a look at our poster attached below for more information about our training program. If you have any questions please contact James at 416-765-4905 or visit us today at 123 Anyone St. Markham, ON.',
         attachments: [{
             filename: 'poster.jpg',
             content: fs.createReadStream('./poster.jpg')

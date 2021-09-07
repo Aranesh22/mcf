@@ -316,14 +316,38 @@
   
   
   
-  .halfHexR1{
+  /* .halfHexR1{
     /* height: 100px;
     bottom: 1em; */
-    bottom: 9.8em;
+    /* bottom: 9.8em;
     left:0;
     right:0;
   
     border: solid;
-    position: relative;
+    position: relative; */
     
-  }
+.halfHexR1 {
+    position: absolute;
+    height: 37%;
+    bottom: -0.4em;
+
+
+}
+
+.fullHexR2 {  
+
+    position: absolute;
+    height: 45%;
+    bottom: 5.5em;
+
+}
+
+
+
+.fullHexR3 {  
+
+    position: absolute;
+    height: 45%;
+    bottom:18em;
+
+}

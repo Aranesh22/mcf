@@ -60,7 +60,7 @@ app.post('/question/:quesNum',(req,res) => {
         req.session[String(Object.keys(req.body)[0])] = String(req.body[Object.keys(req.body)[0]]);
     }
     
-    if (questionNumber == 13) {
+    if (questionNumber == 14) {
         if (checkEmail(req.body.email) == 0) {
             return res.status(400).send({
                 message: "Email was not entered properly! The email service providers we support include gmail, hotmail, aol, outlook, yahoo, icloud, me, mac."

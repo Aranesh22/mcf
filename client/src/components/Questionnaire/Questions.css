@@ -555,11 +555,16 @@ input[type=checkbox] {
 }
 
 .beta {
-    height: 500px;
+    height: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
     width: 85%;
+}
+
+.hexSubmit {
+    opacity: 0;
+    pointer-events: none;
 }
 
 @media (max-width: 600px) {

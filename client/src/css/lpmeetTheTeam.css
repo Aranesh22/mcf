@@ -15,12 +15,13 @@
     /* top: 27px; */
     position: absolute;
     /* z-index: 1; */
-    background-image: url('../assets/mTimages/updated/RS_HP_PIC.svg');
+  
+    background-image: url('../assets/mTimages/RS_HP (1).svg');
     transition:ease-in-out .2s;
 }
 
 .topLeft:hover{ 
-    background-image: url('../assets/mTimages/RS_HP (1).svg');
+    background-image: url('../assets/mTimages/updated/RS_HP_PIC.svg');
     transition: ease-in-out .2s;
 }  
 
@@ -31,13 +32,13 @@
     left: 275px; 
     bottom: 450px;
     position: absolute; 
-    background-image: url('../assets/mTimages/updated/JG_HP_PIC.svg');
+    background-image: url('../assets/mTimages/updated/JG_HP.svg');    
     transition:ease-in-out .2s;
     
 } 
 
 .mid:hover{
-    background-image: url('../assets/mTimages/updated/JG_HP.svg');
+    background-image: url('../assets/mTimages/updated/JG_HP_PIC.svg');
     transition:ease-in-out .2s;
 }
 
@@ -49,12 +50,12 @@
     /* top: 16px; */
     /* z-index: 1; */
     position: absolute; 
-    background-image: url('../assets/mTimages/updated/DPP_HP_PIC.svg');
+    background-image: url('../assets/mTimages/updated/DPP_HP.svg');
     transition:ease-in-out .2s;
 }
 
 .topRight:hover{
-    background-image: url('../assets/mTimages/updated/DPP_HP.svg');
+    background-image: url('../assets/mTimages/updated/DPP_HP_PIC.svg');
     transition:ease-in-out .2s;
 }
 

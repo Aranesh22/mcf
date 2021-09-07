@@ -268,3 +268,62 @@
     /* font-size: 1.2rem; */
     letter-spacing: 0.15rem;
 }
+
+
+
+
+
+
+/* navdesktop  */
+
+.pagesList {
+    flex-direction: column;
+    align-items: flex-start;
+    color: #004c54;
+  }
+  
+  .pagesList li {
+    color: #004c54;
+    list-style: none;
+    padding-bottom: 5%;
+  }
+  
+  
+  .footerMobile{
+    background-color: #E8F7F2;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  a{
+    color: #004c54 !important;
+    text-decoration: none !important;
+  }
+  
+  
+  .fBg {
+  
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 0;
+      padding-top: 45.64%; /* (img-height / img-width * container-width) */  
+                  /* (853 / 1280 * 100)   --- prob change this/fiddle w this */ 
+  
+  }
+  
+  
+  
+  .halfHexR1{
+    /* height: 100px;
+    bottom: 1em; */
+    bottom: 9.8em;
+    left:0;
+    right:0;
+  
+    border: solid;
+    position: relative;
+    
+  }

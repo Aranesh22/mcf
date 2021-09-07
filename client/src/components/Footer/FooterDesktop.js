@@ -13,7 +13,7 @@ export default function FooterDesktop() {
             </div>
             <div className="fullHexR2" style={{border: "solid orange", marginLeft: '60%',  width: '20%'}}>
             </div>
-            <div className="fullHexR3" style={{border: "solid purple", marginLeft: '80%',  width: '20%'}}>
+            <div className="halfHexR1" style={{border: "solid purple", marginLeft: '80%',  width: '20%'}}>
             </div>
 
         </div>

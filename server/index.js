@@ -7,6 +7,7 @@ const coaches = require('./coaches.json');
 const questions = require('./questions.json');
 const { google } = require("googleapis");
 const nodemailer = require('nodemailer');
+const pino = require('express-pino-logger')();
 const fs = require('fs');
 require('dotenv').config();
 
@@ -17,6 +18,7 @@ let db;
 
 app.use('/aboutUs',aboutUs);
 app.use('/',index);
+app.use(pino);
 
 //Body parsers
 app.use(express.urlencoded({extended:true}));

@@ -585,12 +585,6 @@ input[type=checkbox] {
         height: 50px;
         width: 50px;
     
-        /*
-        background: #518087;
-        position: absolute;
-        top: 30px;
-        right: 210px;
-        */
         position: absolute;
         top: 30px;
         right: 60px;
@@ -603,12 +597,6 @@ input[type=checkbox] {
         height: 50px;
         width: 50px;
         
-        /*
-        background: #4B757D;
-        position: absolute;
-        top: 30px;
-        right: 160px;
-        */
         position: absolute;
         top: 30px;
         right: 10px;

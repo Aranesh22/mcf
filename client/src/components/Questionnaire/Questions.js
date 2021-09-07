@@ -15,6 +15,7 @@ import vegan_3 from './vegan_3.svg'
 import paleoKeto_3 from './paleoKeto_3.svg'
 import mediterranean_3 from './mediterranean_3.svg'
 import other_3 from './other_3.svg'
+import beta from './beta.svg'
 
 export class Questions extends React.Component {
   constructor(props) {
@@ -470,9 +471,11 @@ export class Questions extends React.Component {
                     </Link>
                   </form>
                 </Route>
-
+                
                 <Route exact path="/quiz/question_13">
                   <form action='/question/13' method='POST'>
+                    <img src={beta} alt="beta" className="beta"/>
+                    <br/><br/>
                     <label for="email">Let us connect with you for your unique information and one of our experts will contact you to get more detail about your goals!</label><br/>
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
                     <input type="submit" value="Submit"/>

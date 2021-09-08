@@ -455,7 +455,7 @@ export class Questions extends React.Component {
                     <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
                     <div id="example_hex"></div>
                     <br></br>
-                    <label>Enter the amount of squats.</label><br/>
+                    <label>Enter the amount of squats and please wait until the counter reaches 0.</label><br/>
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                     
                     {count > 0

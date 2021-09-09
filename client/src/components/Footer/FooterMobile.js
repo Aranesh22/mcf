@@ -8,6 +8,7 @@ export default function FooterMobile() {
             <ul className="pagesList d-flex mx-5">
                 <li ><a href="../#">HOME</a></li>
                 <li><a href="../#/quiz/question_1">KNOW YOUR STRENGTH</a></li>
+                <li><a href="../#"  >Products We Trust</a></li>
                 <li><a href="../#/aboutUs">YOUR TEAM</a></li>
                 <li><a href="../#/contactUs">CONTACT US</a></li>
             </ul>

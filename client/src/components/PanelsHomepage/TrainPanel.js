@@ -44,7 +44,7 @@ export default function TrainPanel() {
                     </footer> */}
                     
                     <div className="flexAlignStart d-flex" style={{padding: '4%'}}>
-                    <Button className="buttonWhite">Know Your Strength ⟶</Button> </div> 
+                    <a href="../#/quiz/question_1"><Button className="buttonWhite">Know Your Strength ⟶</Button></a></div> 
                 </div>
             </div>
            

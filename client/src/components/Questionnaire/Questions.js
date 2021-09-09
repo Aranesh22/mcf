@@ -92,9 +92,10 @@ export class Questions extends React.Component {
           <div className="form">
             <Switch>
             <Route exact path="/quiz/question_1">
-                <form action='/question/1' method='POST'>
+                <form action='/question/1' method='POST' data-netlify="true" name="form_1" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                  <input type="hidden" name="form-name" value="form_1"/>
                   <p>At MyCure Fitness our Strength Programs are custom built with your input. Along with a few simple questions, this test will require a squat test so please have the space to complete that. Take the 4 minutes to provide us your details and we will be in touch in less than 24 hours. Stronger - Healthier - Happier is achievable.</p>
-                  <input type="submit" value="GO!"/>
+                  <input type="submit" value="GO!" name="submit_1"/>
 
                   <div id="hexagons">
                       <div id="hex_1" className="chosen_one"></div>
@@ -107,14 +108,16 @@ export class Questions extends React.Component {
                           ᐊ Back
                       </button>
                   </Link>
+                  <div data-netlify-recaptcha="true"></div>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_2">
-                <form action='/question/2' method='POST'>
+                <form action='/question/2' method='POST' data-netlify="true" name="form_2" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                  <input type="hidden" name="form-name" value="form_2"/>
                   <label>What is your age?</label><br/>
                   <input type="number" id="age" name="current_age" min="0" max="100"/><br/><br/>
-                  <input type="submit" value="Submit"/>
+                  <input type="submit" value="Submit" name="submit_2"/>
                   <div id="hexagons">
                       <div id="hex_1" className="chosen_one"></div>
                       <div id="hex_2"></div>
@@ -125,18 +128,20 @@ export class Questions extends React.Component {
                           ᐊ Back
                       </button>
                   </Link>
+                  <div data-netlify-recaptcha="true"></div>
                 </form>
               </Route>
 
               <Route exact path="/quiz/question_3">
-                  <form action='/question/3' method='POST'>
+                  <form action='/question/3' method='POST' data-netlify="true" name="form_3" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_3"/>
                     <label for="bio_sex">{question_1.question}</label><br/>
                     <select id="bio_sex" name={question_1.question}>
-                      <option value="male">{answer_1[0]}</option>
-                      <option value="female">{answer_1[1]}</option>
-                      <option value="other">{answer_1[2]}</option>
+                      <option value="male" name="male">{answer_1[0]}</option>
+                      <option value="female" name="female">{answer_1[1]}</option>
+                      <option value="other" name="other">{answer_1[2]}</option>
                     </select><br/><br/>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_3"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2"></div>
@@ -147,11 +152,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
                 
                 <Route exact path="/quiz/question_4">
-                  <form id='question4' action='/question/4' method='POST'>
+                  <form id='question4' action='/question/4' method='POST' data-netlify="true" name="form_4" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_4"/>
                     <label>What is your height in feet or centimeters?</label><br/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -160,21 +167,21 @@ export class Questions extends React.Component {
                     </div>
                     <br></br>
 
-                    <input type="checkbox" id="btnControl"/>
+                    <input type="checkbox" id="btnControl" name="ft_inch_input"/>
                     <label class="btn" for="btnControl">
                       <h2>Enter Feet and inches</h2>
                       <input type="number" id="ft_cms" name="feet" min="0" max="10" placeholder="feet"/>
                       <input type="number" id="ft_inches" name="feet_inches" min="0" max="11" placeholder="inches"/>
                     </label>
                     <br></br>
-                    <input type="checkbox" id="btnControl_2"/>
+                    <input type="checkbox" id="btnControl_2" name="cms_input"/>
                     <label class="btn" for="btnControl_2">
                       <h2>Enter cms</h2>
                       <input type="number" id="cms" className="cms" name="cms" min="0" max="243" placeholder="cms"/>
                     </label>
 
                     <br></br>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_4"/>
                     <br></br>
                     
                     <Link to="/quiz/question_3">
@@ -182,11 +189,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_5">
-                  <form id='question5' action='/question/5' method='POST'>
+                  <form id='question5' action='/question/5' method='POST' data-netlify="true" name="form_5" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_5"/>
                     <label>What is your CURRENT weight or kilograms and pounds?</label><br/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
@@ -195,20 +204,20 @@ export class Questions extends React.Component {
                     </div>
                     <br></br>
 
-                    <input type="checkbox" id="btnControl_3"/>
+                    <input type="checkbox" id="btnControl_3" name="kgs_input"/>
                     <label class="btn" for="btnControl_3">
                       <h2>Enter kgs</h2>
                       <input type="number" id="kgs" name="kgs" min="0" max="635" placeholder="kgs"/>
                     </label>
                     <br></br>
-                    <input type="checkbox" id="btnControl_4"/>
+                    <input type="checkbox" id="btnControl_4" name="pounds_input"/>
                     <label class="btn" for="btnControl_4">
                       <h2>Enter pounds</h2>
                       <input type="number" id="pounds" name="pounds" min="0" max="1400" placeholder="pounds"/>
                     </label>
 
                     <br></br>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_5"/>
                     <br></br>
 
                     <Link to="/quiz/question_4">
@@ -216,11 +225,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_6">
-                  <form id='question6' action='/question/6' method='POST'>
+                  <form id='question6' action='/question/6' method='POST' data-netlify="true" name="form_6" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_6"/>
                     <label>What is your IDEAL weight in kilograms or pounds?</label><br/>
                     
                     <div className="hexagons">
@@ -230,20 +241,20 @@ export class Questions extends React.Component {
                     </div>
                     <br></br>
 
-                    <input type="checkbox" id="btnControl_5"/>
+                    <input type="checkbox" id="btnControl_5" name="ideal_kgs_input"/>
                     <label class="btn" for="btnControl_5">
                       <h2>Enter Ideal kgs</h2>
                       <input type="number" id="ideal_kgs" name="ideal_kgs" min="0" max="635" placeholder="Ideal kgs"/>
                     </label>
                     <br></br>
-                    <input type="checkbox" id="btnControl_6"/>
+                    <input type="checkbox" id="btnControl_6" name="ideal_pounds_input"/>
                     <label class="btn" for="btnControl_6">
                       <h2>Enter Ideal pounds</h2>
                       <input type="number" id="ideal_pounds" name="ideal_pounds" min="0" max="1400" placeholder="Ideal pounds"/>
                     </label>
 
                     <br></br>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_6"/>
                     <br></br>
 
                     <Link to="/quiz/question_5">
@@ -251,11 +262,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_7">
-                  <form action='/question/7' method='POST'>
+                  <form action='/question/7' method='POST' data-netlify="true" name="form_7" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                      <input type="hidden" name="form-name" value="form_7"/>
                       <p id="mc_question">{question_2.question}</p>
                       <p>We want to custom plan for your specific goals.</p>
                       <div className="radio-buttons">
@@ -289,19 +302,20 @@ export class Questions extends React.Component {
 
                       </div>
 
-                      <input type="submit" value="Submit"/>
+                      <input type="submit" value="Submit" name="submit_7"/>
                       <br></br>
                       <Link to="/quiz/question_6">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
                       </Link>
-                      
+                      <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_8">
-                  <form action='/question/8' method='POST'>
+                  <form action='/question/8' method='POST' data-netlify="true" name="form_8" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                      <input type="hidden" name="form-name" value="form_8"/>
                       <p id="mc_question">{question_3.question}</p>
                       <p>We can always make workouts more efficient, lets figure out where you are right now.</p>
                       <div className="radio-buttons">
@@ -328,23 +342,24 @@ export class Questions extends React.Component {
                         </div>
                       </div>
 
-                      <input type="submit" value="Submit"/>
+                      <input type="submit" value="Submit" name="submit_8"/>
                       <br></br>
                       <Link to="/quiz/question_7">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
                       </Link>
-                      
+                      <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_9">
-                  <form action='/question/9' method='POST'>
+                  <form action='/question/9' method='POST' data-netlify="true" name="form_9" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_9"/>
                     <p id="mc_question">Activity Level</p>
                     <label>How often did you work out last week?</label><br/>
                     <p>Including at the gym, at home, outside, or at a local studio.</p>
-                    {/*<input type="number" id="activity_lvl" name="activity" min="0" max="10"/><br/><br/>*/}
+                    
                     <div className="radio-buttons">
                         <label className="option">
                             <input type="radio" id='activityLevel_1' name='What is your activity level?' value='0 - 1 days'/> 
@@ -369,7 +384,7 @@ export class Questions extends React.Component {
                             <div id="hex_3"></div>
                         </div>
                     </div>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_9"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -380,11 +395,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_10">
-                  <form action='/question/10' method='POST'>
+                  <form action='/question/10' method='POST' data-netlify="true" name="form_10" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                      <input type="hidden" name="form-name" value="form_10"/>
                       <p id="mc_question">{question_4.question}</p>
                       <div className="radio-buttons">
                         <label className="option">
@@ -420,21 +437,22 @@ export class Questions extends React.Component {
                         </div>
                       </div>
                       
-                      <input type="submit" value="Submit"/>
+                      <input type="submit" value="Submit" name="submit_10"/>
                       <br></br><br></br>
                       <Link to="/quiz/question_9">
                             <button type="button" className="back_button">
                                 ᐊ Back
                             </button>
                       </Link>
-                      
+                      <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_11">
-                  <form action='/question/11' method='POST'>
+                  <form action='/question/11' method='POST' data-netlify="true" name="form_11" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_11"/>
                     <p>It's time for a little foundational movement! Please do 30 seconds of squats for us (don’t worry we will keep the time). Press start to begin your countdown - and don’t forget to remember how many squats you did!</p>
-                    <input type="submit" value="Start"/>
+                    <input type="submit" value="Start" name="submit_11"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -446,11 +464,13 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_12">
-                  <form action='/question/12' method='POST' id="count_form">
+                  <form action='/question/12' method='POST' id="count_form" data-netlify="true" name="form_12" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_12"/>
                     <div className="hexagon"><span></span></div>
                     <h1 id="current_count">Current count: </h1> <br></br><p id="count">{count}</p>
                     <div id="example_hex"></div>
@@ -459,8 +479,8 @@ export class Questions extends React.Component {
                     <input type="number" id="squat_lvl" name="squat" min="0" max="100"/><br/><br/>
                     
                     {count > 0
-                      ? <input type="submit" value="Submit" className="hexSubmit"/>
-                      : <input type="submit" value="Submit"/>
+                      ? <input type="submit" value="Submit" className="hexSubmit" name="submit_12_0"/>
+                      : <input type="submit" value="Submit" name="submit_12_1"/>
                     }
 
                     
@@ -475,13 +495,15 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
 
                 <Route exact path="/quiz/question_13">
-                  <form action='/question/13' method='POST'>
+                  <form action='/question/13' method='POST' data-netlify="true" name="form_13" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_13"/>
                     <img src={beta} alt="beta" className="beta"/><br/>
-                    <input type="submit" value="Proceed to last question"/>
+                    <input type="submit" value="Proceed to last question" name="submit_13"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -492,14 +514,16 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
                 
                 <Route exact path="/quiz/question_14">
-                  <form action='/question/14' method='POST'>
+                  <form action='/question/14' method='POST' data-netlify="true" name="form_14" encType="application/x-www-form-urlencoded" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="form_14"/>
                     <label for="email">Let us connect with you for your unique information and one of our experts will contact you to get more detail about your goals!</label><br/>
                     <input type="text" id="user_email" name="email" placeholder="Enter email"/><br/><br/>
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" name="submit_14"/>
                     <div className="hexagons">
                         <div id="hex_1" className="chosen_one"></div>
                         <div id="hex_2" className="chosen_one"></div>
@@ -510,6 +534,7 @@ export class Questions extends React.Component {
                             ᐊ Back
                         </button>
                     </Link>
+                    <div data-netlify-recaptcha="true"></div>
                   </form>
                 </Route>
             </Switch>

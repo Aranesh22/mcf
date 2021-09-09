@@ -31,6 +31,9 @@ function App() {
             <ContactUs />
             <Footer/>
           </Route>
+          <Route path="/products">
+            <p className="mt-5">Shopify coming soon</p>
+          </Route>
 
           <Questions/>
         

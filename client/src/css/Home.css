@@ -13,7 +13,6 @@ body {
 
 
 
-
 /* 670px */
 @media only screen and (max-width: 670px){
     .greenBehind{ 
@@ -22,7 +21,7 @@ body {
         height: 100%;
         width: 100%;
         position: absolute;
-        bottom: 75%;
+        bottom: 55%;
         z-index: -1;
     }
 }
@@ -52,7 +51,16 @@ body {
 }
 
 
-
+.greenBehind{ 
+    /* background-color: #35B686; */
+    background-color: #2cdc83;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 20%;
+    /* 25% */
+    z-index: -1;
+}
 
 
 .bgDiv{

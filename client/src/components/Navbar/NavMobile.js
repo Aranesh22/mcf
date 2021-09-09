@@ -21,20 +21,20 @@ return (
   {/* <!-- Overlay content --> */}
   <Button className="navDropButton flexAlignStart d-flex" onClick={() => setOpen(!open)} >☰</Button>
   <div className="overlay-content">
-  <a href="../">Home</a>
-    <a href="../#/aboutUs">Your Team</a>
-    <a href="#">Products We Trust</a>
-    <a href="../contactUs">Contact Us</a>
+  <a href="../#" onClick={() => setOpen(!open)} >Home</a>
+    <a href="../#/aboutUs" onClick={() => setOpen(!open)} >Your Team</a>
+    <a href="#" onClick={() => setOpen(!open)} >Products We Trust</a>
+    <a href="../#/contactUs" onClick={() => setOpen(!open)} >Contact Us</a>
   </div>
   
 </div>
             : <div id="myNav" class="overlay" style={{height: '0%'}}>
             <Button className="navDropButton flexAlignStart d-flex" onClick={() => setOpen(!open)} >☰</Button>
             <div className="overlay-content">
-            <a href="#">Home</a>
-            <a href="../aboutUs">Your Team</a>
-            <a href="#">Products We Trust</a>
-            <a href="../contactUs">Contact Us</a>
+            <a href="#" onClick={() => setOpen(!open)} >Home</a>
+            <a href="../#/aboutUs" onClick={() => setOpen(!open)} >Your Team</a>
+            <a href="#" onClick={() => setOpen(!open)} >Products We Trust</a>
+            <a href="../#/contactUs" onClick={() => setOpen(!open)} >Contact Us</a>
             </div>
           
           </div>} 
